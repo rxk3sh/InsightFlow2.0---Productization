@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_RequestExtension</fullName>
+    <active>true</active>
+    <description>To be used for storing Request records where Account is an Extension Object for Insightflow 2.0</description>
+    <label>Request Extension</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_AllDay__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_ApplicantValidation__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_ApprovalRoute__c</picklist>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG CN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG DE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SG DE HiP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGHU%2C Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGHU%2C Indirect blue collar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGHU%2C Indirect white collar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGHU%2C Trainee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SGIN</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Area_of_responsibility_as_LEX__c</picklist>
+        <values>
+            <fullName>Brazil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>China</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>France</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Germany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Global</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungary</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korea</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mexico</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Portugal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>United States</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_CausesforSpecialFreightDelivery__c</picklist>
+        <values>
+            <fullName>Delay in Customs Clearance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delay in delivery packaging material - supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Delay of transport caused by LSP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDI Failure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>IT system breakdown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAE breakdown %28MAZE%2C spare parts%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Others</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transfer of production</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>delay in delivery RM - supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>delay in delivery RM%2FWIP - SG plant</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>incorect logisting lanning %2F rescheduling - procurement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>incorrect logistics planning %2F rescheduling - customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>missing capacity at supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>missing empties</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>missing packaging materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>production backlog due to capacity issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>production backlog due to customer order changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>production backlog due to quality issues</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>production backlog due to technical problems</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>quality issue supplier</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>samples%2C parts for samles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>short-term customer order changes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stock differences - finished goods</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stock differences - raw materials</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>stock differences -WIP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>transport damage or force majeure</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>wrong deliver to customer - logistics quality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>wrong delivery to customer - production quality</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_CompensationType__c</picklist>
+        <values>
+            <fullName>Compensated Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overtime Salary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_ContentType__c</picklist>
+        <values>
+            <fullName>Error Logs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sample ContentType Relatedlist_R</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Contribution_Type__c</picklist>
+        <values>
+            <fullName>Communication</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Coordination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Enhancement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Projects</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Support in Department</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_DescriptionPicklist__c</picklist>
+        <values>
+            <fullName>Additional Clock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Clock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Using Wrong Clock Machine</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_DirectIndirect__c</picklist>
+        <values>
+            <fullName>Direct</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indirect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Escalatetomanagementlevel__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_LeaveType__c</picklist>
+        <values>
+            <fullName>Annual Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bereavement Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Compensated Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Family-planning Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marriage Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maternity Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nursing Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>On-job Injury Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Paternity Leave</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pregnancy Medical Check-up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sick Leave Deduction 30%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sick Leave Partial Pay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unpaid Leave</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_OcupancyType__c</picklist>
+        <values>
+            <fullName>external</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>internal OR external</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_OrganizedbyPlant__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_OvertimeType__c</picklist>
+        <values>
+            <fullName>OT on off day</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OT on public holiday</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>OT on working day</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_PANFType__c</picklist>
+        <values>
+            <fullName>Individual requirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple requirement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Product_Type__c</picklist>
+        <values>
+            <fullName>Alternator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BRM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Component</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM1%2E150</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM1%2E2</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EM1%2E25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inverter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Starter motor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VCU</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Rechargeable__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_RequirementType__c</picklist>
+        <values>
+            <fullName>Additional requirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Backup requirement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Replacement requirement</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_RequirementiswithinApprovBusPlan__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_Segment__c</picklist>
+        <values>
+            <fullName>CV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LeM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_SupplierClassification__c</picklist>
+        <values>
+            <fullName>China MAE</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MGP India</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Special Freights</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_TransportationTools__c</picklist>
+        <values>
+            <fullName>Bus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Co%2E Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ferry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private Car</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Taxi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Train</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_TransportationType__c</picklist>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IFv2_TypeofPersonnelRequisition__c</picklist>
+        <values>
+            <fullName>Permanent post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Temporary post</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Analyst</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integrator</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Investor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Press</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reseller</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

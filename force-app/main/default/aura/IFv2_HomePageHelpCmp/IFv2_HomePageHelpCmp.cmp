@@ -1,0 +1,69 @@
+<!--
+* 
+* @ Name 	:	IFv2_HomePageHelpCmp
+* @ Purpose : 	This Component is used to display the URL for help text
+* @ Author	: 	Naga Sai
+*
+*   Date	        |  Developer Name                           |  Version      |  Changes
+* ======================================================================================================
+*   29-11-2018      |  nagasai.chalamalasetti@absyz.com			|  1.0          |  Initial Version
+*   26-03-2019      |  nagasai.chalamalasetti@absyz.com			|  2.0          |  getting the help urls from custom settings
+-->
+
+<aura:component controller="IFv2_HeaderController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    
+    <!-- Attributes for data table -->
+    <aura:attribute name="allRecordList" type="SObject" description="backup attribute to keep all the data"/>
+    <aura:attribute name="columnLabels" type="List" description="attribute for the columns of the data table"/>
+    
+    <!-- Attributes for spinner -->
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <!-- Attributes for  Empty data handling -->
+    <aura:attribute name="emptyMessage" type="String"/>
+    <aura:attribute name="isEmpty" type="Boolean" default="false" />
+    
+    <!--Attributes used for sorting-->
+    <aura:attribute name="sortedBy" type="String" default="Name"/>
+    <aura:attribute name="sortedDirection" type="String" default="asc"/>
+    
+    <!-- Handlers and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <div style="position:relative">
+        <div class="slds-box slds-theme_default">
+            
+            <!-- display message for empty list -->
+            <aura:if isTrue="{!v.isEmpty}">
+                <p>{!v.emptyMessage}</p>
+                
+                <!-- display table for Non empty list -->
+                <aura:set attribute="else">
+                    
+                    <!-- Data Table for Workflow Listview -->
+                    <!-- Attributes:- data: holds the Admin ony record data -->
+                    <!-- columns: holds the column labels, types -->
+                    <!-- keyField: id -->
+                    <!-- onrowaction: Edit,View,Execute actions handler -->
+                    <!-- hideCheckboxColumn: Either true or false to display the checkbox column -->
+                    
+                    <lightning:datatable data="{!v.allRecordList}"
+                                         columns="{!v.columnLabels}"
+                                         keyField="id"
+                                         onrowaction="{!c.downloadFile}"
+                                         onsort="{!c.handleColumnSorting}"
+                                         sortedBy="{!v.sortedBy}"  
+                                         sortedDirection="{!v.sortedDirection}"
+                                         hideCheckboxColumn="true"/>
+                </aura:set>
+            </aura:if>
+        </div>
+        
+        <!-- Spinner -->
+        <aura:if isTrue="{!v.showSpinner}">
+            <div class="slds-spinner_container" style="border-radius: .25rem;height:50vh">
+                <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

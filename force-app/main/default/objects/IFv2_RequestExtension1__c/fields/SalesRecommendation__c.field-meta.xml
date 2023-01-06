@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesRecommendation__c</fullName>
+    <description>Used in China MAE Application - Scrap</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should be filled by specific Approvers</inlineHelpText>
+    <label>Sales Recommendation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Direct Scrap</fullName>
+                <default>false</default>
+                <label>Direct Scrap</label>
+            </value>
+            <value>
+                <fullName>Sale to Employee</fullName>
+                <default>false</default>
+                <label>Sale to Employee</label>
+            </value>
+            <value>
+                <fullName>Sale to other Bosch entity</fullName>
+                <default>false</default>
+                <label>Sale to other Bosch entity</label>
+            </value>
+            <value>
+                <fullName>Sale to third Party</fullName>
+                <default>false</default>
+                <label>Sale to third Party</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

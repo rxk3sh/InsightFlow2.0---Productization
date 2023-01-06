@@ -1,0 +1,62 @@
+.THIS.slds-card{
+    padding-left : 1rem;
+}
+
+.THIS .customHeaderIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+} 
+
+.THIS .customHeaderIcon svg{
+    width: 1.5rem;
+    height: 1.5rem;
+} 
+
+.THIS .slds-card__header {
+    padding: .75rem 0 0;
+}
+
+.THIS .customAnchor {
+    text-decoration: none ;
+    color: black;
+}
+
+.THIS .slds-file-selector__dropzone {
+    padding: none;
+    border-color: white;
+}
+
+.THIS .slds-file-selector__text {
+    display: none;
+}
+
+.THIS .slds-file-selector__dropzone .slds-file-selector__button{
+    font-size: 0;
+}
+
+.THIS .slds-file-selector__dropzone .slds-file-selector__button:after{
+    content: 'Upload Files';
+    font-size: .8125rem;
+    color: rgba(27, 82, 151, 1.0);
+}
+
+.THIS .custom-font {
+    font-size: 0.75rem;
+}
+
+.THIS .slds-button__icon {
+    display: none;
+}
+
+.THIS .slds-file-selector__button {
+    margin: inherit;
+    height: 2rem;
+    max-height: unset;
+}
+
+.THIS .slds-form-element {
+    position: relative;
+    padding-top: -2rem;
+    margin-top: -2rem;
+    padding-top: 0.7rem;
+}

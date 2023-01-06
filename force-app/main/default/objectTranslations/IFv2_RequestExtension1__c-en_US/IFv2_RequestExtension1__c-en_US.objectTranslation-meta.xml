@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request Extension 1 - APAC</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Request Extension 1 - APAC</value>
+    </caseValues>
+    <layouts>
+        <layout>Request Extension Layout</layout>
+        <sections>
+            <label></label>
+            <section>China Leave and Overtime</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Capitalize</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Combine</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Lost</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Scrap</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Split</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China MAE Application - Transfer</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China Training Application</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>China Travel Application</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>General - APAC</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>SharingRecordsWithChatter</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>DateTimeValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>NumericFieldValidation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>OnlyNumber</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>TrainingTotalHoursValidation</name>
+    </validationRules>
+</CustomObjectTranslation>

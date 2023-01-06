@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BothFieldsOnExtensionObject__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This fields has to be checked if both fields being used in this record are on extension object.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this check box if both fields being used are on extension object.</inlineHelpText>
+    <label>Both Fields on Extension Object</label>
+    <type>Checkbox</type>
+</CustomField>

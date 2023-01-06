@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InvoiceItemAmountEUR__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Workflow__c = &quot;ICO Workflow - 6&quot;  || Workflow__c = &quot;ICO Workflow - 5&quot;,  
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(        
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE(
+  SUBSTITUTE( 
+  SUBSTITUTE(  LOWER(Account__r.IFv2_ItemText__c) , &quot;a&quot; , &quot;&quot;), &quot;b&quot; , &quot;&quot;), &quot;c&quot; , &quot;&quot;), &quot;d&quot; , &quot;&quot;), &quot;e&quot; , &quot;&quot;), &quot;f&quot; , &quot;&quot;), &quot;g&quot; , &quot;&quot;), &quot;h&quot; , &quot;&quot;), &quot;i&quot; , &quot;&quot;), &quot;j&quot; , &quot;&quot;), &quot;k&quot; , &quot;&quot;), &quot;l&quot; , &quot;&quot;), &quot;m&quot; , &quot;&quot;), &quot;n&quot; , &quot;&quot;), &quot;o&quot; , &quot;&quot;), &quot;p&quot; , &quot;&quot;), &quot;q&quot; , &quot;&quot;), &quot;r&quot; , &quot;&quot;), &quot;s&quot; , &quot;&quot;), &quot;t&quot; , &quot;&quot;), &quot;u&quot; , &quot;&quot;), &quot;v&quot; , &quot;&quot;), &quot;w&quot; , &quot;&quot;), &quot;x&quot; , &quot;&quot;), &quot;y&quot; , &quot;&quot;), &quot;z&quot; , &quot;&quot;), &quot; &quot;, &quot;&quot;), &quot;,&quot;,&quot;&quot;), &apos;&apos;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Invoice Item Amount (EUR)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

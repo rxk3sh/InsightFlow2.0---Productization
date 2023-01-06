@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_Requestsforcorporatecard2WayCard</fullName>
+    <description>used in Requests for corporate card workflow</description>
+    <displayedFields>
+        <field>RequestExtension3__r.Reasonforreissue__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Requests for corporate card  2ª Way - Card</label>
+</FieldSet>

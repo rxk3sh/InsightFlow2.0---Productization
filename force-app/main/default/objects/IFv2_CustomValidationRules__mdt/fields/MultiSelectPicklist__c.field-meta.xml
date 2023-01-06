@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MultiSelectPicklist__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this check box if any one of the group check box is required.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this check box if any one of the group check box is required.</inlineHelpText>
+    <label>MultiSelect Picklist</label>
+    <type>Checkbox</type>
+</CustomField>

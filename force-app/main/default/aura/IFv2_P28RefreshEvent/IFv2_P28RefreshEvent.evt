@@ -1,0 +1,14 @@
+<!--
+* 
+* @ Name 	:	IFv2_P28RefreshEvent
+* @ Purpose : 	This is a component for displaying the workflow listview
+* @ Author	: 	NagaSai
+*
+*   Date	        |  Developer Name                       |  Version      |  Changes
+* ======================================================================================================
+*   21-03-2019      |  nagasai.chalamalasetti@absyz.com    	|  1.0          |  Initial Version
+*
+-->
+<aura:event type="APPLICATION">
+    
+</aura:event>

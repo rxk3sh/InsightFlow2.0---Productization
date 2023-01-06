@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>TD with rowspan 2(Challan)</label>
+    <protected>false</protected>
+    <values>
+        <field>Division__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HTMLTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HorizonatalLine__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ImageSourceTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ImageSpecsTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TableCellLabel__c</field>
+        <value xsi:type="xsd:string">&lt;td rowspan=&quot;2&quot;&gt;</value>
+    </values>
+    <values>
+        <field>TableCellValue__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TableRow__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Table__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

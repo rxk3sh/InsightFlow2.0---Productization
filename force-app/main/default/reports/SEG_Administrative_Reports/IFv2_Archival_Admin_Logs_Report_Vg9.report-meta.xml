@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>IFv2_AdminOnly__c$Name</field>
+    </columns>
+    <columns>
+        <field>IFv2_AdminOnly__c$RecordName__c</field>
+    </columns>
+    <columns>
+        <field>IFv2_AdminOnly__c$GlacierId__c</field>
+    </columns>
+    <columns>
+        <field>IFv2_AdminOnly__c$Vault__c</field>
+    </columns>
+    <columns>
+        <field>IFv2_AdminOnly__c$Region__c</field>
+    </columns>
+    <columns>
+        <field>IFv2_AdminOnly__c$CreatedDate</field>
+    </columns>
+    <currency>EUR</currency>
+    <description>IFv2 Archival Admin Logs Report</description>
+    <filter>
+        <criteriaItems>
+            <column>IFv2_AdminOnly__c$RecordType</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>IFv2_AdminOnly__c.Archival_Logs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>IFv2_AdminOnly__c$CreatedDate</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>6/20/2020 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>IFv2_AdminOnly__c$RecordName__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>INF-0000186157</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>IFv2 Archival Admin Logs Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Archival_Admin_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>IFv2_AdminOnly__c$CreatedDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>IFv2_AdminOnly__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

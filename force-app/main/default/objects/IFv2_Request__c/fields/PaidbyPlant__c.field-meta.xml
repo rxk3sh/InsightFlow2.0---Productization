@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PaidbyPlant__c</fullName>
+    <description>42 Special Freights Approval</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the percentage paid by plant (whole number)</inlineHelpText>
+    <label>Paid by Plant</label>
+    <precision>3</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

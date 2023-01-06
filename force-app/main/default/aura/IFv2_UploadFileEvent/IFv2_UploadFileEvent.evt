@@ -1,0 +1,2 @@
+<aura:event type="Application" description="Sample Application Event">
+</aura:event>

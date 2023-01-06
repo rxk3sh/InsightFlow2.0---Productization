@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MaterialClass__c</fullName>
+    <externalId>false</externalId>
+    <label>Material Class</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ProductClass__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>EZ</fullName>
+                <default>false</default>
+                <label>EZ</label>
+            </value>
+            <value>
+                <fullName>EZFE</fullName>
+                <default>false</default>
+                <label>EZFE</label>
+            </value>
+            <value>
+                <fullName>EZRS</fullName>
+                <default>false</default>
+                <label>EZRS</label>
+            </value>
+            <value>
+                <fullName>LOG IDC</fullName>
+                <default>false</default>
+                <label>LOG IDC</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>C6X</controllingFieldValue>
+            <controllingFieldValue>PC-Starter</controllingFieldValue>
+            <controllingFieldValue>CV-Starter</controllingFieldValue>
+            <controllingFieldValue>NBL</controllingFieldValue>
+            <controllingFieldValue>LIX</controllingFieldValue>
+            <controllingFieldValue>Charge forward/Tovább számlázás</controllingFieldValue>
+            <valueName>EZ</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C6X</controllingFieldValue>
+            <controllingFieldValue>PC-Starter</controllingFieldValue>
+            <controllingFieldValue>CV-Starter</controllingFieldValue>
+            <controllingFieldValue>NBL</controllingFieldValue>
+            <controllingFieldValue>LIX</controllingFieldValue>
+            <controllingFieldValue>Charge forward/Tovább számlázás</controllingFieldValue>
+            <valueName>EZFE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C6X</controllingFieldValue>
+            <controllingFieldValue>PC-Starter</controllingFieldValue>
+            <controllingFieldValue>CV-Starter</controllingFieldValue>
+            <controllingFieldValue>NBL</controllingFieldValue>
+            <controllingFieldValue>LIX</controllingFieldValue>
+            <controllingFieldValue>Charge forward/Tovább számlázás</controllingFieldValue>
+            <valueName>EZRS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>C6X</controllingFieldValue>
+            <controllingFieldValue>PC-Starter</controllingFieldValue>
+            <controllingFieldValue>CV-Starter</controllingFieldValue>
+            <controllingFieldValue>NBL</controllingFieldValue>
+            <controllingFieldValue>LIX</controllingFieldValue>
+            <controllingFieldValue>Charge forward/Tovább számlázás</controllingFieldValue>
+            <controllingFieldValue>Relais</controllingFieldValue>
+            <valueName>LOG IDC</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EnteredValueisPublicGroup__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This check box is used to specify whether the value specified in users field is a public group or not. If yes this checkbox is checked else not.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this checkbox if the entered value in Users field is public group.</inlineHelpText>
+    <label>Entered Value is Public Group</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <!--Attribute tohold spinnre status -->
+    <aura:attribute name="showSpinner" type="Boolean" />
+</aura:event>

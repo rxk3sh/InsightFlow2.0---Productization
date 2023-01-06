@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>Reasonforunlock__c</name>
+    <picklistValues>
+        <masterLabel>Carta Novo</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cartao sem utilizacao por 3 meses</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Renovacao</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

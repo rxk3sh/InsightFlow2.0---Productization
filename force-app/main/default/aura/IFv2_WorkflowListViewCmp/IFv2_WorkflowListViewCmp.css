@@ -1,0 +1,85 @@
+.THIS .slds-button_brand {
+    height: 100%;
+    width: 100%;
+    line-height: 0;
+    text-align: center;
+    align: center;
+    min-width: max-content;
+}
+
+.THIS .slds-button_icon-container {
+    width: 1.25 rem;
+    height: 1.25 rem;
+}
+
+.THIS .slds-grid_align-center {
+    justify-content: left; 
+}
+
+.THIS .execute-icon svg {
+    color: rgb(0,109,264);
+    width: 1.05 rem;
+    height: 1.05 rem;
+}
+
+.THIS .slds-form-element {
+    width: 60%;
+}
+
+.THIS .custom-datatable {
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.THIS.container {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: .25rem;
+    background: white;
+}
+
+.THIS .slds-resizable__divider {
+    height: max-content;
+}
+
+.THIS .slds-table td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    white-space: normal;
+    position: relative;
+}
+
+.THIS .slds-text-link_reset {
+    padding-left: 1rem;
+}
+
+.THIS .slds-table_bordered tbody th {
+    padding-left: 1rem;
+}
+
+.THIS .ICO .slds-button {
+    display: none;
+}
+
+.THIS .ShopMe .slds-button {
+    display: none;
+}
+
+.THIS .Aftermarket .slds-button {
+    display: none;
+}
+
+.THIS .custom-hide-scroll .slds-scrollable_y{
+    overflow-y: hidden !important;
+}
+
+.THIS .second-column-bold tbody tr td:nth-child(2) {
+    font-weight: bold !important;
+}
+
+.THIS .lex-column-bold tbody tr td:nth-child(8) {
+    font-weight: bold !important;
+}

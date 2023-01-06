@@ -1,0 +1,91 @@
+<!--
+* @ Name 	:	IFv2_SummaryCmp
+* @ Purpose : 	Summary for ICO Workflows
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   04-04-2019      |  anoop.ravindran@absyz.com  	|  1.0          |  Initial Version
+*
+-->
+<aura:component controller="IFv2_SummaryCmpController" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="sobjectName" type="String"/>
+    <aura:attribute name="workflowName" type="String" default="Test"/>
+    <aura:attribute name="requestList" type="Object[]"/>
+    <aura:attribute name="count" type="Integer" default="0"/>
+    <aura:attribute name="workflowDesc" type="String"/>
+    <aura:attribute name="isApprover" type="Boolean" default="false"/>
+    <aura:attribute name="fontSize" type="Integer" default="14"/>
+    <aura:attribute name="status" type="String"/>
+    <aura:attribute name="scanRequestCount" type="Integer" default="0"/>
+    <aura:attribute name="scanOtherUserCount" type="Integer" default="0"/>
+    <aura:attribute name="scanOtherRequestList" type="Object[]"/>
+    <aura:attribute name="scanAllUserPendingCount" type="Integer" default="0"/>
+    
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <!--
+    <aura:if isTrue="{!v.isApprover}">
+        <div class="slds-panel  slds-panel_docked slds-panel_docked-left slds-is-open body" aria-hidden="false">
+            <div class="slds-panel__header">
+                <h2 class="slds-panel__header-title slds-text-heading_medium slds-truncate" title="{!$Label.c.CLIFv20169}">{!$Label.c.CLIFv20169}</h2>
+            </div>
+            <div class="slds-panel__body">
+                {!$Label.c.CLIFv20165} &nbsp;<b>{!v.workflowName}&nbsp; </b>  {!v.workflowDesc}
+                <br/>{!$Label.c.CLIFv20166}&nbsp; <b>{!v.count}</b>
+                <br/> 
+                <aura:if isTrue="{!v.count > 1}">
+                    {!$Label.c.CLIFv20167}
+                    <br/>
+                    <aura:iteration items="{!v.requestList}" var="req" indexVar="index">
+                        <aura:if isTrue = "{!!(index == 0)}">,&ensp;</aura:if><a href = "{!'/lightning/r/'+req.Id+'/view'}">{!req.Name}</a>
+                    </aura:iteration>
+                </aura:if>
+                <br/>
+                <b>{!$Label.c.CLIFv20168}</b>
+            </div>
+        </div>
+    </aura:if>
+    
+-->    
+     <aura:if isTrue="{!v.isApprover}">
+        <div class="slds-panel  slds-panel_docked slds-panel_docked-left slds-is-open body" aria-hidden="false">
+            <div class="slds-panel__header">
+                <h2 class="slds-panel__header-title slds-text-heading_medium slds-truncate" title="{!$Label.c.CLIFv20169}">{!$Label.c.CLIFv20169}</h2>
+            </div>
+            <div class="slds-panel__body">
+                {!$Label.c.CLIFv20165} &nbsp;<b>{!v.workflowName}&nbsp; </b>  {!v.workflowDesc}
+                <br/>{!$Label.c.CLIFv20166} &nbsp; <b>{!v.scanRequestCount}</b>
+                <br/> 
+                <!--
+                {!$Label.c.CLIFv20315} &nbsp; <b>{!v.scanAllUserPendingCount}</b>
+                <br/>--> 
+                <aura:if isTrue="{!v.count > 1}">
+                    {!$Label.c.CLIFv20316}
+                    <br/>
+                    <aura:iteration items="{!v.requestList}" var="req" indexVar="index">
+                        <aura:if isTrue = "{!!(index == 0)}">,&ensp;</aura:if><a href = "{!'/lightning/r/'+req.Id+'/view'}">{!req.Name}</a>
+                    </aura:iteration>
+                    <br/>
+                </aura:if>
+                
+                
+                <!--<aura:if isTrue="{!v.scanOtherUserCount > 0}"> 
+                   
+                    {!$Label.c.CLIFv20317} &nbsp; 
+                    <br/>
+                    <aura:iteration items="{!v.scanOtherRequestList}" var="req" indexVar="index">
+                        <aura:if isTrue = "{!!(index == 0)}">,&ensp;</aura:if>{!req.Name}
+                    </aura:iteration>
+                    <br/>
+                   
+                </aura:if> -->
+                
+                <br/> 
+                <b>{!$Label.c.CLIFv20168}</b>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

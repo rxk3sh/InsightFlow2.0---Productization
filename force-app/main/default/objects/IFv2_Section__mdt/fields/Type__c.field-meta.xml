@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <description>Describes whether the section is for Workflow details page or Request details page or Related list.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Workflow details - For Workflow Detail section
+Request details - For Request Detail section
+Related lists - For Related List section</inlineHelpText>
+    <label>Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Workflow details</fullName>
+                <default>true</default>
+                <label>Workflow details</label>
+            </value>
+            <value>
+                <fullName>Request details</fullName>
+                <default>false</default>
+                <label>Request details</label>
+            </value>
+            <value>
+                <fullName>Related list</fullName>
+                <default>false</default>
+                <label>Related list</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

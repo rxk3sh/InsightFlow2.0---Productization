@@ -1,0 +1,10 @@
+<!--
+@name : IFv2_FieldSetFormLayoutRecordSave_Event
+@author : Anoop Ravindran
+@since : 31 Oct 2018
+@description : Application event used for saving records from IFv2_FieldSetFormLayoutParent_Component
+-->
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name = "record" type = "object"/>
+    <aura:attribute name = "event" type = "String" />
+</aura:event>

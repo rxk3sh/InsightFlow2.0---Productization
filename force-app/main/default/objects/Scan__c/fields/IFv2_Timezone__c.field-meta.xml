@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_Timezone__c</fullName>
+    <description>To display the timzone of the SCAN record based on the source (IMAP/Reisswolf)</description>
+    <externalId>false</externalId>
+    <formula>IF( CONTAINS( CreatedBy.LastName , &apos;IMAP&apos;) , &apos;IST&apos;, 
+IF( CONTAINS( CreatedBy.LastName , &apos;Reiswolf&apos;), &apos;CET&apos;, &apos;&apos;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Timezone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

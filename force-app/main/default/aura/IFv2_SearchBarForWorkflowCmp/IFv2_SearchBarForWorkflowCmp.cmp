@@ -1,0 +1,24 @@
+<!--
+* 
+* @ Name 	:	IFv2_SearchBarForWorkflowCmp
+* @ Purpose : 	This is a component for the search bar on workflow listview
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   30-10-2018      |  pradeep.chary@absyz.com(yv)	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <aura:attribute name="placeholder" type="String" default="Search"/>
+    
+    <lightning:input 
+                     aura:id="searchBar"
+                     type="search" 
+                     name="search" 
+                     placeholder="{!v.placeholder}"
+                     onchange="{! c.searchKeyChange}"/>
+    
+</aura:component>

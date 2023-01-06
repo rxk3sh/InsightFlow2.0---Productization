@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecialFreightsArrivalTargetDate</fullName>
+    <active>true</active>
+    <description>This is used to fire validation rule if arrival target date is less than today.</description>
+    <errorConditionFormula>and 
+( 
+ISPICKVAL(Status__c, &apos;Draft&apos;) , 
+Workflow__c = $CustomMetadata.IFv2_Workflows__mdt.ApprovalProcessforSpecialFreights.Name__c , 
+ ArrivalTargetDate__c &lt;  TODAY() 
+)</errorConditionFormula>
+    <errorMessage>The targeted arrival date must be greater than today</errorMessage>
+</ValidationRule>

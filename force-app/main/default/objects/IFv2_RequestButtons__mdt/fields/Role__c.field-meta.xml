@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <description>To store the roles of the logged in users</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please select the appropriate role of the User</inlineHelpText>
+    <label>Role</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Applicant</fullName>
+                <default>true</default>
+                <label>Applicant</label>
+            </value>
+            <value>
+                <fullName>Approver</fullName>
+                <default>false</default>
+                <label>Approver</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Administrator</fullName>
+                <default>false</default>
+                <label>Administrator</label>
+            </value>
+            <value>
+                <fullName>Delegated Approver</fullName>
+                <default>false</default>
+                <label>Delegated Approver</label>
+            </value>
+            <value>
+                <fullName>Privileged Approver</fullName>
+                <default>false</default>
+                <label>Privileged Approver</label>
+            </value>
+            <value>
+                <fullName>Helpdesk</fullName>
+                <default>false</default>
+                <label>Helpdesk</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_GeneralApprovalFormUsageAgreement</fullName>
+    <active>true</active>
+    <description>To check whether User has agreed to the Usage Agreement in General Approval Form workflow</description>
+    <errorConditionFormula>AND(NOT(ISNEW()),NOT( ISCHANGED( OwnerId ) ), 
+     IFv2_Request__r.Workflow__c == &apos;General Approval Form&apos;, 
+     IFv2_Ihavereadagreedtheusageagreement__c  &lt;&gt; True)</errorConditionFormula>
+    <errorMessage>Please agree to the Usage Agreement</errorMessage>
+</ValidationRule>

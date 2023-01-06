@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestForCorporateCardSection6_2</fullName>
+    <active>true</active>
+    <description>To through Error message when Section 6 is filled without Selecting Data modification in workflow type.</description>
+    <errorConditionFormula>and 
+( 
+(AND(NOT(INCLUDES(WorkflowType__c, &apos;Data modification&apos;)),NOT(INCLUDES(WorkflowType__c, &apos;Card Solicitation&apos;)))), 
+ Workflow__c =  $CustomMetadata.IFv2_Workflows__mdt.Requestsforcorporatecard.Name__c , 
+OR(
+NOT(ISBLANK(RequestExtension3__r.Department__c)), 
+NOT(ISBLANK(RequestExtension3__r.RG__c)), 
+NOT(ISBLANK(TEXT(RequestExtension3__r.DateofBirth__c))),
+NOT(ISBLANK(RequestExtension3__r.MothersName__c)),
+NOT(ISBLANK(RequestExtension3__r.IssuingBody__c)),
+NOT(ISBLANK(RequestExtension3__r.Nationality__c)),
+NOT(ISBLANK(RequestExtension3__r.Sex__c)),
+NOT(ISBLANK(RequestExtension3__r.UserEmail__c)),
+NOT(ISBLANK(RequestExtension3__r.MaritalStatus__c)),
+NOT(ISBLANK(CostCenter__c))
+)
+)</errorConditionFormula>
+    <errorMessage>Not allowed to enter data in section 1 / section 6 without checking the corresponding values in WorkflowType</errorMessage>
+</ValidationRule>

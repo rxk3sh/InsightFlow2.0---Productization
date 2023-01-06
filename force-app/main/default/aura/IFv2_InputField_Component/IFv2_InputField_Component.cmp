@@ -1,0 +1,52 @@
+<!--
+* @ Name 	:	IFv2_InputField_Component
+* @ Purpose : 	Wrap input field and helptext together
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   01-11-2018      |  anoop.ravindran@absyz.com  	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component controller="IFv2_FieldSetFormController">
+    
+    <!--Attributes-->
+    <aura:attribute name="field" type="Object" />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="readOnlyBody" type="Aura.Component[]" />
+    <aura:attribute name="editBody" type="Aura.Component[]" />
+    <aura:attribute name="isReference" type="Boolean" default="false" />
+    <aura:attribute name="readOnlySection" type="Boolean" default="false" />
+    <aura:attribute name="viewPage" type="Boolean" />
+    <aura:attribute name="isEditBody" type="Boolean" default="false" />
+    <aura:attribute name="requestStatus" type="String" />
+    <aura:attribute name="currentUser" type="String"/>
+    <aura:attribute name="recordType" type="String"/>
+    <aura:attribute name="subTitle" type="String"/>
+    <aura:attribute name="filter" type="String"/>
+    <aura:attribute name="disabled" type="Boolean" default = "false"/>
+    <!-- Changed to make role fields readonly only for request (01-03-2019) Start -->
+    <aura:attribute name="sObjectName" type="String"/>
+    <!-- Changed to make role fields readonly only for request (01-03-2019) End -->
+    <!--Events & Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.viewPage}" action="{!c.doInit}" />
+    <aura:handler event="c:IFv2_DependentPicklistChangeEvt" action="{!c.handleChangeTransportType}" />
+    
+    <lightning:layoutItem aura:Id="layoutItem" padding="horizontal-small" class="slds-p-top--x-small" size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="6">
+        
+        <aura:if isTrue="{!v.isEditBody}">
+            
+            <!-- Edit field -->
+            {!v.editBody}
+            
+            <aura:set attribute="else">
+                <!-- Read Only field -->
+                {!v.readOnlyBody}
+                
+            </aura:set>
+        </aura:if>
+        
+    </lightning:layoutItem>
+</aura:component>

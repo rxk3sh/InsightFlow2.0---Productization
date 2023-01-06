@@ -1,0 +1,73 @@
+<!--
+* 
+* @ Name 	:	IFv2_GeneralHomeTab
+* @ Purpose : 	Display list of different apps for navigation on the home page 
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               	|  Version      |  Changes
+* ======================================================================================================
+*   05-06-2019      |  anoop.ravindran@absyz.com		|  1.0          |  Initial Version
+*   22-06-2019      |  vivek.kothalanka@absyz.com    	|  1.1          |  Added favorite logic.
+*
+-->
+
+<aura:component access="global" controller="IFv2_GeneralHomeController">
+    
+    <!-- Attribute Definitions-->
+    <aura:attribute name="tab" type="Object" />		<!-- Aura attribute to take tab value from parent -->
+    <aura:attribute name="index" type="Integer"/>	<!-- Aura attribute to track index -->
+    <aura:attribute name="listName" type="String"/>	<!-- Aura attribute to check the list type -->
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="Success/Error alert message" />
+    <aura:attribute name="alertMsg" type="String" description="attahments alert message" />
+    
+    <!-- Events and Handlers-->
+    <aura:registerEvent name="favoriteUpdate" type="c:IFv2_FavoriteUpdate"/>
+    
+    <!--Markup Body-->
+    <div onpointerleave="{!c.goBack}">
+        <lightning:card aura:id="card-id" class="slds-m-around_small">
+            <a>
+                <div aura:id="front-end" onclick="{!c.goToLink}">
+                    <center>
+                        <lightning:layout horizontalAlign="center" verticalAlign="center">
+                            <lightning:layout horizontalAlign="center" verticalAlign="center" class="custom-padding">
+                                <img src="{!v.tab.ImageName__c}" />
+                            </lightning:layout>
+                        </lightning:layout>
+                        <lightning:layout horizontalAlign="center" verticalAlign="center" class="outputDots" title="{!v.tab.Name__c}">
+                            <b><lightning:formattedUrl class="outputDots" value="{!v.tab.Link__c}" label="{!v.tab.Name__c}" target="_blank" tooltip="{!v.tab.Name__c}"/></b>
+                        </lightning:layout>
+                        <lightning:layout horizontalAlign="center" verticalAlign="center">
+                            <p><lightning:formattedText class="outputDots" value="{!'(' + v.tab.AppOldName__c + ')'}" title="{!v.tab.AppOldName__c}" /></p>
+                        </lightning:layout>
+                    </center>
+                </div>
+            </a>
+            <!-- Mark up to display description -->
+            <div aura:id="back-end" class="slds-hide">
+                <lightning:layout horizontalAlign="center" verticalAlign="center">
+                    <lightning:layout horizontalAlign="center" verticalAlign="center" class="custom-padding-2">
+                        <p>{!v.tab.Description__c}</p>
+                    </lightning:layout>
+                </lightning:layout>
+            </div>
+            <!-- Markup to display footer -->
+            <aura:set attribute="footer">
+                <lightning:layout aura:id="front-end-2" horizontalAlign="end" verticalAlign="center">
+                    <aura:if isTrue="{!v.tab.Starred__c}">
+                        <lightning:buttonIcon class="favoritecolor"  iconName="utility:favorite" size="large" variant="bare" value="{!v.tab.Starred__c}" onclick="{!c.favorite}" alternativeText="UnMark Favorite" />
+                        <aura:set attribute="else">	
+                            <lightning:buttonIcon aura:id="nonfavorite" iconName="utility:favorite" size="large" variant="bare-inverse" value="{!v.tab.Starred__c}" onclick="{!c.favorite}" alternativeText="Mark Favorite" />
+                        </aura:set>
+                    </aura:if>
+                    <lightning:buttonIcon iconName="utility:info_alt" size="large" variant="bare" onclick="{!c.handleHover}"  alternativeText="Information" class="custom-info" />
+                </lightning:layout>
+                <lightning:layout aura:id="back-end-2" horizontalAlign="start" verticalAlign="center" class="slds-hide">
+                    <lightning:button label="GO TO" iconName="utility:forward" iconPosition="right" variant="normal" onclick="{!c.goToLink}" class="custom-underline slds-text-link slds-text-link_reset" />
+                </lightning:layout>
+            </aura:set>
+        </lightning:card>
+    </div>
+</aura:component>

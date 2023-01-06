@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_Repeatedconcession</fullName>
+    <description>Concession workflow</description>
+    <displayedFields>
+        <field>Account__r.IFv2_Escalatetomanagementlevel__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>Repeated concession</label>
+</FieldSet>

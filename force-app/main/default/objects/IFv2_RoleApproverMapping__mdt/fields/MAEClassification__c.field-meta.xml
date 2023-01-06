@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MAEClassification__c</fullName>
+    <description>Select the condition for loading Roles and Approvers in MAE Classification.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Select the condition for loading Roles and Approvers in MAE Classification.</inlineHelpText>
+    <label>MAE Classification</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Quality-QM</fullName>
+                <default>false</default>
+                <label>Quality-QM</label>
+            </value>
+            <value>
+                <fullName>Quality-PUQ</fullName>
+                <default>false</default>
+                <label>Quality-PUQ</label>
+            </value>
+            <value>
+                <fullName>Quality-MOE</fullName>
+                <default>false</default>
+                <label>Quality-MOE</label>
+            </value>
+            <value>
+                <fullName>Productivity</fullName>
+                <default>false</default>
+                <label>Productivity</label>
+            </value>
+            <value>
+                <fullName>Capacity</fullName>
+                <default>false</default>
+                <label>Capacity</label>
+            </value>
+            <value>
+                <fullName>R&amp;D</fullName>
+                <default>false</default>
+                <label>R&amp;D</label>
+            </value>
+            <value>
+                <fullName>Plant Maintenance</fullName>
+                <default>false</default>
+                <label>Plant Maintenance</label>
+            </value>
+            <value>
+                <fullName>MAE modification/ flexibilization</fullName>
+                <default>false</default>
+                <label>MAE modification/ flexibilization</label>
+            </value>
+            <value>
+                <fullName>MAE Maintenance (replacement)</fullName>
+                <default>false</default>
+                <label>MAE Maintenance (replacement)</label>
+            </value>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>BAU</fullName>
+                <default>false</default>
+                <label>BAU</label>
+            </value>
+            <value>
+                <fullName>Software</fullName>
+                <default>false</default>
+                <label>Software</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

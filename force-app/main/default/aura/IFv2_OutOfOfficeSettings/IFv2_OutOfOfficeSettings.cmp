@@ -1,0 +1,214 @@
+<!--
+* 
+* @ Name 	:	IFv2_OutOfOfficeSettings
+* @ Purpose : 	This Component is used for Out of Office settings
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   25-01-2019      |  madhuravani.b@absyz.com   	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component access="global" controller="IFv2_HomePageRequestsOverviewController" implements="flexipage:availableForAllPageTypes,force:appHostable">
+    
+    <!-- attributes -->
+    <aura:attribute name="OutOfOfficeWF" type="Object[]" description="holds Workflow based on the Logged in user" />
+    <aura:attribute name="UserDetails" type="Object[]" description="holds Users Details" />
+    <aura:attribute name="UserDetailsMini" type="Object[]" description="holds Only 3 Users Details" />
+    <aura:attribute name="WorkflowOptions" type="LIST" default="[]" description="Preparing the Workflow options on load" />
+    <aura:attribute name="columns" type="LIST" description="holds the label names of each column in the datatable" />
+    <aura:attribute name="selectedId" type="String" default="" description="holds the id of the lookup user" />
+    <aura:attribute name="UserName" type="string" description="holds the name of the lookup user" />
+    <aura:attribute name="selectedWF" type="String" description="holds the Selected Workflow name" default="" />
+    <aura:attribute name="recordId" type="String" description="holds the Record Id" />
+    <aura:attribute name="userId" type="String" description="holds the User Id" />
+    <aura:attribute name="enableOutOfOffice" type="Boolean" default="false" description="Checkbox which stores OutOfOffice or BackToOffice" />
+    <aura:attribute name="disableDelete" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false" description = "shows the spinner on load" />
+    <aura:attribute name="isOpen" type="Boolean" default="false" description="To open Modal on click of View All" />
+    <aura:attribute name="sortedBy" type="String" default="Workflow__c"/>
+    <aura:attribute name="sortedDirection" type="String" default="desc"/>
+    <aura:attribute name="enableCheckbox" type="Boolean" />
+    <aura:attribute name="displayMessage" type="String" description="To display message on header"/>
+    <aura:attribute name="displayBodyMessage" type="String" description="To display message on body"/>
+    
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="shows error message" />
+    <aura:attribute name="isAlert" type="Boolean" default="false" description="displays or hides the error message" />
+    
+    <!--Handlers and events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-theme_default slds-box" style="padding:0;">
+        <lightning:layout verticalAlign="center" multipleRows="false" class="slds-p-top_x-small">
+            <lightning:layoutItem padding="horizontal-small">
+                <lightning:icon class="changeColor" size="medium" iconName="custom:custom3" />
+            </lightning:layoutItem>
+            <lightning:layoutItem class="slds-text-heading_small">
+                <b>{!$Label.c.CLIFv20129}</b>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="horizontal-small" class="slds-container_right slds-p-top_small">
+                <lightning:input aura:id="ooo-id" type="toggle" label="Enable" class="slds-checkbox_toggle slds-grid"
+                                 onchange="{!c.onEnableChecked}" checked="{!v.enableOutOfOffice}" />
+            </lightning:layoutItem>
+        </lightning:layout>
+        
+        <!-- Alert message for error -->
+        <aura:if isTrue="{!v.isAlert}">
+            <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                <h2>{!v.alertMessage}</h2>
+            </div>
+        </aura:if>
+        
+        <div class="slds-p-around_small" style="padding-top:0;position:relative;">
+            <div class="slds-p-around--xx-small">
+                <lightning:combobox aura:id="selectItem" name="Workflow" label="Select Workflow"
+                                    placeholder="Select"
+                                    value="{!v.selectedWF}"
+                                    dropdownAlignment="right"
+                                    variant="standard"
+                                    messageWhenValueMissing="You Must Select the Value"
+                                    onchange="{!c.handleOptionSelected}"
+                                    options="{!v.WorkflowOptions}" />
+            </div>
+            <div class="slds-p-around--xx-small">
+                <c:IFv2_LookupComponent aura:id="UserId"
+                                        label="User"
+                                        object="User"
+                                        searchField="Name"
+                                        placeholder="Search"
+                                        iconName="standard:user"
+                                        order="Name"
+                                        limit="5"
+                                        readOnly="false"
+                                        loadingMessage="Loading..."
+                                        errorMessage="Invalid input"
+                                        value="{!v.selectedId}"
+                                        valueLabel="{!v.UserName}"
+                                        filter="{!'isActive = true AND Id !=\''+v.userId+'\''}" />
+            </div>
+            
+            <lightning:layout verticalAlign="center" horizontalAlign="spread" multipleRows="false" class="custom-p-top_small">
+                <lightning:layoutItem>
+                    
+                </lightning:layoutItem>
+                <lightning:layoutItem>
+                    <lightning:buttonGroup class="slds-button-group-row">
+                        <lightning:button variant="Neutral" label="Cancel" title="Cancel" onclick="{! c.cancelButton }"/>
+                        <lightning:button variant="brand" label="Save" title="Save" onclick="{! c.saveOutOfOffice }"/>
+                        <!--<lightning:buttonIcon iconName="utility:check" alternativeText="Update" onclick="{! c.saveOutOfOffice }" variant="brand" />
+                        <lightning:buttonIcon iconName="utility:close" alternativeText="Cancel" onclick="{! c.cancelButton }" />-->
+                    </lightning:buttonGroup>
+                </lightning:layoutItem>
+            </lightning:layout>
+            
+            <!-- displays the request data-->
+            <aura:if isTrue="{!(v.UserDetails.length > 0)}">
+                <article>
+                    <div class="slds-scrollable_y">
+                        <lightning:datatable class="datatableChild"
+                                             keyField="id"
+                                             data="{! v.UserDetailsMini }"
+                                             columns="{! v.columns }"
+                                             onsort="{!c.handleColumnSorting}"
+                                             sortedBy="{!v.sortedBy}"
+                                             sortedDirection="{!v.sortedDirection}"
+                                             hideCheckboxColumn="true"
+                                             onrowaction="{!c.DisableOutOfOffice}" />
+                        <footer class="slds-card__footer">
+                            <a class="slds-card__footer-action" href="javascript:void(0);" onclick="{!c.handleViewAll}">View All</a>
+                        </footer>
+                    </div>
+                </article>
+            </aura:if>
+            
+            <!-- Spinner -->
+            <aura:if isTrue="{!v.showSpinner}">
+                <div class="slds-spinner_container" style="border-radius: .25rem;">
+                    <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+                </div>
+            </aura:if>
+        </div>
+    </div>
+    
+    <!-- Modal to be displayed on update of check box-->
+    <aura:if isTrue="{!v.enableCheckbox}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeUpdateModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close" />
+                    <h2 class="slds-text-heading_medium slds-hyphenate slds-align_absolute-center">{!v.displayMessage}</h2>
+                </header>
+                
+                <!-- MODAL BOX BODY Part Start -->
+                <div class="slds-modal__content scroll">
+                    <h2 class="slds-text-heading_medium slds-hyphenate slds-align_absolute-center slds-p-bottom_medium slds-p-top_medium">{!v.displayBodyMessage}</h2>
+                </div>
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="No"
+                                      title="No"
+                                      onclick="{! c.closeUpdateModal }" />
+                    <lightning:button variant="brand" 
+                                      label="Yes"
+                                      title="Yes"
+                                      onclick="{! c.saveModal }" />
+                    
+                </footer>
+                
+                
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    
+    <!-- MODAL BOX Start --> 
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                
+                <!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close" />
+                    <h2 class="slds-text-heading_medium slds-hyphenate">{!$Label.c.CLIFv20129}</h2>
+                </header>
+                
+                <!-- MODAL BOX BODY Part Start -->
+                <div class="slds-modal__content scroll">
+                    <lightning:datatable class="datatableChild"
+                                         keyField="id"
+                                         data="{! v.UserDetails }"
+                                         columns="{! v.columns }"
+                                         onsort="{!c.handleColumnSorting}"
+                                         sortedBy="{!v.sortedBy}"  
+                                         sortedDirection="{!v.sortedDirection}"
+                                         hideCheckboxColumn="true"
+                                         onrowaction="{!c.DisableOutOfOffice}" />
+                </div>
+                
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{! c.closeModal }" />
+                    
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <!-- MODAL BOX Part END Here -->
+</aura:component>

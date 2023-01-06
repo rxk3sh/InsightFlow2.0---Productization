@@ -1,0 +1,35 @@
+.THIS.container {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: .25rem;
+    background: white;
+}
+
+.THIS .custom-datatable {
+    position: relative;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.THIS .slds-page-header .slds-form-element {
+    display: flex !important;
+    width: 100% !important;
+}
+
+.THIS .customRecordsToDisplay {
+    padding-bottom : 0.5rem;
+}
+
+.THIS .customRecordsDisplaySelect {
+    max-width: fit-content;
+}
+
+.THIS .download-icon .slds-button__icon_left {
+    margin-right: 0;
+}
+
+.THIS .custom-hide-scroll .slds-scrollable_y{
+    overflow-y: hidden !important;
+}

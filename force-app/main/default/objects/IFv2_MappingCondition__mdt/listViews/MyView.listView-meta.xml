@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyView</fullName>
+    <columns>RoleApproverMapping__c</columns>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>ControllingField__c</columns>
+    <columns>Mapping__c</columns>
+    <columns>Operator__c</columns>
+    <columns>Value__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ControllingField__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>RoleApproverMapping__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>My View</label>
+    <language>en_US</language>
+</ListView>

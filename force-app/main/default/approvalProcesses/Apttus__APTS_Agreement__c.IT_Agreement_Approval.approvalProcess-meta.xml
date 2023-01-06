@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ApprovalProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <allowRecall>false</allowRecall>
+    <allowedSubmitters>
+        <type>owner</type>
+    </allowedSubmitters>
+    <approvalPageFields>
+        <field>Name</field>
+        <field>Owner</field>
+    </approvalPageFields>
+    <approvalStep>
+        <allowDelegate>false</allowDelegate>
+        <assignedApprover>
+            <approver>
+                <name>Data_Protection_Queue</name>
+                <type>queue</type>
+            </approver>
+            <whenMultipleApprovers>FirstResponse</whenMultipleApprovers>
+        </assignedApprover>
+        <label>Data Protection Approval</label>
+        <name>Data_Protection_Approval</name>
+    </approvalStep>
+    <description>Approval for DPA</description>
+    <emailTemplate>CLM_Email_Templates/DPA_Approval_Email</emailTemplate>
+    <enableMobileDeviceAccess>false</enableMobileDeviceAccess>
+    <entryCriteria>
+        <criteriaItems>
+            <field>Apttus__APTS_Agreement__c.DPA_ApprovalStatus__c</field>
+            <operation>equals</operation>
+            <value>Approval Required</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Apttus__APTS_Agreement__c.RecordType</field>
+            <operation>equals</operation>
+            <value>IT Service Agreement,IT License Agreement</value>
+        </criteriaItems>
+    </entryCriteria>
+    <finalApprovalActions>
+        <action>
+            <name>DPA_Approved</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>DPA_Approved</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalApprovalActions>
+    <finalApprovalRecordLock>false</finalApprovalRecordLock>
+    <finalRejectionActions>
+        <action>
+            <name>DPA_Rejected</name>
+            <type>Alert</type>
+        </action>
+        <action>
+            <name>DPA_Rejected</name>
+            <type>FieldUpdate</type>
+        </action>
+    </finalRejectionActions>
+    <finalRejectionRecordLock>false</finalRejectionRecordLock>
+    <initialSubmissionActions>
+        <action>
+            <name>DPA_Submitted</name>
+            <type>FieldUpdate</type>
+        </action>
+        <action>
+            <name>Submitted_for_DPA_Approval</name>
+            <type>Task</type>
+        </action>
+    </initialSubmissionActions>
+    <label>IT Agreement Approval</label>
+    <processOrder>1</processOrder>
+    <recordEditability>AdminOnly</recordEditability>
+    <showApprovalHistory>true</showApprovalHistory>
+</ApprovalProcess>

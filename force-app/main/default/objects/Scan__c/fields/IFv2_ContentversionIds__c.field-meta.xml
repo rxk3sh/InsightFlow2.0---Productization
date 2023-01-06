@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ContentversionIds__c</fullName>
+    <description>used to store content version ids of scan record and also used to store glacier id when scan is archived</description>
+    <externalId>false</externalId>
+    <label>ContentversionIds</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Html</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AllowCreate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked if users should be allowed to create records from the lookup field</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Checked if users should be allowed to create records from the lookup field</inlineHelpText>
+    <label>Allow Record Creation</label>
+    <type>Checkbox</type>
+</CustomField>

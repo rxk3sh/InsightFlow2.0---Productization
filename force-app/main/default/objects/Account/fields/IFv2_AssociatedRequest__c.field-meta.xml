@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_AssociatedRequest__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Used in employee related list</description>
+    <externalId>false</externalId>
+    <label>Associated Request</label>
+    <referenceTo>IFv2_RequestExtension1__c</referenceTo>
+    <relationshipLabel>Account</relationshipLabel>
+    <relationshipName>Account</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workflows__c</fullName>
+    <description>To select the workflow to which this record is related to.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Select the workflow to which this record is related to.</inlineHelpText>
+    <label>Workflow</label>
+    <referenceTo>IFv2_Workflows__mdt</referenceTo>
+    <relationshipLabel>Custom Validation Rules</relationshipLabel>
+    <relationshipName>Custom_Validation_Rules</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PredefinedWorkflow__c</fullName>
+    <description>Used in Predefined Workflow approvals</description>
+    <externalId>false</externalId>
+    <label>Predefined Workflow</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>RegionPredefinedWF__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ISP Concept Review and Approval in Department(for SGCN Users)</fullName>
+                <default>false</default>
+                <label>ISP Concept Review and Approval in Department(for SGCN Users)</label>
+            </value>
+            <value>
+                <fullName>BCP Application - External Web Access application</fullName>
+                <default>false</default>
+                <label>BCP Application - External Web Access application</label>
+            </value>
+            <value>
+                <fullName>FTS Application-Change request-Parameter/Batch Job Change</fullName>
+                <default>false</default>
+                <label>FTS Application-Change request-Parameter/Batch Job Change</label>
+            </value>
+            <value>
+                <fullName>FTS Application-Change request-Process/Function Change</fullName>
+                <default>false</default>
+                <label>FTS Application-Change request-Process/Function Change</label>
+            </value>
+            <value>
+                <fullName>FTS Application-Change request-Role Change</fullName>
+                <default>false</default>
+                <label>FTS Application-Change request-Role Change</label>
+            </value>
+            <value>
+                <fullName>FTS Application-User and Authorization</fullName>
+                <default>false</default>
+                <label>FTS Application-User and Authorization</label>
+            </value>
+            <value>
+                <fullName>SG Quotation Approval</fullName>
+                <default>false</default>
+                <label>SG Quotation Approval</label>
+            </value>
+            <value>
+                <fullName>SPA Approval</fullName>
+                <default>false</default>
+                <label>SPA Approval</label>
+            </value>
+            <value>
+                <fullName>RBET Staff Internal Changes</fullName>
+                <default>false</default>
+                <label>RBET Staff Internal Changes</label>
+            </value>
+            <value>
+                <fullName>Approval of various moviments</fullName>
+                <default>false</default>
+                <label>Approval of various moviments</label>
+            </value>
+            <value>
+                <fullName>Ballots Exchange</fullName>
+                <default>false</default>
+                <label>Ballots Exchange</label>
+            </value>
+            <value>
+                <fullName>Change Price / Quota</fullName>
+                <default>false</default>
+                <label>Change Price / Quota</label>
+            </value>
+            <value>
+                <fullName>Creating Miscellaneous Clients</fullName>
+                <default>false</default>
+                <label>Creating Miscellaneous Clients</label>
+            </value>
+            <value>
+                <fullName>Emission of international debit Invoices</fullName>
+                <default>false</default>
+                <label>Emission of international debit Invoices</label>
+            </value>
+            <value>
+                <fullName>Entrance Request for External</fullName>
+                <default>false</default>
+                <label>Entrance Request for External</label>
+            </value>
+            <value>
+                <fullName>FCM Layout Approval</fullName>
+                <default>false</default>
+                <label>FCM Layout Approval</label>
+            </value>
+            <value>
+                <fullName>Financial Process Request - Debit customers</fullName>
+                <default>false</default>
+                <label>Financial Process Request - Debit customers</label>
+            </value>
+            <value>
+                <fullName>Financial Process Request - Release Notice DG: Automakers</fullName>
+                <default>false</default>
+                <label>Financial Process Request - Release Notice DG: Automakers</label>
+            </value>
+            <value>
+                <fullName>IFE Process</fullName>
+                <default>false</default>
+                <label>IFE Process</label>
+            </value>
+            <value>
+                <fullName>Invoice Service Approval</fullName>
+                <default>false</default>
+                <label>Invoice Service Approval</label>
+            </value>
+            <value>
+                <fullName>IO/RS/PEP Register on SAP - SG Factory</fullName>
+                <default>false</default>
+                <label>IO/RS/PEP Register on SAP - SG Factory</label>
+            </value>
+            <value>
+                <fullName>MAE Acquisition and release</fullName>
+                <default>false</default>
+                <label>MAE Acquisition and release</label>
+            </value>
+            <value>
+                <fullName>Packaging Approval of Purchased Parts</fullName>
+                <default>false</default>
+                <label>Packaging Approval of Purchased Parts</label>
+            </value>
+            <value>
+                <fullName>Price changing/Debit or Credit Invoice - Complementar Notes</fullName>
+                <default>false</default>
+                <label>Price changing/Debit or Credit Invoice - Complementar Notes</label>
+            </value>
+            <value>
+                <fullName>Price changing/Debit or Credit Invoice - SG - AL Logistics</fullName>
+                <default>false</default>
+                <label>Price changing/Debit or Credit Invoice - SG - AL Logistics</label>
+            </value>
+            <value>
+                <fullName>Price changing/Debit or Credit Invoice - SG - AL Sales</fullName>
+                <default>false</default>
+                <label>Price changing/Debit or Credit Invoice - SG - AL Sales</label>
+            </value>
+            <value>
+                <fullName>Price changing/Debit or Credit Invoice - SG – APV</fullName>
+                <default>false</default>
+                <label>Price changing/Debit or Credit Invoice - SG – APV</label>
+            </value>
+            <value>
+                <fullName>Price changing/Debit or Credit Invoice - SG - Technical Fator/Coming</fullName>
+                <default>false</default>
+                <label>Price changing/Debit or Credit Invoice - SG - Technical Fator/Coming</label>
+            </value>
+            <value>
+                <fullName>Product Release Request SG</fullName>
+                <default>false</default>
+                <label>Product Release Request SG</label>
+            </value>
+            <value>
+                <fullName>Quote Form - Low Fixed Asset by Scrap</fullName>
+                <default>false</default>
+                <label>Quote Form - Low Fixed Asset by Scrap</label>
+            </value>
+            <value>
+                <fullName>Quote Form – Transfer of Fixed Assets</fullName>
+                <default>false</default>
+                <label>Quote Form – Transfer of Fixed Assets</label>
+            </value>
+            <value>
+                <fullName>Quote Form - Low Fixed Asset for Sale</fullName>
+                <default>false</default>
+                <label>Quote Form - Low Fixed Asset for Sale</label>
+            </value>
+            <value>
+                <fullName>Quote Form - Low Fixed Asset-Donation</fullName>
+                <default>false</default>
+                <label>Quote Form - Low Fixed Asset-Donation</label>
+            </value>
+            <value>
+                <fullName>Regularization of access to banks</fullName>
+                <default>false</default>
+                <label>Regularization of access to banks</label>
+            </value>
+            <value>
+                <fullName>Request Credit Limit Change</fullName>
+                <default>false</default>
+                <label>Request Credit Limit Change</label>
+            </value>
+            <value>
+                <fullName>Request for Advance Payment to Suppliers</fullName>
+                <default>false</default>
+                <label>Request for Advance Payment to Suppliers</label>
+            </value>
+            <value>
+                <fullName>Update IFE</fullName>
+                <default>false</default>
+                <label>Update IFE</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>ISP Concept Review and Approval in Department(for SGCN Users)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>BCP Application - External Web Access application</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>FTS Application-Change request-Parameter/Batch Job Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>FTS Application-Change request-Process/Function Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>FTS Application-Change request-Role Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>FTS Application-User and Authorization</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>SG Quotation Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>SPA Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>RBET Staff Internal Changes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Approval of various moviments</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Ballots Exchange</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Change Price / Quota</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Creating Miscellaneous Clients</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Emission of international debit Invoices</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Entrance Request for External</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>FCM Layout Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Financial Process Request - Debit customers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Financial Process Request - Release Notice DG: Automakers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>IFE Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Invoice Service Approval</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>IO/RS/PEP Register on SAP - SG Factory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>MAE Acquisition and release</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Packaging Approval of Purchased Parts</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Price changing/Debit or Credit Invoice - Complementar Notes</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Price changing/Debit or Credit Invoice - SG - AL Logistics</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Price changing/Debit or Credit Invoice - SG - AL Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Price changing/Debit or Credit Invoice - SG – APV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Price changing/Debit or Credit Invoice - SG - Technical Fator/Coming</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Product Release Request SG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Quote Form - Low Fixed Asset by Scrap</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Quote Form – Transfer of Fixed Assets</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Quote Form - Low Fixed Asset for Sale</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Quote Form - Low Fixed Asset-Donation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Regularization of access to banks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Request Credit Limit Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Request for Advance Payment to Suppliers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Update IFE</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

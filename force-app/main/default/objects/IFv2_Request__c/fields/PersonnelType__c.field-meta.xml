@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PersonnelType__c</fullName>
+    <externalId>false</externalId>
+    <label>Personnel type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ApprovalRoute__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tariff</fullName>
+                <default>false</default>
+                <label>Tariff</label>
+            </value>
+            <value>
+                <fullName>Non-tariff</fullName>
+                <default>false</default>
+                <label>Non-tariff</label>
+            </value>
+            <value>
+                <fullName>Below SL1</fullName>
+                <default>false</default>
+                <label>Below SL1</label>
+            </value>
+            <value>
+                <fullName>Above incl. SL1</fullName>
+                <default>false</default>
+                <label>Above incl. SL1</label>
+            </value>
+            <value>
+                <fullName>Special Tasks</fullName>
+                <default>false</default>
+                <label>Special Tasks</label>
+            </value>
+            <value>
+                <fullName>VA/VN</fullName>
+                <default>false</default>
+                <label>VA/VN</label>
+            </value>
+            <value>
+                <fullName>Trainee / others</fullName>
+                <default>false</default>
+                <label>Trainee / others</label>
+            </value>
+            <value>
+                <fullName>SL1 - SL5</fullName>
+                <default>false</default>
+                <label>SL1 - SL5</label>
+            </value>
+            <value>
+                <fullName>RG-VA/VN</fullName>
+                <default>false</default>
+                <label>RG-VA/VN</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Praxisstudenten</fullName>
+                <default>false</default>
+                <label>Special working conditions – Praxisstudenten</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Praktikant</fullName>
+                <default>false</default>
+                <label>Special working conditions – Praktikant</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Leasing</fullName>
+                <default>false</default>
+                <label>Special working conditions – Leasing</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Sonstiges</fullName>
+                <default>false</default>
+                <label>Special working conditions – Sonstiges</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Abschlussarbeiten / wissenschaftliche Arbeiten</fullName>
+                <default>false</default>
+                <label>Special working conditions – Abschlussarbeiten / wissenschaftliche Arbeiten</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Doktoranden</fullName>
+                <default>false</default>
+                <label>Special working conditions – Doktoranden</label>
+            </value>
+            <value>
+                <fullName>SL1</fullName>
+                <default>false</default>
+                <label>SL1</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>SG CN</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Tariff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>SG CN</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Non-tariff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>Below SL1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>Above incl. SL1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>Special Tasks</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>VA/VN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>Trainee / others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <valueName>SL1 - SL5</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <valueName>RG-VA/VN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Leasing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <valueName>SL1</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Praxisstudenten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Praktikant</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Sonstiges</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Abschlussarbeiten / wissenschaftliche Arbeiten</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG DE HiP</controllingFieldValue>
+            <controllingFieldValue>SG DE St</controllingFieldValue>
+            <valueName>Special working conditions – Doktoranden</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

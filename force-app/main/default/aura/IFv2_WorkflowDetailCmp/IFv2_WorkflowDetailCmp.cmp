@@ -1,0 +1,55 @@
+<!--
+* 
+* @ Name 	:	IFv2_WorkflowDetailCmp
+* @ Purpose : 	Display the Workflow Details
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   08-11-2018      |  madhuravani.b@absyz.com      |  1.0          |  Initial Version
+*
+-->
+<aura:component controller = "IFv2_WorkflowListviewController" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global" >
+    <aura:attribute name = "recordId" type = "String"/>
+    <aura:attribute name = "workFlowName" type = "String" />
+    <aura:attribute name = "recordType" type = "String" default = "Custom Setting"/>
+    <aura:attribute name = "record" type = "Object" />
+    <aura:attribute name = "actionType" type = "String"/>
+    <aura:attribute name = "editMode" type = "Boolean" default="false"/>
+    <aura:attribute name = "newButton" type = "boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String"/>
+    <aura:attribute name="isAlertError" type="Boolean" default="false"/>
+    <aura:registerEvent name="cmpEditEvent" type="c:IFv2_EditEvent"/>
+    
+    <div class="slds-page-header slds-page-header_record-home">
+        <lightning:layout verticalAlign="center" multipleRows="true">
+            <!-- Header part with Request name -->
+            <lightning:layoutItem padding="around-small" size="6" smallDeviceSize="12" mediumDeviceSize="6">
+                <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="false">
+                    <lightning:layoutItem>
+                        <lightning:icon size="medium" iconName="standard:flow"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="horizontal-small">
+                        <ui:outputText class="slds-page-header__name" value="Workflow"/>
+                        <ui:outputText class="slds-page-header__title slds-truncate" value="{!v.workFlowName}"/>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small" size="6" smallDeviceSize="12" mediumDeviceSize="6" >
+                <div class="slds-float--right">
+                    <lightning:buttonGroup>
+                        <aura:if isTrue="{!!v.editMode}">
+                            <lightning:button label="Edit" title="Edit" onclick="{!c.editRecord}"/>
+                            <lightning:button label="Execute" title="Neutral action" onclick="{! c.executeWorkflow }"/>
+                        </aura:if>
+                    </lightning:buttonGroup>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <c:IFv2_FieldSetFormLayoutParent_Component newButton = "{!v.newButton}" recordId="{!v.recordId}" sObjectName="{!v.sObjectName}" recordType = "{!v.recordType}"  isEditMode = "{!v.editMode}" record="{!v.record}"/>
+</aura:component>

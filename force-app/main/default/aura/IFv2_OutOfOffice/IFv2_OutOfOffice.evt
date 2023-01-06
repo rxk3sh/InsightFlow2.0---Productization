@@ -1,0 +1,17 @@
+<!--
+* 
+* @ Name 	:	IFv2_OutOfOffice
+* @ Purpose : 	Event which holds the values of Out Of Office
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   12-03-2019      |  madhuravani.b@absyz.com   	|  1.0          |  Initial Version
+*
+-->
+<aura:event type="Application" description="Sample Application Event">
+    <aura:attribute name="OutOfOfficeWorkflow" type="sObject[]" 
+                    description="holds Workflow details from custom settings"/>
+    <aura:attribute name="OutOfOfficeUsers" type="sObject[]" 
+                    description="holds list of Users"/>
+</aura:event>

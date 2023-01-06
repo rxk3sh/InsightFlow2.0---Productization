@@ -1,0 +1,157 @@
+<!--
+* 
+* @ Name 	:	IFv2_FieldSetFormLayoutParent_Component
+* @ Purpose : 	Display Page Layout of record using field sets for different sections 
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   31-10-2018      |  anoop.ravindran@absyz.com	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component controller="IFv2_FieldSetFormController" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName" access="global">
+    
+    <!-- Attributes Alert message and spinner -->
+    <aura:attribute name="alertMessage" type="String[]"/>
+    <aura:attribute name="isAlert" type="Boolean" />
+    <aura:attribute name="showSpinner" type="Boolean" />
+    
+    <!-- Attributes used in Logic -->
+    <aura:attribute name="record" type="Object" default="{}" />
+    <aura:attribute name="initRecord" type = "Object" default="{}" />
+    <aura:attribute name="metadata" type="Object[]" />
+    <aura:attribute name="sectionList" type="Object[]" />
+    <aura:attribute name="purchaseMetadata" type="Object[]" />
+    <aura:attribute name="metadataName" type="String" default="IFv2_Section__mdt" />
+    <aura:attribute name="workFlowName" type="String" />
+    <aura:attribute name="requiredFieldsList" type="String[]" default="[]" />
+    <aura:attribute name="recordType" type="String" default="Custom Object" />
+    <aura:attribute name="saveButtonLabel" type="String" />
+    <aura:attribute name="actionType" type="String" />
+    <aura:attribute name="editMode" type="String" />
+    <aura:attribute name="expandAll" type="String" />
+    <aura:attribute name="loadValidation" type="Boolean" default="false" />
+    <aura:attribute name="purchaseWorkflow" type="Boolean" default="false" />
+    <aura:attribute name="validationCmp" type="Aura.Component[]" />
+    <aura:attribute name="requiredFieldListWrapper" type="Object[]" />
+    <aura:attribute name="newButton" type="Boolean" />
+    <aura:attribute name="fieldNames" type="String[]" />
+    <aura:attribute name="LDSError" type="String" />
+    <aura:attribute name="loadRecord" type="Boolean" default="false" />
+    <aura:attribute name="recordLoad" type="Boolean" default="false" />
+    <aura:attribute name="isEditMode" type="Boolean" default="false" />
+    <aura:attribute name="currentUser" type="String" default="false" />
+    
+    <!-- Events & Handlers >-->
+    <aura:registerEvent name="editEvent" type="c:IFv2_EditButtonHandleEvent" />
+    <aura:registerEvent name="dependentEvt" type="c:IFv2_SetDependentValues" />
+    
+    <!-- Component event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="cmpEvent" event="c:IFv2_EditModeEvent" action="{!c.toggleEditMode}" />
+    <aura:handler event="c:IFv2_ShowSpinner" action="{!c.toggleSpinner}"/>	<!-- Event to show and hide spinner -->
+    
+    <!-- Application Event handlers -->
+    <aura:handler event="c:IFv2_Headerevent" action="{!c.reloadRecord}" />
+    <aura:handler event="c:IFv2_EditEvent" action="{!c.toggleEditMode}" />
+    <aura:handler event="c:IFv2_RefreshRelatedListEvent" action="{!c.reloadRecord}" />
+    <aura:handler event="c:IFv2_UpdateConcessionRecord" action="{!c.updateConcessionRecord}"/>
+    
+    <!-- dynamic references components -->
+    <aura:dependency resource="markup://c:IFv2_InputField" type="COMPONENT"/>
+    <aura:dependency resource="markup://c:IFv2_OutputField" type="COMPONENT"/>
+    <aura:dependency resource="markup://c:IFv2_LookupComponent" type="COMPONENT"/>
+    
+    <!-- Displays Error Message -->
+    <aura:if isTrue="{!v.isAlert}">
+        <div aura:id="alert-id">
+            <div class="slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                
+                <lightning:layout horizontalAlign="center" verticalAlign="center" multipleRows="true" class="custom-error-message">
+                    
+                    <lightning:layoutItem flexibility="auto" smallDeviceSize="10" mediumDeviceSize="10" largeDeviceSize="10" size="10" class="custom-error-css-header">
+                        <lightning:icon iconName="utility:error" variant="inverse" alternativeText="error" class="custom-icon" />
+                        ERROR<br/>     
+                    </lightning:layoutItem>
+                    <aura:iteration items = "{!v.alertMessage}" var = "message">
+                        <lightning:layoutItem flexibility="auto" smallDeviceSize="10" mediumDeviceSize="10" largeDeviceSize="10" size="10" class="custom-error-css slds-m-left_x-small">
+                            <h2><li>{!message}<br/></li></h2>
+                        </lightning:layoutItem>
+                    </aura:iteration>
+                </lightning:layout>
+            </div>
+        </div>
+    </aura:if>
+    
+    <!-- Lightning Data Service -->
+    <aura:if isTrue="{!v.loadRecord}">
+        <force:recordData recordId="{!v.recordId}"
+                          aura:id="forceRecord"
+                          targetFields="{!v.record}"
+                          fields="{!v.fieldNames}"
+                          mode="EDIT"
+                          recordUpdated="{!c.recordLoaded}"
+                          targetError="{!v.LDSError}" />
+    </aura:if>
+    
+    <!--Markup body Start-->
+    <div style="position:relative">
+        <aura:if isTrue="{!v.recordLoad}">
+            <!-- Form component start -->
+            <div class="slds-card slds-p-left_small slds-p-right_small slds-p-bottom_large">
+                
+                <lightning:layout verticalAlign="center" horizontalAlign="end" class="slds-p-around--x-small">
+                    <div onclick="{!c.expandAll}" class="slds-m-right_xx-small slds-text-align_right" title="Expand All"><a>Expand All</a></div>|
+                    <div onclick="{!c.collapseAll}" class="slds-m-left_xx-small slds-text-align_right" title="Collapse All"><a>Collapse All</a></div>
+                </lightning:layout>
+                
+                <!-- Iterate over sections -->
+                <aura:iteration items="{!v.metadata}" var="data">
+                    
+                    <!-- If collapsible section -->
+                    <c:IFv2_CollapsibleSection title="{!data.section.Name__c}" stateAll="{!v.expandAll}">
+                        
+                        <!-- Display fields in the section -->
+                        <c:IFv2_FieldSetForm_Component section="{!data.section}"
+                                                       data="{!data}"
+                                                       fieldSetName="{!data.section.Value__c}" 
+                                                       recordType="{!v.recordType}" 
+                                                       requiredFieldList="{!v.requiredFieldsList}" 
+                                                       sObjectName="{!v.sObjectName}" 
+                                                       record="{!v.record}" 
+                                                       recordId="{!v.recordId}" 
+                                                       readOnlySection="{!data.section.ReadOnly__c}"
+                                                       viewPage="{!v.isEditMode}" 
+                                                       currentUser="{!v.currentUser}"
+                                                       sectionId="{!data.section.Id}" 
+                                                       isAlert="{!v.isAlert}" 
+                                                       alertMessage="{!v.alertMessage}" 
+                                                       StoreInValue2="{!data.section.HasExtendedValue__c}" 
+                                                       fieldSetName2 ="{!data.section.ExtendedValue__c}"/> 
+                        
+                    </c:IFv2_CollapsibleSection>
+                </aura:iteration>
+                
+                <!-- Save and cancel buttons -->
+                <lightning:layout horizontalAlign="center">
+                    <aura:if isTrue="{!v.isEditMode}">
+                        <div class="float">
+                            <lightning:button label="Cancel" onclick="{!c.cancel}" />
+                            <lightning:button label="{!v.saveButtonLabel}" onclick="{!c.fireSaveEvent}" variant="brand" />
+                        </div>
+                    </aura:if>
+                </lightning:layout>
+                
+            </div>
+            {!v.body}
+        </aura:if>
+        
+        <!-- Spinner -->
+        <aura:if isTrue="{!v.showSpinner}">
+            <div class="slds-spinner_container">
+                <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

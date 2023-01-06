@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Area__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OE</fullName>
+                <default>false</default>
+                <label>OE</label>
+            </value>
+            <value>
+                <fullName>OES</fullName>
+                <default>false</default>
+                <label>OES</label>
+            </value>
+            <value>
+                <fullName>IAM</fullName>
+                <default>false</default>
+                <label>IAM</label>
+            </value>
+            <value>
+                <fullName>Several</fullName>
+                <default>false</default>
+                <label>Several</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,106 @@
+<!--
+* 
+* @ Name 	:	IFv2_WorkflowListViewCmp
+* @ Purpose : 	This is a component for displaying the workflow listview
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   30-10-2018      |  pradeep.chary@absyz.com(yv)	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component access="global" controller="IFv2_WorkflowListviewController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" >
+    
+    <!-- Attributes for data table -->
+    <aura:attribute name="AllRecordList" type="SObject" description="backup attribute to keep all the data"/>
+    <aura:attribute name="filteredData" type="SObject" description="attribute to display data in the data table"/>
+    <aura:attribute name="columnLabels" type="List" description="attribute for the columns of the data table"/>
+    <aura:attribute name="sObjectName" type="String" default="IFv2_Workflow__c"/>
+    <aura:attribute name="sortedBy" type="String" default="Workflow__c"/>
+    <aura:attribute name="sortedDirection" type="String" default="asc"/>
+    <aura:attribute name="userProfile" type="String" description="attribute to store the logged in user profile"/>
+    <aura:attribute name="showSpinner" type="Boolean" default="true"/>
+    <aura:attribute name="isSystemAdmin" type="Boolean" default="false"/>
+    <aura:attribute name="newButton" type="Boolean" default="false"/>
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String"/>
+    <aura:attribute name="emptyMessage" type="String"/>
+    <aura:attribute name="isAlert" type="Boolean" default="false"/>
+    <aura:attribute name="isEmpty" type="Boolean" default="false"/>
+    
+    <!-- Handlers and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:IFv2_SearchBarForWorkflowEvent" action="{!c.handlesearchKeyChange}"/> 
+    
+    <!-- Alert message for error -->
+    <aura:if isTrue="{!v.isAlert}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>{!v.alertMessage}</h2>
+        </div>
+    </aura:if>
+    
+    <!-- Page Markup Header -->
+    <div class="container">
+        <div class="slds-page-header">
+            <lightning:layout verticalAlign="center" multipleRows="true">
+                <lightning:layoutItem size="12" padding="around-small" smallDeviceSize="12" mediumDeviceSize="7" largeDeviceSize="8">
+                    <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="false">
+                        <lightning:layoutItem>
+                            <lightning:icon size="medium" iconName="standard:flow"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="horizontal-small">
+                            <ui:outputText class="slds-page-header__title slds-truncate" value="{!$Label.c.CLIFv20028}"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+                
+                <!-- SearchBar Component -->
+                <lightning:layoutItem size="12" padding="around-small" smallDeviceSize="12" mediumDeviceSize="5" largeDeviceSize="4">
+                    <lightning:layout verticalAlign="center" horizontalAlign="end">
+                        <c:IFv2_SearchBarForWorkflowCmp placeholder="{!$Label.c.CLIFv20027}"/>
+                        <aura:if isTrue="{!v.isSystemAdmin}">
+                            <button class="slds-button slds-button_neutral slds-float_right" onclick="{!c.createWorkflow}">New</button>
+                        </aura:if>
+                    </lightning:layout>
+                </lightning:layoutItem>
+                <!-- End of SearchBar Component -->
+            </lightning:layout>
+        </div>
+        
+        <!-- Data Table for Workflow Listview
+   Attributes:-
+                data: holds the workflow custom settings
+                columns: holds the column labels, types
+                keyField: id
+                onrowaction: Edit,View,Execute actions handler 
+                onsort: sorting of the data table columns
+                sortedBy: column by which the table should be sorted
+                sortedDirection: Ascending or Descending (asc or desc)
+                hideCheckboxColumn: Either true or false to display the checkbox column-->
+        
+        <div aura:id="datatable-id" class="custom-datatable second-column-bold lex-column-bold">
+            <lightning:datatable data="{!v.filteredData}"
+                                 columns="{!v.columnLabels}"
+                                 keyField="id"
+                                 onrowaction="{! c.handleRowAction}"
+                                 onsort="{!c.handleColumnSorting}"
+                                 sortedBy="{!v.sortedBy}"  
+                                 sortedDirection="{!v.sortedDirection}"
+                                 hideCheckboxColumn="true"/>
+            
+            <!-- display message for empty list -->
+            <aura:if isTrue="{!v.isEmpty}">
+                <p>{!v.emptyMessage}</p>
+            </aura:if>
+            
+            <!-- Spinner -->
+            <aura:if isTrue="{!v.showSpinner}">
+                <div class="slds-spinner_container" style="border-radius: .25rem;">
+                    <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+                </div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

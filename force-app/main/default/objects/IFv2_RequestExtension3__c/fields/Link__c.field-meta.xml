@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Link__c</fullName>
+    <defaultValue>&quot;http://www.bosch.de/de/de/our_company_1/business_sectors_and_divisions_1/starter_motors_and_generators_1/starter-motors-and-generators.html&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Link</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

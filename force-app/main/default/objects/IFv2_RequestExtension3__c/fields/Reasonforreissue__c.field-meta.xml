@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reasonforreissue__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for reissue:</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tarja Magnética</fullName>
+                <default>false</default>
+                <label>Tarja Magnética</label>
+            </value>
+            <value>
+                <fullName>Quebra do Cartao</fullName>
+                <default>false</default>
+                <label>Quebra do Cartao</label>
+            </value>
+            <value>
+                <fullName>Roubo</fullName>
+                <default>false</default>
+                <label>Roubo</label>
+            </value>
+            <value>
+                <fullName>Clonagem</fullName>
+                <default>false</default>
+                <label>Clonagem</label>
+            </value>
+            <value>
+                <fullName>Perda</fullName>
+                <default>false</default>
+                <label>Perda</label>
+            </value>
+            <value>
+                <fullName>Numeracao Comprometida</fullName>
+                <default>false</default>
+                <label>Numeracao Comprometida</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

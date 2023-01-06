@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request Extension 3 - NALA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Request Extension 3 - NALA</value>
+    </caseValues>
+    <layouts>
+        <layout>Request Extension 3 - NALA Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>General - NALA</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>NA Journal Entry</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Order Experience Request</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Predefined Workflow Approvals</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Request for Corporate Card</section>
+        </sections>
+    </layouts>
+    <sharingReasons>
+        <label></label>
+        <name>SharingRecordsWithChatter</name>
+    </sharingReasons>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage></errorMessage>
+        <name>NumericFieldValidation</name>
+    </validationRules>
+</CustomObjectTranslation>

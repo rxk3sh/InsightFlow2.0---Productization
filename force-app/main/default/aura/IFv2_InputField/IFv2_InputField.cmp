@@ -1,0 +1,165 @@
+<!--
+* 
+* @ Name 	:	IFv2_InputField
+* @ Purpose : 	This is the generic input form
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   24-12-2018      |  pradeep.chary@absyz.com  	|  1.0          |  Initial Version
+*   20-08-2018      |  external.debasmita.rawooth@seg-automotive.com|  Added logic for SubjectType__c field for Purchasing WF
+-->
+
+<aura:component controller="IFv2_FieldSetFormController" implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="field" type="Object" />
+    <aura:attribute name="label" type="String" />
+    <aura:attribute name="value" type="String" />
+    <aura:attribute name="type" type="String" default="text" />
+    <aura:attribute name="placeholder" type="String" default="" />
+    <aura:attribute name="picklistvalues" type="String[]" default="[]" />
+    <aura:attribute name="helpText" type="String" />
+    <aura:attribute name="hasHelpText" type="Boolean" default="false" />
+    <aura:attribute name="required" type="Boolean" default="false" />
+    <aura:attribute name="updatedvaluelist" type="String[]" default="[]" />
+    <aura:attribute name="controllingFieldVal" type="String" />
+    <aura:attribute name="disable" type="Boolean" />
+    <aura:attribute name="workflow" type="String"/>
+    <aura:attribute name="isDecimal" type="Boolean"/>
+    
+    <!--Declare Attributes-->
+    <aura:attribute name="selectedList" type="Object[]" default="[]" description="Selected Picklist Values"/>
+    <aura:handler event="c:IFv2_DependentPicklistChangeEvt" action="{!c.handleDependentValues}" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-form-element">
+        <aura:if isTrue="{!not(or(v.type == 'datetime',v.type == 'multipicklist'))}">
+            <label class="slds-form-element__label">
+                <aura:if isTrue="{!v.required}">
+                    <abbr class="slds-required" title="required">* </abbr>
+                </aura:if>
+                {!v.label}
+            </label>
+            <div class="slds-form-element__icon">
+                <aura:if isTrue="{!v.hasHelpText}">
+                    <div class="slds-button slds-button_icon">
+                        <lightning:helptext content="{!v.helpText}" />
+                    </div>
+                </aura:if>
+            </div>
+        </aura:if>
+        <div class="slds-form-element__control">
+            <aura:if isTrue="{!v.type == 'date'}">
+                <lightning:input type="date" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" class="custom-label-hide" messageWhenBadInput ="{!$Label.c.CLIFv20075}" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'datetime'}">
+                <lightning:input type="datetime" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" messageWhenBadInput = "{!$Label.c.CLIFv20075}"/>
+            </aura:if>
+            <aura:if isTrue="{!or(or(v.type == 'text',v.type == 'email'),v.type == 'time')}">
+                <lightning:input type="{!v.type}" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" class="custom-label-hide" />
+            </aura:if>
+            <aura:if isTrue="{!v.type=='url'}">
+                <lightning:input value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" class="custom-label-hide" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'currency'}">
+                <lightning:input type="number" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" formatter="currency" 
+                                 required="{!v.required}" class="custom-label-hide" step="0.01" />
+            </aura:if>
+            <aura:if isTrue="{!or(v.type == 'integer',v.type == 'double')}">
+                <aura:if isTrue="{!v.isDecimal}">
+                    <lightning:input type="number" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                     required="{!v.required}" class="custom-label-hide" step="0.01"/>
+                    <aura:set attribute="else">
+                        <lightning:input type="number" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                         required="{!v.required}" class="custom-label-hide"/>
+                    </aura:set>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'percent'}">
+                <lightning:input type="number" formatter="percent-fixed" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" class="custom-label-hide" step="0.01" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'phone'}">
+                <lightning:input type="tel" value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                 required="{!v.required}" class="custom-label-hide" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'boolean'}">
+                <lightning:input type="checkbox" label="{!v.label}" checked="{!v.value}" 
+                                 required="{!v.required}" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'picklist'}">
+                <aura:if isTrue="{!v.field.APIName == 'SubjectType__c'}">
+                    <aura:if isTrue="{!v.workflow == $Label.c.CLIFv20005}">
+                        <lightning:select label="{!v.label}" value="{!v.value}" onchange="{!c.picklistValue}"
+                                          required="{!v.required}" class="custom-label-hide" disabled="{!v.disable}">
+                            <option value="" text="--None--" />
+                            <aura:iteration items="{!v.picklistvalues}" var="item">
+                                <aura:if isTrue="{!not(item == $Label.c.CLIFv20306)}">
+                                    <option value="{!item}" text="{!if(item=='Debit Notes','Credit Notes',item)}" selected = "{!v.value == item}"/>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:select>
+                        <aura:set attribute = "else">
+                            <aura:if isTrue="{!v.workflow == $Label.c.CLIFv20007}">
+                                <lightning:select label="{!v.label}" value="{!v.value}" onchange="{!c.picklistValue}"
+                                                  required="{!v.required}" class="custom-label-hide" disabled="{!v.disable}">
+                                    <option value="" text="--None--" />
+                                    <aura:iteration items="{!v.picklistvalues}" var="item">
+                                        <aura:if isTrue="{!item=='Agreements'}">
+                                            <option value="{!item}" text="{!if(item=='Agreements','Quota Change',item)}" selected = "{!v.value == item}"/>
+                                            <aura:set attribute = "else">
+                                                <aura:if isTrue="{!item=='Price Decision'}">
+                                                    <option value="{!item}" text="{!if(item=='Price Decision','Purchasing Decision (Complete Volume)',item)}" selected = "{!v.value == item}"/>
+                                                    <aura:set attribute = "else">
+                                                        <aura:if isTrue="{!item=='Price Decision (delta volume)'}">
+                                                            <option value="{!item}" text="{!if(item=='Price Decision (delta volume)','Purchasing Decision (delta Volume)',item)}" selected = "{!v.value == item}"/>
+                                                            <aura:set attribute = "else">
+                                                                <option value="{!item}" text="{!item}" selected = "{!v.value == item}" />
+                                                            </aura:set>
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                    <aura:set attribute = "else">
+                        <lightning:select label="{!v.label}" value="{!v.value}" onchange="{!c.picklistValue}"
+                                          required="{!v.required}" class="custom-label-hide" disabled="{!v.disable}">
+                            <option value="" text="--None--" />
+                            <aura:iteration items="{!v.picklistvalues}" var="item">
+                                <option value="{!item}" text="{!item}" selected = "{!v.value == item}" />
+                            </aura:iteration>
+                        </lightning:select>
+                    </aura:set>
+                </aura:if>
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'textarea'}">
+                <lightning:textarea value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                    required="{!v.required}" class="custom-label-hide" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'richtextarea'}">
+                <lightning:inputRichText value="{!v.value}" placeholder="{!v.placeholder}" label="{!v.label}" 
+                                         class="custom-label-hide" />
+            </aura:if>
+            <aura:if isTrue="{!v.type == 'multipicklist'}">
+                <lightning:dualListbox aura:id="select"
+                                       name="dualbox"
+                                       label="{!v.label}"
+                                       sourceLabel="Available"
+                                       selectedLabel="Selected"
+                                       options="{!v.picklistvalues}"
+                                       required="{!v.required}"
+                                       value="{!v.selectedList}"
+                                       onchange="{!c.handleChange}"/>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

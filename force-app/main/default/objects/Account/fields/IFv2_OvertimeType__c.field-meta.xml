@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_OvertimeType__c</fullName>
+    <description>Used in China Leave and overtime request</description>
+    <externalId>false</externalId>
+    <label>Overtime Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OT on working day</fullName>
+                <default>false</default>
+                <label>OT on working day</label>
+            </value>
+            <value>
+                <fullName>OT on off day</fullName>
+                <default>false</default>
+                <label>OT on off day</label>
+            </value>
+            <value>
+                <fullName>OT on public holiday</fullName>
+                <default>false</default>
+                <label>OT on public holiday</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

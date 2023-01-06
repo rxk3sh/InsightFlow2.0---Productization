@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AQT_Quotation</fullName>
+    <description>Quotation Number
+SEG IAM Number
+Quantity Requested
+Price Proposal
+Discount in %
+End Price
+EBIT in %
+Quantity (final)
+Total Amount</description>
+    <displayedFields>
+        <field>AQT_QuotationNumber__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>AQT_TotalAmount__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>AQT_Discount__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>AQT_NetAmount__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Quotation</label>
+</FieldSet>

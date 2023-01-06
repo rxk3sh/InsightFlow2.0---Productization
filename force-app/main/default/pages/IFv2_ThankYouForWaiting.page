@@ -1,0 +1,66 @@
+<!--
+* 
+* @ Name 	:	IFv2_ThankYouForWaiting
+* @ Purpose : 	Thank you page to redirect to the current system
+* @ Author	: 	Madhura vani 
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   26-11-2018      |  madhuravani.b@absyz.com      |  1.0          |  Initial Version   
+-->
+
+<apex:page showHeader="false" sidebar="false" controller="IFv2_ThankYouForWaitingController" action="{!redirectToActualRecord}">
+    <style>
+        h1 {
+        left: 0;
+        line-height: 200px;
+        margin: auto;
+        margin-top: -100px;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        }
+    </style>
+    
+    <apex:pageMessages />
+    <script>
+    fucntion clickHme() {
+        clickHme();
+    }
+    </script>
+    
+    <apex:form id="formId">
+        <h1>
+            <apex:slds />
+            <apex:actionFunction id="navigateToHome" action="{!clickHme}" name="navigateToHome" />
+            <apex:outputPanel rendered="{!NOT(displayPopUp)}">
+                <div class="slds-spinner_container" style="position: fixed;" >
+                    <div role="status" class="slds-spinner slds-spinner--large slds-spinner--brand">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </apex:outputPanel>
+            
+            <!-- / SPINNER -->
+        </h1>
+        
+        <apex:outputPanel rendered="{!displayPopUp}">
+            <div class="demo-only" style="height: 640px;">
+                <section role="dialog" tabindex="-1" aria-label="Meaningful description of the modal content" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                    <div class="slds-modal__container">
+                        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                            {!$Label.CLIFv20088} 
+                        </div>
+                        <footer class="slds-modal__footer">
+                            <button type ="button" onclick ="navigateToHome()" value ="{!$Label.CLIFv20089}" Class="slds-button slds-button--brand">
+                                {!$Label.CLIFv20089}
+                            </button>
+                        </footer>
+                    </div>
+                </section>
+                <div class="slds-backdrop slds-backdrop_open"></div>
+            </div>
+        </apex:outputPanel>
+    </apex:form>
+</apex:page>

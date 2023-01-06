@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkflowType__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used in Request for Corporate Card</inlineHelpText>
+    <label>Workflow Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Card Solicitation</fullName>
+                <default>false</default>
+                <label>Card Solicitation</label>
+            </value>
+            <value>
+                <fullName>2ª Way - Card</fullName>
+                <default>false</default>
+                <label>2ª Way - Card</label>
+            </value>
+            <value>
+                <fullName>2ª Way - Password Card</fullName>
+                <default>false</default>
+                <label>2ª Way - Password Card</label>
+            </value>
+            <value>
+                <fullName>Card Cancellation</fullName>
+                <default>false</default>
+                <label>Card Cancellation</label>
+            </value>
+            <value>
+                <fullName>Work trips - 90 days</fullName>
+                <default>false</default>
+                <label>Work trips - 90 days</label>
+            </value>
+            <value>
+                <fullName>Data modification</fullName>
+                <default>false</default>
+                <label>Data modification</label>
+            </value>
+            <value>
+                <fullName>Credit limits modification</fullName>
+                <default>false</default>
+                <label>Credit limits modification</label>
+            </value>
+            <value>
+                <fullName>Unlock Corporate Card</fullName>
+                <default>false</default>
+                <label>Unlock Corporate Card</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>RULE000211</label>
+    <protected>false</protected>
+    <values>
+        <field>ApproverValidation__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>BothFieldsOnExtensionObject__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>DependentFieldAPI__c</field>
+        <value xsi:type="xsd:string">Approver6__c</value>
+    </values>
+    <values>
+        <field>ExtensionAPIName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>GroupCheckbox__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>HasExtensionObject__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>MultiSelectPicklist__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>RelatedListRecordType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>RelatedList__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>ValidationErrorMessage__c</field>
+        <value xsi:type="xsd:string">Please fill in Approver 6</value>
+    </values>
+    <values>
+        <field>ValidationFieldAPI__c</field>
+        <value xsi:type="xsd:string">Role06__c</value>
+    </values>
+    <values>
+        <field>ValidationFieldValue__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Workflows__c</field>
+        <value xsi:type="xsd:string">ICOWorkflow6</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,114 @@
+<!--
+* 
+* @ Name 	:	IFv2_HomePageMyRequests
+* @ Purpose : 	Child component to display the Request information based on the status
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   01-11-2018      |  madhuravani.b@absyz.com		|  1.0          |  Initial Version
+*
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" controller="IFv2_HomePageController">
+    
+    <!-- Request object details -->
+    <aura:attribute name="requestData" type="List" description="holds the request data"/>
+    <aura:attribute name="status" type="String" description="stores the status type"/>
+    <aura:attribute name="sectionHeader" type="String" description="holds the Request header"/>
+    <aura:attribute name="sObjectName" type="String" description="holds the sObject name"/>
+    
+    <!-- attributes for toggling records based on limit -->
+    <aura:attribute name="isShowLink" type="Boolean" description="Holds the no.of records to be displayed"/>
+    <aura:attribute name="showMore" type="Boolean" default="false"/>
+    <aura:attribute name="limit" type="Integer" description="no of records to be displayed on page load"/>
+    <aura:attribute name="limitAll" type="Integer" description="holds the count to display when show less is clicked"/>
+    <aura:attribute name="displaymessage" type="Boolean" description="To dsiplay message"/>
+     <!-- Aura Attribute Definition -->
+    <aura:attribute name="alertMsg" type="String" description="Warning alert message" default = "{!$Label.c.CLIFv20237}" />	
+                
+    
+    
+    <!-- Alert Messages -->
+    <aura:attribute name="alertMessage" type="String" description="handles alert message"/>
+    <aura:attribute name="isAlert" type="Boolean" description="shows or hides alert messages"/>
+    <aura:attribute name="showSpinner" type="Boolean" />
+    
+    <!-- Handler which calls on page load -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" description="loads on page load"/>
+    
+    <div style="position:relative">
+        <!-- shows the data in article tag -->
+        <article class="slds-card forceBaseCard backgroundClass" style="background:#fdfdfd;" >
+            <!-- Display error message -->
+            <aura:if isTrue="{!v.isAlert}">
+                <div aura:id="alert-id">
+                    <div class="slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                        <lightning:layout horizontalAlign="center" verticalAlign="center" multipleRows="false" class="error-messageDiv">
+                            <lightning:layoutItem flexibility="auto" smallDeviceSize="10" mediumDeviceSize="10" largeDeviceSize="10" size="10" class="error-contentDiv">
+                                <lightning:icon iconName="utility:error" variant="inverse" alternativeText="error" class="custom-icon" />
+                                <h2>{!v.alertMessage}</h2>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div>
+                </div>
+            </aura:if>
+            <aura:if isTrue="{!v.displaymessage}">
+                
+                <!-- Division to show message on page load. -->
+                <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+                    
+                    <h2><b>{!v.alertMsg}</b></h2>
+                    <!-- Link To navigate --> 
+                   <!-- <b> <a class="slds-p-left_xx-small" href="{!$Label.c.CLIFv20086}" target="_blank"> Link </a> </b>     -->
+                    
+                </div>                    
+                
+            </aura:if>
+            <div class="slds-card__header slds-grid">
+                <div class="slds-media slds-media--center slds-has-flexi-truncate">
+                    <div class="slds-media__body">
+                        <!-- displays section header -->
+                        <h2 class="header-title-container" style="font-size:12pt;"> 
+                            {!v.sectionHeader}
+                        </h2>
+                    </div>	
+                </div>
+            </div>
+            <div class="slds-card__body slds-card__body--inner">
+                <ul id ="{!v.status}" aura:id="ulId" class="pendingApprovalCardList">
+                    <!-- Iterating the request records and displaying based on the status -->
+                    <aura:iteration items="{!v.requestData}" var="cus" indexVar="i" end="{!v.limit}">
+                        <li data-index="{!i}" class="pending-approval-card-row slds-tile slds-hint-parent runtime_approval_processPendingApprovalCardRow">
+                            <!-- URL which navigates to the detail page -->
+                            <ui:outputURL value="{! '/' + cus.key}" label="{!cus.value}"/>
+                        </li><br/>
+                    </aura:iteration>
+                </ul>
+                <aura:if isTrue="{!not(empty(v.requestData))}">
+                    <aura:if isTrue="{!v.isShowLink}">
+                        <aura:if isTrue="{!v.showMore}">
+                            <div aura:id="showMore" onclick="{!c.showMoreDiv}">
+                                <a href="javascript:void(0);" >{!$Label.c.CLIFv20010}</a>
+                            </div>
+                            <aura:set attribute="else">
+                                <div aura:id="showLess" onclick="{!c.showLessDiv}">
+                                    <a href="javascript:void(0);" >{!$Label.c.CLIFv20011}</a>
+                                </div>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <aura:set attribute="else">{!$Label.c.CLIFv20012}</aura:set>
+                </aura:if>
+            </div>
+        </article>
+        
+        <!-- Spinner -->
+        <aura:if isTrue="{!v.showSpinner}">
+            <div class="slds-spinner_container" style="border-radius: .25rem">
+                <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+            </div>
+        </aura:if>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,42 @@
+<!--
+* 
+* @ Name :IFv2_GenerateChallanPage
+* @ Purpose : To generate challan
+* @ Author: Naga Sai
+*
+*   Date            |  Developer Name                  |  Version      |  Changes
+* ======================================================================================================
+*   08-05-2019      |  nagasai.chalamalasetti@absyz.com|  1.0          |  Initial Version
+*
+-->
+
+<apex:page standardController="IFv2_Request__c" extensions="IFv2_GenerateChallanController" applyHtmlTag="true" applyBodyTag="false" showHeader="false" > 
+    <html>
+        <script type="text/javascript">
+        var image;
+        var canvasimage;
+        function printPDF() {
+            document.getElementById("printbutton").style.display = "none";
+            window.print();
+        }
+       
+        </script>
+        <apex:form >
+            <head>
+                <body>
+                    <style>
+                        table, th, td,tr {
+                        border: 1px solid black;
+                        border-collapse: collapse;
+                        width:100;
+                        }
+                    </style>
+                    <div id="printbutton">
+                        <button onclick="printPDF();" class="button"> Print </button>
+                    </div>
+                    <apex:outputText value="{!challanHTML}" escape="false" />
+                </body>
+            </head>
+        </apex:form>
+    </html>
+</apex:page>

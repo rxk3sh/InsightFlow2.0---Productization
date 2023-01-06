@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Summary__c</fullName>
+    <description>Used in HU Scrapping Workflow</description>
+    <externalId>false</externalId>
+    <formula>IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow1.Name__c, 
+Workflow__c + &apos; - Approval for Missing Goods Receipt&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow2.Name__c, 
+Workflow__c + &apos; - Approval for Price Variance&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow3.Name__c, 
+Workflow__c + &apos; - Approval for Quantity Variance&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow4.Name__c, 
+Workflow__c + &apos; - Approval for Functional Correctness&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow5.Name__c, 
+Workflow__c + &apos; - Approval for Unplanned Delivery Cost&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow6.Name__c, 
+Workflow__c + &apos; - Approval for FI Workflows (non-PO related invoices)&apos;, 
+IF(Workflow__c == $CustomMetadata.IFv2_Workflows__mdt.ICOWorkflow8.Name__c, 
+Workflow__c + &apos; - Approval for Price Check&apos;, 
+&apos;&apos;)))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Summary</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

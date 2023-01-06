@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsApproverOnly__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please check the checkbox if the section is to be displayed only to the Approvers</inlineHelpText>
+    <label>Approver Only</label>
+    <type>Checkbox</type>
+</CustomField>

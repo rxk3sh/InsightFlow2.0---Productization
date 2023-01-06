@@ -1,0 +1,51 @@
+<!--
+* 
+* @ Name 	:	IFv2_HeaderChildCmp
+* @ Purpose : 	This is the custom request header component
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   29-10-2018      |  pradeep.chary@absyz.com(es)	|  1.0          |  Initial Version
+*   01-11-2018      |  madhuravani.b@absyz.com		|  1.1          |  Added the popup functionality for custom Approve button, Delete button
+*   23-03-2019      |  vivek.kothalanka@absyz.com   |  2.0          |  Update for Concession
+-->
+
+<aura:component controller="IFv2_HeaderController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    
+    <!-- Attributes for button display logic-->
+    <aura:attribute name="button" type="Object" description="Stores the buttons related information from Custom metadata"/>
+    <aura:attribute name="recordId" type="String" description="Id of the current record"/>
+    <aura:attribute name="index" type="String" description="Index value of aura iteration"/>
+    <aura:attribute name="type" type="String" description="Index value of aura iteration" />
+    <aura:attribute name="isFollowed" type="Boolean" description="Whether the current record is in followed status"/>
+    <aura:attribute name="workflow" type="String" description="TO store workflow name" />
+    <aura:attribute name="approverRoleName" type="String" default="" description="Holds the role of the current approver" />
+    <aura:attribute name="disabled" type="Boolean" />
+    <aura:attribute name="oldRequest" type="Boolean" />
+    <aura:attribute name="oldRequestRestart" type="Boolean" />
+    <aura:attribute name="approverSectionMetadata" type="Object" description="Stores metadata of all Approver Sections" />
+    
+    <!-- Attribute for modal display logic -->
+    <aura:attribute name="showModal" type="Boolean" default="false" description="Whether to show modal"/>
+    
+    <!-- Register events -->
+    <aura:registerEvent name="verifyEvent" type="c:IFv2_ValidationCheck_EVENT"/>
+    <aura:registerEvent name="componentEventFired" type="c:IFv2_ApprovePopupEvent"/>
+    <aura:registerEvent name="deleteEvent" type="c:IFv2_DeleteEvent"/>
+    <aura:registerEvent name="alertEvent" type="c:IFv2_AlertEvent"/>
+    <aura:registerEvent name="checkNowEvent" type="c:IFv2_ShowSpinner"/> 	<!-- Event to show spinner on requestr detail page -->
+    
+    
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- dynamic references components -->
+    <aura:dependency resource="markup://lightning:buttonStateful" type="COMPONENT"/>
+    <aura:dependency resource="markup://lightning:button" type="COMPONENT"/>
+    <aura:dependency resource="markup://lightning:fileUpload" type="COMPONENT"/>
+    
+    <!-- Dynamically created buttons are set to body -->
+    {!v.body}
+    
+</aura:component>

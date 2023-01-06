@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CategoryCodeDescription__c</fullName>
+    <description>Used in Concession Workflow</description>
+    <externalId>false</externalId>
+    <label>Category Code Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>QS-RM001-0010 Concession inhouse production (product)</fullName>
+                <default>false</default>
+                <label>QS-RM001-0010 Concession inhouse production (product)</label>
+            </value>
+            <value>
+                <fullName>QS-RM001-0020 Concession inhouse production (process)</fullName>
+                <default>false</default>
+                <label>QS-RM001-0020 Concession inhouse production (process)</label>
+            </value>
+            <value>
+                <fullName>QS-RM001-0030 Concession inhouse production (product and customer)</fullName>
+                <default>false</default>
+                <label>QS-RM001-0030 Concession inhouse production (product and customer)</label>
+            </value>
+            <value>
+                <fullName>QS-RM001-0040 Concession inhouse production (process and customer)</fullName>
+                <default>false</default>
+                <label>QS-RM001-0040 Concession inhouse production (process and customer)</label>
+            </value>
+            <value>
+                <fullName>QS-RM002-0030 Concession external procurement (supplier, SOP)</fullName>
+                <default>false</default>
+                <label>QS-RM002-0030 Concession external procurement (supplier, SOP)</label>
+            </value>
+            <value>
+                <fullName>QS-RM002-0040 Concession external procurement (supplier, repet. manufact.)</fullName>
+                <default>false</default>
+                <label>QS-RM002-0040 Concession external procurement (supplier, repet. manufact.)</label>
+            </value>
+            <value>
+                <fullName>QS-RM003-0050 Concession external procurement (internal, SOP)</fullName>
+                <default>false</default>
+                <label>QS-RM003-0050 Concession external procurement (internal, SOP)</label>
+            </value>
+            <value>
+                <fullName>QS-RM003-0060 Concession external procurement (internal, repet. manufact.)</fullName>
+                <default>false</default>
+                <label>QS-RM003-0060 Concession external procurement (internal, repet. manufact.)</label>
+            </value>
+            <value>
+                <fullName>QS-RM004-0010 pres-series conc.(in-house production) pre-series conc. (product)</fullName>
+                <default>false</default>
+                <label>QS-RM004-0010 pres-series conc.(in-house production) pre-series conc. (product)</label>
+            </value>
+            <value>
+                <fullName>QS-RM004-0020 pres-series conc.(in-house production) pre-series conc. (process)</fullName>
+                <default>false</default>
+                <label>QS-RM004-0020 pres-series conc.(in-house production) pre-series conc. (process)</label>
+            </value>
+            <value>
+                <fullName>QS-RM004-0030 pres-series conc.(in-house production) pre-series conc. (product and customer)</fullName>
+                <default>false</default>
+                <label>QS-RM004-0030 pres-series conc.(in-house production) pre-series conc. (product and customer)</label>
+            </value>
+            <value>
+                <fullName>QS-RM004-0040 pres-series conc.(in-house production) pre-series conc. (process and customer)</fullName>
+                <default>false</default>
+                <label>QS-RM004-0040 pres-series conc.(in-house production) pre-series conc. (process and customer)</label>
+            </value>
+            <value>
+                <fullName>QS-RM005-0070 pres-series conc.(external procurement) pre-series conc. (resp: internal)</fullName>
+                <default>false</default>
+                <label>QS-RM005-0070 pres-series conc.(external procurement) pre-series conc. (resp: internal)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>COND1296</label>
+    <protected>false</protected>
+    <values>
+        <field>ControllingField__c</field>
+        <value xsi:type="xsd:string">CompanyCode__c</value>
+    </values>
+    <values>
+        <field>ConvertCurrency__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>ConvertToCurrency__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CurrencyField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>CurrencyReferenceDateField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Mapping__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Operator__c</field>
+        <value xsi:type="xsd:string">Not Equals</value>
+    </values>
+    <values>
+        <field>RoleApproverMapping__c</field>
+        <value xsi:type="xsd:string">MAP000261</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">9000</value>
+    </values>
+</CustomMetadata>

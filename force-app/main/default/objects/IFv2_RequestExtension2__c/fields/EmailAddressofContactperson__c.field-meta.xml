@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmailAddressofContactperson__c</fullName>
+    <description>Used for Badgemanagement Workflow (mandatory in case of usage information =external)</description>
+    <externalId>false</externalId>
+    <label>Email address of contact person</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_CausesforSpecialFreightDelivery__c</fullName>
+    <description>WF - used in 42 Special Freights Approval</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the correct cause</inlineHelpText>
+    <label>Causes for Special Freight Delivery</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Delay in Customs Clearance</fullName>
+                <default>false</default>
+                <label>Delay in Customs Clearance</label>
+            </value>
+            <value>
+                <fullName>Delay in delivery packaging material - supplier</fullName>
+                <default>false</default>
+                <label>Delay in delivery packaging material - supplier</label>
+            </value>
+            <value>
+                <fullName>delay in delivery RM - supplier</fullName>
+                <default>false</default>
+                <label>delay in delivery RM - supplier</label>
+            </value>
+            <value>
+                <fullName>delay in delivery RM/WIP - SG plant</fullName>
+                <default>false</default>
+                <label>delay in delivery RM/WIP - SG plant</label>
+            </value>
+            <value>
+                <fullName>Delay of transport caused by LSP</fullName>
+                <default>false</default>
+                <label>Delay of transport caused by LSP</label>
+            </value>
+            <value>
+                <fullName>EDI Failure</fullName>
+                <default>false</default>
+                <label>EDI Failure</label>
+            </value>
+            <value>
+                <fullName>incorrect logistics planning / rescheduling - customer</fullName>
+                <default>false</default>
+                <label>incorrect logistics planning / rescheduling - customer</label>
+            </value>
+            <value>
+                <fullName>incorect logisting lanning / rescheduling - procurement</fullName>
+                <default>false</default>
+                <label>incorect logisting lanning / rescheduling - procurement</label>
+            </value>
+            <value>
+                <fullName>IT system breakdown</fullName>
+                <default>false</default>
+                <label>IT system breakdown</label>
+            </value>
+            <value>
+                <fullName>MAE breakdown (MAZE, spare parts)</fullName>
+                <default>false</default>
+                <label>MAE breakdown (MAZE, spare parts)</label>
+            </value>
+            <value>
+                <fullName>missing capacity at supplier</fullName>
+                <default>false</default>
+                <label>missing capacity at supplier</label>
+            </value>
+            <value>
+                <fullName>missing empties</fullName>
+                <default>false</default>
+                <label>missing empties</label>
+            </value>
+            <value>
+                <fullName>missing packaging materials</fullName>
+                <default>false</default>
+                <label>missing packaging materials</label>
+            </value>
+            <value>
+                <fullName>production backlog due to capacity issues</fullName>
+                <default>false</default>
+                <label>production backlog due to capacity issues</label>
+            </value>
+            <value>
+                <fullName>production backlog due to customer order changes</fullName>
+                <default>false</default>
+                <label>production backlog due to customer order changes</label>
+            </value>
+            <value>
+                <fullName>production backlog due to quality issues</fullName>
+                <default>false</default>
+                <label>production backlog due to quality issues</label>
+            </value>
+            <value>
+                <fullName>production backlog due to technical problems</fullName>
+                <default>false</default>
+                <label>production backlog due to technical problems</label>
+            </value>
+            <value>
+                <fullName>quality issue supplier</fullName>
+                <default>false</default>
+                <label>quality issue supplier</label>
+            </value>
+            <value>
+                <fullName>samples, parts for samles</fullName>
+                <default>false</default>
+                <label>samples, parts for samles</label>
+            </value>
+            <value>
+                <fullName>short-term customer order changes</fullName>
+                <default>false</default>
+                <label>short-term customer order changes</label>
+            </value>
+            <value>
+                <fullName>stock differences - finished goods</fullName>
+                <default>false</default>
+                <label>stock differences - finished goods</label>
+            </value>
+            <value>
+                <fullName>stock differences - raw materials</fullName>
+                <default>false</default>
+                <label>stock differences - raw materials</label>
+            </value>
+            <value>
+                <fullName>stock differences -WIP</fullName>
+                <default>false</default>
+                <label>stock differences -WIP</label>
+            </value>
+            <value>
+                <fullName>Trade show</fullName>
+                <default>false</default>
+                <label>Trade show</label>
+            </value>
+            <value>
+                <fullName>Transfer of production</fullName>
+                <default>false</default>
+                <label>Transfer of production</label>
+            </value>
+            <value>
+                <fullName>transport damage or force majeure</fullName>
+                <default>false</default>
+                <label>transport damage or force majeure</label>
+            </value>
+            <value>
+                <fullName>wrong deliver to customer - logistics quality</fullName>
+                <default>false</default>
+                <label>wrong deliver to customer - logistics quality</label>
+            </value>
+            <value>
+                <fullName>wrong delivery to customer - production quality</fullName>
+                <default>false</default>
+                <label>wrong delivery to customer - production quality</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OldRequests</fullName>
+    <columns>NAME</columns>
+    <columns>OldRequestName__c</columns>
+    <columns>Summary__c</columns>
+    <columns>Workflow__c</columns>
+    <columns>Status__c</columns>
+    <columns>OldRequest__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>OldRequest__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Old Requests</label>
+</ListView>

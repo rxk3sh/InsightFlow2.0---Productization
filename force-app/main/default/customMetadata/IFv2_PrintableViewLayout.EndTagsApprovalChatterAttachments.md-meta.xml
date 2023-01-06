@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>End Tags(Approval,Chatter,Attachments)</label>
+    <protected>false</protected>
+    <values>
+        <field>Division__c</field>
+        <value xsi:type="xsd:string">&lt;/h2&gt;&lt;/div&gt;</value>
+    </values>
+    <values>
+        <field>HTMLTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>HorizonatalLine__c</field>
+        <value xsi:type="xsd:string">&lt;hr/&gt;</value>
+    </values>
+    <values>
+        <field>ImageSourceTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ImageSpecsTag__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TableCellLabel__c</field>
+        <value xsi:type="xsd:string">&lt;/div&gt;&lt;/td&gt;</value>
+    </values>
+    <values>
+        <field>TableCellValue__c</field>
+        <value xsi:type="xsd:string">&lt;/div&gt;&lt;/td&gt;</value>
+    </values>
+    <values>
+        <field>TableRow__c</field>
+        <value xsi:type="xsd:string">&lt;/tr&gt;</value>
+    </values>
+    <values>
+        <field>Table__c</field>
+        <value xsi:type="xsd:string">&lt;/table&gt;</value>
+    </values>
+</CustomMetadata>

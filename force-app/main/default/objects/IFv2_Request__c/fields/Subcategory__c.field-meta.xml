@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subcategory__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Category</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>PredefinedWorkflow__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Motor de Partoda (ST)</fullName>
+                <default>false</default>
+                <label>Motor de Partoda (ST)</label>
+            </value>
+            <value>
+                <fullName>Alternadpr (CV/DT)</fullName>
+                <default>false</default>
+                <label>Alternadpr (CV/DT)</label>
+            </value>
+            <value>
+                <fullName>Aprovação de embalagem de peças compradas (outros GB&apos;s)</fullName>
+                <default>false</default>
+                <label>Aprovação de embalagem de peças compradas (outros GB&apos;s)</label>
+            </value>
+            <value>
+                <fullName>Liberação AA =&gt; GE e CV-GE</fullName>
+                <default>false</default>
+                <label>Liberação AA =&gt; GE e CV-GE</label>
+            </value>
+            <value>
+                <fullName>Liberação AA =&gt; ST, CV-ST e BPL</fullName>
+                <default>false</default>
+                <label>Liberação AA =&gt; ST, CV-ST e BPL</label>
+            </value>
+            <value>
+                <fullName>Liberação OE =&gt; GE e CV-GE</fullName>
+                <default>false</default>
+                <label>Liberação OE =&gt; GE e CV-GE</label>
+            </value>
+            <value>
+                <fullName>Liberação OE =&gt; ST, CV-ST e BPL</fullName>
+                <default>false</default>
+                <label>Liberação OE =&gt; ST, CV-ST e BPL</label>
+            </value>
+            <value>
+                <fullName>-</fullName>
+                <default>false</default>
+                <label>-</label>
+            </value>
+            <value>
+                <fullName>Dentro da empresa</fullName>
+                <default>false</default>
+                <label>Dentro da empresa</label>
+            </value>
+            <value>
+                <fullName>Entre empresas</fullName>
+                <default>false</default>
+                <label>Entre empresas</label>
+            </value>
+            <value>
+                <fullName>Entre plantas</fullName>
+                <default>false</default>
+                <label>Entre plantas</label>
+            </value>
+            <value>
+                <fullName>Itau</fullName>
+                <default>false</default>
+                <label>Itau</label>
+            </value>
+            <value>
+                <fullName>Citibank</fullName>
+                <default>false</default>
+                <label>Citibank</label>
+            </value>
+            <value>
+                <fullName>CEF</fullName>
+                <default>false</default>
+                <label>CEF</label>
+            </value>
+            <value>
+                <fullName>Banco do Brasil</fullName>
+                <default>false</default>
+                <label>Banco do Brasil</label>
+            </value>
+            <value>
+                <fullName>Bradesco</fullName>
+                <default>false</default>
+                <label>Bradesco</label>
+            </value>
+            <value>
+                <fullName>Santander</fullName>
+                <default>false</default>
+                <label>Santander</label>
+            </value>
+            <value>
+                <fullName>Deutsche</fullName>
+                <default>false</default>
+                <label>Deutsche</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>MAE Acquisition and release</controllingFieldValue>
+            <controllingFieldValue>Price changing/Debit or Credit Invoice - Complementar Notes</controllingFieldValue>
+            <controllingFieldValue>Price changing/Debit or Credit Invoice - SG - AL Logistics</controllingFieldValue>
+            <controllingFieldValue>Price changing/Debit or Credit Invoice - SG - AL Sales</controllingFieldValue>
+            <controllingFieldValue>Price changing/Debit or Credit Invoice - SG – APV</controllingFieldValue>
+            <controllingFieldValue>Price changing/Debit or Credit Invoice - SG - Technical Fator/Coming</controllingFieldValue>
+            <controllingFieldValue>Quote Form - Low Fixed Asset by Scrap</controllingFieldValue>
+            <controllingFieldValue>Approval of various moviments</controllingFieldValue>
+            <controllingFieldValue>Quote Form - Low Fixed Asset for Sale</controllingFieldValue>
+            <controllingFieldValue>Ballots Exchange</controllingFieldValue>
+            <controllingFieldValue>Quote Form - Low Fixed Asset-Donation</controllingFieldValue>
+            <controllingFieldValue>Change Price / Quota</controllingFieldValue>
+            <controllingFieldValue>Creating Miscellaneous Clients</controllingFieldValue>
+            <controllingFieldValue>Request Credit Limit Change</controllingFieldValue>
+            <controllingFieldValue>Emission of international debit Invoices</controllingFieldValue>
+            <controllingFieldValue>Request for Advance Payment to Suppliers</controllingFieldValue>
+            <controllingFieldValue>Entrance Request for External</controllingFieldValue>
+            <controllingFieldValue>Update IFE</controllingFieldValue>
+            <controllingFieldValue>FCM Layout Approval</controllingFieldValue>
+            <controllingFieldValue>Financial Process Request - Debit customers</controllingFieldValue>
+            <controllingFieldValue>Financial Process Request - Release Notice DG: Automakers</controllingFieldValue>
+            <controllingFieldValue>IFE Process</controllingFieldValue>
+            <controllingFieldValue>ISP Concept Review and Approval in Department(for SGCN Users)</controllingFieldValue>
+            <controllingFieldValue>BCP Application - External Web Access application</controllingFieldValue>
+            <controllingFieldValue>FTS Application-Change request-Parameter/Batch Job Change</controllingFieldValue>
+            <controllingFieldValue>FTS Application-Change request-Process/Function Change</controllingFieldValue>
+            <controllingFieldValue>FTS Application-Change request-Role Change</controllingFieldValue>
+            <controllingFieldValue>FTS Application-User and Authorization</controllingFieldValue>
+            <controllingFieldValue>SG Quotation Approval</controllingFieldValue>
+            <controllingFieldValue>SPA Approval</controllingFieldValue>
+            <controllingFieldValue>RBET Staff Internal Changes</controllingFieldValue>
+            <controllingFieldValue>Invoice Service Approval</controllingFieldValue>
+            <controllingFieldValue>IO/RS/PEP Register on SAP - SG Factory</controllingFieldValue>
+            <valueName>-</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging Approval of Purchased Parts</controllingFieldValue>
+            <valueName>Motor de Partoda (ST)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging Approval of Purchased Parts</controllingFieldValue>
+            <valueName>Alternadpr (CV/DT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Packaging Approval of Purchased Parts</controllingFieldValue>
+            <valueName>Aprovação de embalagem de peças compradas (outros GB&apos;s)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Release Request SG</controllingFieldValue>
+            <valueName>Liberação AA =&gt; GE e CV-GE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Release Request SG</controllingFieldValue>
+            <valueName>Liberação AA =&gt; ST, CV-ST e BPL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Release Request SG</controllingFieldValue>
+            <valueName>Liberação OE =&gt; GE e CV-GE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Release Request SG</controllingFieldValue>
+            <valueName>Liberação OE =&gt; ST, CV-ST e BPL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Form – Transfer of Fixed Assets</controllingFieldValue>
+            <valueName>Dentro da empresa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Form – Transfer of Fixed Assets</controllingFieldValue>
+            <valueName>Entre empresas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Quote Form – Transfer of Fixed Assets</controllingFieldValue>
+            <valueName>Entre plantas</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Itau</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Citibank</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>CEF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Banco do Brasil</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Bradesco</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Santander</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Deutsche</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regularization of access to banks</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

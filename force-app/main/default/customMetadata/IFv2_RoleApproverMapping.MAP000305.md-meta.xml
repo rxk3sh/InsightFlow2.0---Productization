@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MAP000305</label>
+    <protected>false</protected>
+    <values>
+        <field>AllowOverride__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>ApprovalRoute__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver10__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver11__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver12__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver13__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver14__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver15__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver16__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver17__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver18__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver19__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver1__c</field>
+        <value xsi:type="xsd:string">Change Me</value>
+    </values>
+    <values>
+        <field>Approver20__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver21__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver2__c</field>
+        <value xsi:type="xsd:string">Change Me</value>
+    </values>
+    <values>
+        <field>Approver3__c</field>
+        <value xsi:type="xsd:string">Change Me</value>
+    </values>
+    <values>
+        <field>Approver4__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver5__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver6__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver7__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver8__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Approver9__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Division__c</field>
+        <value xsi:type="xsd:string">SGMX</value>
+    </values>
+    <values>
+        <field>FreightPlant__c</field>
+        <value xsi:type="xsd:string">HiP</value>
+    </values>
+    <values>
+        <field>HigherLimit__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IsIndirectMapping__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>LowerLimit__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>MAEClassification__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PersonnelType__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>PredefinedWorkflow__c</field>
+        <value xsi:type="xsd:string">None</value>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">None</value>
+    </values>
+    <values>
+        <field>Role01__c</field>
+        <value xsi:type="xsd:string">Functional</value>
+    </values>
+    <values>
+        <field>Role02__c</field>
+        <value xsi:type="xsd:string">Cost Center</value>
+    </values>
+    <values>
+        <field>Role03__c</field>
+        <value xsi:type="xsd:string">Level 1</value>
+    </values>
+    <values>
+        <field>Role04__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role05__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role06__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role07__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role08__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role09__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role10__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role11__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role12__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role13__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role14__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role15__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role16__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role17__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role18__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role19__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role20__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Role21__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>Subcategory__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>TravelType__c</field>
+        <value xsi:type="xsd:string">Business - Domestic</value>
+    </values>
+    <values>
+        <field>ValueBRL__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ValueCNY__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ValueEur__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ValueINR__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>ValueUSD__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>WorkflowName__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Workflows__c</field>
+        <value xsi:type="xsd:string">ICOWorkflow6</value>
+    </values>
+</CustomMetadata>

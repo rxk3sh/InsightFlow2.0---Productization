@@ -1,0 +1,3 @@
+<design:component>
+    <design:attribute name="recordType" label="Record Type" dataSource="Custom Object,Custom Setting" default="Custom Object"/>
+</design:component>

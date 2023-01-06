@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UnPlannedDeliveryCosts__c</fullName>
+    <description>Used in ICO Workflow 5</description>
+    <externalId>false</externalId>
+    <formula>IF( Workflow__c == &apos;ICO Workflow - 5&apos;,RIGHT(Account__r.IFv2_ItemText__c, LEN(Account__r.IFv2_ItemText__c )- 2),&apos;&apos; )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>UnPlanned Delivery Costs</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

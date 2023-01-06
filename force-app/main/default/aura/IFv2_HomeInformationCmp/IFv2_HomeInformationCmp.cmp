@@ -1,0 +1,25 @@
+<!--
+* 
+* @ Name 	:	IFv2_HomeInformationCmp
+* @ Purpose : 	This component shows information on InsightFlow 1.0 home page
+* @ Author	: 	Veerendra
+*
+*   Date	        |  Developer Name                       |  Version      |  Changes
+* ======================================================================================================
+*   01-02-2019      |  veerendra.billakurthi@absyz.com		|  1.0          |  Initial Version
+*
+-->
+
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global">
+    
+    <!-- Aura Attribute Definition -->
+    <aura:attribute name="alertMsg" type="String" description="Warning alert message" default = "{!$Label.c.CLIFv20085}" />	
+    
+    <!-- Division to show message on page load. -->
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+            <h2><b>{!v.alertMsg}</b></h2>
+        <!-- Link To navigate --> 
+        <b> <a class="slds-p-left_xx-small" href="{!$Label.c.CLIFv20086}" target="_blank"> Link </a> </b>     
+            
+        </div>
+</aura:component>

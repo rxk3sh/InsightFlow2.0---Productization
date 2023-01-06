@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Workflows__c</fullName>
+    <description>Describes to which workflow record this section belongs to.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please select the workflow to which the section is related to</inlineHelpText>
+    <label>Workflows</label>
+    <referenceTo>IFv2_Workflows__mdt</referenceTo>
+    <relationshipLabel>Section</relationshipLabel>
+    <relationshipName>Section</relationshipName>
+    <required>false</required>
+    <type>MetadataRelationship</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ChinaCapitalizeEWAKToolinginSupplie</fullName>
+    <description>Used in China Capitalize Workflow</description>
+    <displayedFields>
+        <field>RequestExtension1__r.SupplierName__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>China Capitalize EWAK Tooling in Supplier</label>
+</FieldSet>

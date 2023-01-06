@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plant__c</fullName>
+    <externalId>false</externalId>
+    <label>Plant</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SGDE-St (Weilimdorf)</fullName>
+                <default>false</default>
+                <label>SGDE-St (Weilimdorf)</label>
+            </value>
+            <value>
+                <fullName>SGDE-Hi (Hildesheim)</fullName>
+                <default>false</default>
+                <label>SGDE-Hi (Hildesheim)</label>
+            </value>
+            <value>
+                <fullName>SDGE-Ig (Ingolstadt)</fullName>
+                <default>false</default>
+                <label>SDGE-Ig (Ingolstadt)</label>
+            </value>
+            <value>
+                <fullName>SGDE-Mu (München)</fullName>
+                <default>false</default>
+                <label>SGDE-Mu (München)</label>
+            </value>
+            <value>
+                <fullName>SGES-Tr (Treto)</fullName>
+                <default>false</default>
+                <label>SGES-Tr (Treto)</label>
+            </value>
+            <value>
+                <fullName>SGHU-Mc (Miskolc)</fullName>
+                <default>false</default>
+                <label>SGHU-Mc (Miskolc)</label>
+            </value>
+            <value>
+                <fullName>SGNA-Le (Lerma)</fullName>
+                <default>false</default>
+                <label>SGNA-Le (Lerma)</label>
+            </value>
+            <value>
+                <fullName>SGNA-Nv (Novi)</fullName>
+                <default>false</default>
+                <label>SGNA-Nv (Novi)</label>
+            </value>
+            <value>
+                <fullName>SGBR-It (Itupeva)</fullName>
+                <default>false</default>
+                <label>SGBR-It (Itupeva)</label>
+            </value>
+            <value>
+                <fullName>SGCN-Cs (Changsha)</fullName>
+                <default>false</default>
+                <label>SGCN-Cs (Changsha)</label>
+            </value>
+            <value>
+                <fullName>SGCN-Cc (Changchun)</fullName>
+                <default>false</default>
+                <label>SGCN-Cc (Changchun)</label>
+            </value>
+            <value>
+                <fullName>SGIN-Nh (Naganathapura)</fullName>
+                <default>false</default>
+                <label>SGIN-Nh (Naganathapura)</label>
+            </value>
+            <value>
+                <fullName>SGIN-Hs (Hassan)</fullName>
+                <default>false</default>
+                <label>SGIN-Hs (Hassan)</label>
+            </value>
+            <value>
+                <fullName>SGIN-Ci (Chennai)</fullName>
+                <default>false</default>
+                <label>SGIN-Ci (Chennai)</label>
+            </value>
+            <value>
+                <fullName>SGFR-Dy (Drancy)</fullName>
+                <default>false</default>
+                <label>SGFR-Dy (Drancy)</label>
+            </value>
+            <value>
+                <fullName>SGJP-Yh (Yokohama)</fullName>
+                <default>false</default>
+                <label>SGJP-Yh (Yokohama)</label>
+            </value>
+            <value>
+                <fullName>SGKR-Yo (Yongin-si)</fullName>
+                <default>false</default>
+                <label>SGKR-Yo (Yongin-si)</label>
+            </value>
+            <value>
+                <fullName>SGIT-Tn (Torino)</fullName>
+                <default>false</default>
+                <label>SGIT-Tn (Torino)</label>
+            </value>
+            <value>
+                <fullName>SGPT-Vc (Vila do Conde)</fullName>
+                <default>false</default>
+                <label>SGPT-Vc (Vila do Conde)</label>
+            </value>
+            <value>
+                <fullName>SGZA-Bi (Brits)</fullName>
+                <default>false</default>
+                <label>SGZA-Bi (Brits)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_OrganisationalUnit__c</fullName>
+    <description>Used in Personnel request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the organisational unit / mandatory field</inlineHelpText>
+    <label>Organisational Unit</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

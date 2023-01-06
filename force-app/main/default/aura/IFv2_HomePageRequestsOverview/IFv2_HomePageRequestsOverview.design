@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="status" label="Status" description="Show the default status on page load " />
+    <design:attribute name="showMessage" label="Show Message" /> 
+</design:component>

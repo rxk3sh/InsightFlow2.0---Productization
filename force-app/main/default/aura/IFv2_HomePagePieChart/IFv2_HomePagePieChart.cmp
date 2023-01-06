@@ -1,0 +1,86 @@
+<!--
+* 
+* @ Name 	:	IFv2_HomePagePieChart
+* @ Purpose : 	This Component is used to display the Pie Chart based on the Request status
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   27-02-2019      |  madhuravani.b@absyz.com   	|  1.0          |  Initial Version
+*
+-->
+<aura:component access="global" implements="flexipage:availableForAllPageTypes,force:appHostable">
+    
+    <!-- static resource -->
+    <ltng:require scripts="/resource/IFv2_PieChart" afterScriptsLoaded="{!c.onInit}"/>
+    
+    <!-- events and handlers -->
+    <aura:registerEvent name="requestStatus" type="c:IFv2_PieChart" />
+    
+    <!-- attributes -->
+    <aura:attribute name="scriptsLoaded" type="Boolean" default="{!false}"/>
+    <aura:attribute name="chartRendered" type="Boolean" default="{!false}" description="Flag to display the loading spinner."/>
+    <aura:attribute name="triggerRedraw" type="Boolean" default="{!false}" description="Flag that triggers redraw of the chart." access="private"/>
+    <aura:attribute name="displayAxis" type="Boolean" default="{!false}" description="Flag that triggers displaying the left and bottom axis labels." access="private"/>
+    <aura:attribute name="containerWidth" type="Integer" default="0" description="This is the avaliable width to draw our charts in pixels" access="private"/>
+    <aura:attribute name="yAxisLabelMaxHeight" type="Integer" default="100" description="This is the max width the y axis can grow to. It should be derived from chart height." access="private"/>
+    <aura:attribute name="thresholdLabel" type="String" default="Threshhold" description="Label that appears at the threshold value."/>
+    <aura:attribute name="thresholdValue" type="Integer" description="Value where the threshold line appears. "/>
+    
+    <aura:attribute name="type" type="String" required="{!true}" description="Type of the chart user wants to render."/>
+    <aura:attribute name="title" type="String" description="Title of the chart. Shows up at the top-left corner of the chart."/>
+    <aura:attribute name="leftSubtitle" type="String" description="Subtitle of the chart. Shows up at the bottom-left corner of the chart."/>
+    <aura:attribute name="rightSubtitle" type="String" description="Subtitle of the chart. Shows up at the bottom-right corner of the chart."/>
+    <aura:attribute name="data" type="Object" required="{!true}" description="The data based on which chart renders."/>
+    <aura:attribute name="fontSize" type="String" default=".8125rem" description="The font size of the div texts" access="private"/>
+    <aura:attribute name="mapReqColors" type="Object" description="holds colors from metadata"/>
+    
+    <!-- TOOLTIP SPECIFIC ATTRIBUTES -->
+    <aura:attribute name="tooltipHtml" type="String" description="Inner html for the tooltip div. This gets generated on mouseover of a datapoint" access="private"/>
+    <aura:attribute name="tooltipDisplay" type="String" default="none" description="Determines to show the tooltip or not" access="private"/>
+    <aura:attribute name="tooltipXPos" type="Integer" default="0" description="X position of the tooltip" access="private"/>
+    <aura:attribute name="tooltipYPos" type="Integer" default="0" description="Y position of the tooltip" access="private"/>
+    <aura:attribute name="tooltipOpacity" type="Integer" default="0" description="Opacity level of the tooltip. This is used to hide it visibly while the width is calculated" access="private"/>
+    <aura:attribute name="index" type="String" />
+    
+    <!-- Donut CHART SPECIFIC ATTRIBUTES -->
+    <aura:attribute name="segmentLabel" type="String" default="Label" description="Label that appears on the tooltip for the label section."/>
+    <aura:attribute name="valueLabel" type="String" default="Value" description="Label that appears on the tooltip for the value section"/>
+    
+    <!-- Rerender the chart if any attribute is changed -->
+    <aura:handler name="change" value="{!v.type}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.data}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.title}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.leftSubtitle}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.rightSubtitle}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.xAxisLabel}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.yAxisLabel}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.xAxisDataType}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.yAxisDataType}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.thresholdLabel}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.thresholdValue}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.orientation}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.pieDonutTooltipLabelText}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.pieDonutTooltipValueText}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.lowLabel}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.medLabel}" action="{!c.reRenderCharts}"/>
+    <aura:handler name="change" value="{!v.highLabel}" action="{!c.reRenderCharts}"/>
+    
+    <!-- CHANGE THE DOM AND FORCE RUN RERENDERER, WITHOUT CHANGING THE DOM RERENDER DOESN'T RUN -->
+    <div class="slds-hide">{!v.triggerRedraw}</div>
+    
+    <div aura:id="chartContainer" class="sc-position--relative">
+        <div aura:id="tooltipContainer" style="{!'display: ' + v.tooltipDisplay + '; position: absolute; top: ' + v.tooltipYPos + 'px; left: ' + v.tooltipXPos + 'px;'}" class="sc-tooltip">
+            <div class="label">
+                <aura:unescapedHtml value="{!v.tooltipHtml}"/>
+            </div>
+        </div>
+        <!--Make a copy to calculate width. Can't use the original since it flickers in firefox-->
+        <div aura:id="tooltipContainerCopy" class="sc-tooltip sc-hidden">
+            <div class="label">
+                <aura:unescapedHtml value="{!v.tooltipHtml}"/>
+            </div>
+        </div>
+        <div aura:id="chart"/>
+    </div>
+</aura:component>

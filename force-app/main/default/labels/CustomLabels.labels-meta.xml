@@ -1,0 +1,3879 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>APTS_Agreement_WizardID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APTS_Agreement_WizardID</shortDescription>
+        <value>a1A3i000000YjmGEAS</value>
+    </labels>
+    <labels>
+        <fullName>APTS_Agreement_Wizard_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Agreement Wizard Name</shortDescription>
+        <value>Agreement Request Portal</value>
+    </labels>
+    <labels>
+        <fullName>APTS_Approval_Email_Reply_To_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Email Reply To Address</shortDescription>
+        <value>approvalreplyservice@1-1ifyr6l14jia41l4rylk5dwpkxdq43i4iinxv0b1wrnlfjrljl.0y-1df4xuaq.eu17.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Approval_Email_Reply_To_Address</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Email Reply To Address</shortDescription>
+        <value>approvalreplyservice@1-1ifyr6l14jia41l4rylk5dwpkxdq43i4iinxv0b1wrnlfjrljl.0y-1df4xuaq.eu17.apex.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Approval_of_internat_credit_debit_invoice</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval_of_internat_credit_debit_invoice</shortDescription>
+        <value>0120Y000000a4amQAA</value>
+    </labels>
+    <labels>
+        <fullName>Barcode_Identifier</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Barcode_Identifier</shortDescription>
+        <value>71D;71D;71D</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00001</fullName>
+        <categories>Aftermarket quotation tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLAQT00001</shortDescription>
+        <value>To enter multiple part numbers kindly use a comma separator.For example F000BL07N1,F000BL07N2</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00002</fullName>
+        <categories>Aftermarket Quotation Tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This is an error message for duplicate part numbers</shortDescription>
+        <value>Duplicate Part Numbers exist. Kindly remove the duplicate and try again.</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00003</fullName>
+        <categories>Aftermarket quotation tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message while processing</shortDescription>
+        <value>An error occurred, please try again.</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00004</fullName>
+        <categories>Aftermarket quotation tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message to select data</shortDescription>
+        <value>Kindly choose to enter Part Number or upload an excel file.</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00005</fullName>
+        <categories>Aftermarket quotation tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Title to store product not found details under notes</shortDescription>
+        <value>Products are not found details</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00006</fullName>
+        <categories>Aftermarket quotation tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Select a record to remove</shortDescription>
+        <value>Kindly select a record to remove.</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00007</fullName>
+        <categories>Aftermarket Quotation Tool</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quote already submitted for approval</shortDescription>
+        <value>The quote is already submitted for approval.</value>
+    </labels>
+    <labels>
+        <fullName>CLAQT00008</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLAQT00008</shortDescription>
+        <value>The record has been created successfully.</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00001</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for accepting Terms of Use</shortDescription>
+        <value>TERMS OF USE</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00002</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for accepting Privacy Policy</shortDescription>
+        <value>PRIVACY POLICY</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00003</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - I have read the</shortDescription>
+        <value>* I have read the</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00004</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Registration Terms Of Use URL</shortDescription>
+        <value>https://www.seg-automotive.com/shopme/shopme-terms-of-use/</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00005</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Registration Privacy Policy URL</shortDescription>
+        <value>https://www.seg-automotive.com/shopme/shopme-privacy/</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00006</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>REGISTRATION</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00007</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>Terms and Conditions</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00008</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>SHIPPING ADDRESS</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00009</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>BILLING ADDRESS</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00010</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>REGISTRATION SUCCESS</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00011</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>Your request for registration has been sent.
+
+
+Please note that your request needs to be validated, you will receive an email acknowledgement shortly.</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00012</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on Registration page, for screen section</shortDescription>
+        <value>FINISH</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00013</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on B2B Registration Controller</shortDescription>
+        <value>TERMS OF USE Accepted</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00014</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used on B2B Order Status</shortDescription>
+        <value>Thanks a lot for your Order. We have Received it and it is being Status Changed Email Alert.</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00015</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_GB</language>
+        <protected>false</protected>
+        <shortDescription>This label is used to store Google Recaptcha Secret Key</shortDescription>
+        <value>6Lfja28cAAAAAF-o6Oz7pzc1I9S9lmd54_TWV5MW</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00016</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used to store Google Recaptcha Site Key</shortDescription>
+        <value>6LcpOekaAAAAAEb5xaJc1a9uobS0OaMWaj583mxA</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00017</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for FAQs component</shortDescription>
+        <value>Frequently asked questions</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00018</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for FAQs component</shortDescription>
+        <value>All Topics</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00019</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for FAQs component</shortDescription>
+        <value>Enter Keyword</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00020</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for social</shortDescription>
+        <value>FOLLOW OUR SOCIALS</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00021</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for privacy statement</shortDescription>
+        <value>Privacy Statement</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00022</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This Label is used for return order confirmation</shortDescription>
+        <value>Are you sure you want to return the order?</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00023</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for profile deletion confirmation</shortDescription>
+        <value>Are you sure you want to delete the profile?</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00024</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label is used for cancel order confirmation</shortDescription>
+        <value>Are you sure you want to cancel the order?</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00025</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>This label stores Order Summary Status values</shortDescription>
+        <value>Created,Acknowledged,Processing,Shipped</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00026</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Checkout TERMS OF USE URL</shortDescription>
+        <value>https://www.seg-automotive.com/shopme/shopme-terms-of-use/</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00027</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Checkbox validation message for Registration and Checkout Terms</shortDescription>
+        <value>Kindly accept the TERMS OF USE</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00028</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Checkbox validation message for Registration Privacy Policy</shortDescription>
+        <value>Kindly accept the PRIVACY POLICY</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00029</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - For Account Availability Header</shortDescription>
+        <value>Add Account</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00030</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - For Account Availability Body</shortDescription>
+        <value>Add account reference on the contact</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00031</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Enable Buyer Header</shortDescription>
+        <value>Enable Buyer Account</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00032</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Enable Buyer Body</shortDescription>
+        <value>Enable account as buyer account</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00033</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Enable Buyer Button</shortDescription>
+        <value>Enable</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00034</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Buyer Group Header</shortDescription>
+        <value>Add Buyer Group</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00035</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Buyer Group Body</shortDescription>
+        <value>Add Buyer Group to Buyer Account</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00036</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Buyer Group Button</shortDescription>
+        <value>Add Buyer Group</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00037</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Enable Customer User Header</shortDescription>
+        <value>Enable Customer User</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00038</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Enable Customer User Body</shortDescription>
+        <value>Enable user as customer user for B2B portal access</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00039</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Contact Point Address Header</shortDescription>
+        <value>Add Contact Point Addresses</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00040</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Contact Point Address Body</shortDescription>
+        <value>Add Shipping and Billing contact point addresses on Account</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00041</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Billing Contact Point Address Button</shortDescription>
+        <value>Add Billing Address</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00042</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Add Shipping Contact Point Address Button</shortDescription>
+        <value>Add Shipping Address</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00043</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Set Sharing Header</shortDescription>
+        <value>Set Sharing and Permission</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00044</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Set Sharing Button</shortDescription>
+        <value>Set Access</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00045</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Reset Password Header</shortDescription>
+        <value>Reset Password</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00046</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Contact Setup Assistant - Reset Password Button</shortDescription>
+        <value>Reset</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00047</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B Portal/Store URL</shortDescription>
+        <value>https://seg-automotive.force.com/segautomotivestore/s/</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00048</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Used on B2B Customer Feedback flow</shortDescription>
+        <value>FEEDBACK FORM</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00049</fullName>
+        <categories>B2B Authorized Users</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of authorized users</shortDescription>
+        <value>Customer Community Plus Login User</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00050</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Feedback form</shortDescription>
+        <value>Thank you for taking time and submitting us with your feedback. Feedback&apos;s from valued customer&apos;s like you will help us improve more.</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00051</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Aftermarket Queue Id</shortDescription>
+        <value>00G1v000009gftwEAA</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00052</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Invoice alert sender name</shortDescription>
+        <value>SEG Support</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00053</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Invoice alert reply to</shortDescription>
+        <value>ShopMe@seg-automotive.com</value>
+    </labels>
+    <labels>
+        <fullName>CLB2B00054</fullName>
+        <categories>B2B ShopMe</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>B2B - Template unique name for Invoice Email Notification</shortDescription>
+        <value>B2B_OrderSummaryUploadInvoice</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20001</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Indirect Purchasing (BuyerSubRegionMandatory)</shortDescription>
+        <value>Please fill in the Buyer Sub-Region.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20002</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Indirect Purchasing (ResponcibleBuyerMandatory)</shortDescription>
+        <value>Please fill in the Responsible Buyer</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20003</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Indirect Purchasing (BuyerRegionMandatory)</shortDescription>
+        <value>Please fill in the Buyer Region</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20004</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Indirect Purchasing (SubRegionMandatoryForEurope)</shortDescription>
+        <value>Sub Region is Mandatory when Region equals to Europe</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20005</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Indirect Purchasing Approval(storing workflow name)</shortDescription>
+        <value>Indirect Purchasing Approval</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20006</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>eSignature(StoringWorkflowName)</shortDescription>
+        <value>eSignature</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20007</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Purchasing Approval Workflow(Storing Workflow Name)</shortDescription>
+        <value>Purchasing Approval Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20008</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>System Administrator</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20009</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SG Standard User</shortDescription>
+        <value>SG Standard User,SG Standard User SF License,SG Standard User - MFA Exempt,Helpdesk Admin User</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20010</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in home Page to display Show More</shortDescription>
+        <value>Show More</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20011</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in home Page to display Show Less</shortDescription>
+        <value>Show Less</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20012</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in home Page when no records are displayed</shortDescription>
+        <value>No Records</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20013</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]Field Names for allowing Decimals</shortDescription>
+        <value>TotalAmount__c,FreightPrice__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20014</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Thank you Page</shortDescription>
+        <value>Thank you for Waiting, you will be redirected in 5 seconds to your request.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20015</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in  Indirect Purchasing Mapping to set Rest Regions</shortDescription>
+        <value>Africa - SouthAfrica,Asia - China,Asia - India,Asia - Japan,Asia - Korea,Europe - France,Europe - Italy,Europe - Portugal,Europe - Global,North America - Mexico	,North America - USA,South America - Brazil</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20016</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in direct Purchasing Mapping to set Rest Regions</shortDescription>
+        <value>Africa - SouthAfrica,Asia - China,Asia - India,Asia - Japan,Asia - Korea,Europe - France,Europe - Italy,Europe - Portugal,North America - Mexico	,North America - USA,South America - Brazil,Europe - Germany,Europe - Hungary,Europe - Spain</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20017</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approvers Gap</shortDescription>
+        <value>Please enter the approvers in an order without any gaps or fill the gaps in between.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20018</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI]Currency Conversion Not found</shortDescription>
+        <value>Invalid currency conversion. Please contact your System Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20019</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Help Page Text</shortDescription>
+        <value>Workflow Help Page</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20020</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20020</shortDescription>
+        <value>Europe - Hungary,Europe - Germany,Europe - Spain</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20021</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Workflow release of Documented Procedures(Storing Workflow Name)</shortDescription>
+        <value>Workflow release of documented procedures</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20022</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]Dummy User Id</shortDescription>
+        <value>0050Y000002UlsrQAC</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20023</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Value Independent Label(Storing Subject type Name)</shortDescription>
+        <value>Value Independent</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20024</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To store Overtime request WF</shortDescription>
+        <value>Overtime Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20025</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China Training Application</shortDescription>
+        <value>China Training Application</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20026</fullName>
+        <categories>Error message on rejection</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20026</shortDescription>
+        <value>Please provide a rejection reason!</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20027</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Search Bar Text</shortDescription>
+        <value>Search Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20028</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Workflow Header Name</shortDescription>
+        <value>Workflows</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20029</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20029</shortDescription>
+        <value>IFv2_RequestExtension1__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20030</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20030</shortDescription>
+        <value>IFv2_RequestExtension2__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20031</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20031</shortDescription>
+        <value>IFv2_RequestExtension3__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20032</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>Error Message:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20033</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>used in Order Experience Request workflow</shortDescription>
+        <value>Order Experience Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20034</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Column labels for Approval History Related List</shortDescription>
+        <value>Status,Comments,Actual Approver</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20035</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Column labels for Extended Approval History Related List</shortDescription>
+        <value>Step Name,Status,Comments,Assigned To,Actual Approver,Date</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20036</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Workflow Listview Column Labels</shortDescription>
+        <value>Workflow,Description,Reminder After (Days),Subsequent Reminder After (Days),Archiving After (Days),Process Owner,Local Expert</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20037</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Capitalize Approval Process</shortDescription>
+        <value>China MAE Application - Capitalize</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20038</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Combine Approval Process</shortDescription>
+        <value>China MAE Application - Combine</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20039</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Transfer Approval Process</shortDescription>
+        <value>China MAE Application - Transfer</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20040</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Lost Approval Process</shortDescription>
+        <value>China MAE Application - Lost</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20041</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Split approval Prccoess</shortDescription>
+        <value>China MAE Application - Split</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20042</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Application - Scrap Approval Process</shortDescription>
+        <value>China MAE Application - Scrap</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20043</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]CLIFv20043</shortDescription>
+        <value>Requests for corporate card</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20044</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20044</shortDescription>
+        <value>NA Journal Entry Application</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20045</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20045</shortDescription>
+        <value>HU Scrapping WorkOn</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20046</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20046</shortDescription>
+        <value>China Travel Application</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20047</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20047</shortDescription>
+        <value>Personnel Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20048</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delete Popup on Request</shortDescription>
+        <value>Are you sure you want to delete this Request?</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20049</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20049</shortDescription>
+        <value>Approval Process for Special Freights</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20050</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20050</shortDescription>
+        <value>At least one Attachment should be present</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20051</fullName>
+        <categories>InsightFlow 2.0 [Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used as a switch to delete scan records after they are archived</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20052</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20052</shortDescription>
+        <value>Approval Process for Special Freights</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20053</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20053</shortDescription>
+        <value>Predefined Workflow Approvals</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20054</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Workflows that need Approver mapping</shortDescription>
+        <value>Indirect Purchasing Approval,Purchasing Approval Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20055</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Convert Approver fields to lookups on Workflow Detail Page</shortDescription>
+        <value>Approver1__c,Approver2__c,Approver3__c,Approver4__c,Approver5__c,Approver6__c,Approver7__c,Approver8__c,Approver9__c,Approver10__c,LocalExpert__c,ProcessOwner__c,InformWhenApproved__c,InformWhenApproved2__c,InformWhenApproved3__c,InformWhenApproved4__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20056</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20056</shortDescription>
+        <value>MAE Approval Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20057</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Unknown Error</shortDescription>
+        <value>ERROR: Unknown Error</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20058</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20058</shortDescription>
+        <value>SG DE St</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20059</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] CLIFv20059</shortDescription>
+        <value>SG DE HiP</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20060</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Price Decision(Storing Subject type Name)</shortDescription>
+        <value>Price Decision</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20061</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Agreements(Storing Subject type Name)</shortDescription>
+        <value>Agreements</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20062</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Purchasing Orders(Storing Subject type Name)</shortDescription>
+        <value>Purchasing Orders</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20063</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI]CLIFv20063</shortDescription>
+        <value>Please Fill</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20065</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]Badge Management SEG-Stuttgart</shortDescription>
+        <value>Badge Management SEG - Stuttgart</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20066</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Alert message for approver</shortDescription>
+        <value>Please check first all the attachments before you are approving this Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20067</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error for reassigning to applicant</shortDescription>
+        <value>Request cannot be Reassigned to the Applicant</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20068</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of fields to be shown as lookup</shortDescription>
+        <value>InformWhenApproved__c,InformWhenApproved2__c,InformWhenApproved3__c,InformWhenApproved4__c,LocalExpert__c,ProcessOwner__c,IFv2_LegacyActualApprover__c,IFv2_LegacyAssignedTo__c,IFv2_Legacysubmitter__c,InformWhenRejected__c,InformWhenRejected2__c,InformWhenRejected3__c,InformWhenRejected4__c,Approver1__c,Approver2__c,Approver3__c,Approver4__c,Approver5__c,Approver6__c,Approver7__c,Approver8__c,Approver9__c,Approver10__c,Approver11__c,Approver12__c,Approver13__c,Approver14__c,Approver15__c,Approver16__c,Approver17__c,Approver18__c,Approver19__c,Approver20__c,Approver21__c,Approver22__c,Approver23__c,Approver24__c,Approver25__c,InformWhenApproved5__c,InformWhenRejected5__c,ParentRequest__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20069</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[[Code] CLIFv20069</shortDescription>
+        <value>Optional</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20070</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Workflows from InsightFlow 1.0</shortDescription>
+        <value>Investment Approval</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20071</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20071 - User id to be made owner of old request records</shortDescription>
+        <value>0050Y000002VtTNQA0</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20072</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Message for New button OverRide</shortDescription>
+        <value>Please Create Request from Workflows.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20073</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Header Message for New button OverRide</shortDescription>
+        <value>Information</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20074</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20074</shortDescription>
+        <value>external.debasmita.rawooth@seg-automotive.com,hanumantharao.sanampudi@seg-automotive.com,SavithriB.Ravichandran@seg-automotive.com</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20075</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] CLIFv20075</shortDescription>
+        <value>Invalid date! Please enter the date in DD.MM.YYYY (eg. 20.01.1999) or choose a date from the date picker</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20076</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]Customer RecordType</shortDescription>
+        <value>0120Y000000a4aH</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20077</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code]Supplier RecordType</shortDescription>
+        <value>0120Y000000a4aI</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20078</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20078</shortDescription>
+        <value>Workflow is migrated to InsightFlow 2.0. Please use the below link to execute the workflow.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20079</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in IFv2_EditShortcut To show error message on press of edit on IFv2_Request</shortDescription>
+        <value>Error</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20080</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] ICO Worklfow 6 Number</shortDescription>
+        <value>06</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20081</fullName>
+        <categories>InsightFlow 2.0 [Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used to switch delete of request records after archived</shortDescription>
+        <value>Delete</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20082</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Help Tab Link Label 1</shortDescription>
+        <value>How to setup delegate?</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20083</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Help Tab Link Label 2</shortDescription>
+        <value>How to use Chatter?</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20084</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Help Tab Link Label 3</shortDescription>
+        <value>InsightFlow 2.0 Changeover Document</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20085</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in IFv2_HomeInformationCmp To show information on Insight 1.0 Home page</shortDescription>
+        <value>InsightFlow is being upgraded to a newer version. For more details, click</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20086</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in IFv2_HomeInformationCmp URL to navigate on Home page Insight 1.0</shortDescription>
+        <value>https://dms.seg-automotive.com/documents/1107635/29926621/%5BInsightFlow+Re-design%5D+Changeover+Document+-+Annexure+1.pdf/34a1bafc-9af3-8d80-a3b2-a55d627228e1</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20087</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error message for Restart button</shortDescription>
+        <value>Old Rejected Requests Migrated from InsightFlow 1.0 cannot be restarted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20088</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20088</shortDescription>
+        <value>Record is Deleted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20089</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20089</shortDescription>
+        <value>Go Back</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20090</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in IFv2_EditShortcutHotKeyCmp for onclick action name</shortDescription>
+        <value>Close</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20091</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Link to display while executing workflow from InsightFlow 1.0</shortDescription>
+        <value>Workflow Tab of InsightFlow 2.0</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20092</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>General Approval Form - WF Name</shortDescription>
+        <value>General Approval Form</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20093</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Employee Suggestion Scheme - WF Name</shortDescription>
+        <value>Employee Suggestion Scheme</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20094</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Employee Clearance Process - WF Name</shortDescription>
+        <value>Employee Clearance Process</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20095</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#00a4e3</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20096</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#16325c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20097</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#76ded9</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20098</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#08a69e</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20099</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#e2cd81</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20100</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#e49e24</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20101</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#c03a38</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20102</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#fdb665</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20103</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#63b07f</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20104</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#0d716a</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20105</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#95caf6</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20106</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>#97e2b3</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20107</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NoHelpDocuments</shortDescription>
+        <value>No help documents found</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20108</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen</shortDescription>
+        <value>Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20109</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen</shortDescription>
+        <value>IFv2_Reminder_for_approvers</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20110</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen</shortDescription>
+        <value>No Request Record Found</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20111</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P28 Record Type label</shortDescription>
+        <value>P28 Logs</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20112</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen</shortDescription>
+        <value>User</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20113</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Product Cancellation Request</shortDescription>
+        <value>Product Cancellation Request</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20114</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>MyRequestsApproved</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20115</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>MyRequestsDraft</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20116</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>MyRequestsRejected</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20117</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>MyRequestsSubmitted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20118</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequeststoApprove</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20119</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequeststoApproveApprovalOverdue</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20120</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequestsApprovedByMe</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20121</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequeststoApproveAsDelegated</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20122</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-1 Comment</shortDescription>
+        <value>This workflow is initiated when an invoice cannot be posted because goods receipt has not been done (or receipt in a lower quantity than that on the invoice.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20123</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-2 Comment</shortDescription>
+        <value>A price variance workflow is started when the price mentioned in an invoice is different from the price mentioned in a Purchase Order or Scheduling Agreement. When there is a price variance, the invoice is blocked for payment. After completing the workflow approval, the invoice could be automatically unblocked and released for payment in SAP.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20124</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-3 Comment</shortDescription>
+        <value>A quantity variance workflow is started when the quantity of an item mentioned in an invoice is different from the quantity mentioned in a Goods Receipt posted or when the Goods Receipt is not posted. When there is a quantity variance, the invoice is blocked for payment. After the Goods Receipt is posted and workflow is approved, the invoice is automatically unblocked and released for payment.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20125</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-4 Comment</shortDescription>
+        <value>A functional correctness workflow is used to process or approve service invoices. When this workflow is started, the invoice is blocked for payment. After the workflow is approved, the invoice could be unblocked and released for payment in SAP.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20126</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-5 Comment</shortDescription>
+        <value>An unplanned delivery costs workflow is used for the approval of additional costs, such as, delivery costs and packing costs that are not planned in a Purchase Order by the responsible Purchase Department. When this workflow is initiated, the invoice is blocked for payment. After completing the workflow approval, the invoice could be unblocked and released for payment in SAP.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20127</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-6 Comment</shortDescription>
+        <value>Applicable to workflows with non-PO related invoices. Payment will be released after the price and facts have been approved.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20128</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>APM Workflow-8 Comment</shortDescription>
+        <value>This WF is used to approve the prices of framework, limit &amp; blanket purchase orders with PO type FO, YB where the Purchase Order unit is AB, AU, DL, LE, SRV, or ZZ.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20129</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>My &quot;Out of Office&quot; Settings</shortDescription>
+        <value>My &quot;Out of Office&quot; Settings</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20130</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Requests Overview</shortDescription>
+        <value>Requests Overview</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20131</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] IFv2_SAPCalloutHandler - ContentType for Attachment query</shortDescription>
+        <value>text/xml</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20132</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Used to display Error message in Concession CLIFv20132</shortDescription>
+        <value>Material No field id mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20133</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Used to display Error message in Concession CLIFv20133</shortDescription>
+        <value>SAP Instance field is mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20134</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Used to display Error message in Concession CLIFv20134</shortDescription>
+        <value>Full 8D report necessary field is required.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20135</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Used to display Error message in Concession CLIFv20135</shortDescription>
+        <value>Escalate to management level Field is mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20136</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] IFv2_APMRequestCreation - ICO workflow name</shortDescription>
+        <value>ICO Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20137</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Used to display Error message in Concession CLIFv20137</shortDescription>
+        <value>Language Field is mandatory</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20139</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Document Error</shortDescription>
+        <value>No Document Found</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20140</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] This is used for ICO Workflows CLIFv20140</shortDescription>
+        <value>Draft</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20141</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error for already completed approval process</shortDescription>
+        <value>Request Already Completed Approval Process, Please refresh the page!!</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20142</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error on Restart</shortDescription>
+        <value>Request already Restarted. Please refresh the page!!</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20143</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Restart Message</shortDescription>
+        <value>Please make necessary changes and submit the workflow for approval</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20144</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit for Approval error</shortDescription>
+        <value>Request already in Approval Process, Please refresh the page</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20145</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] This is used display Error Message for ICO Scan Record Id CLIFv20145</shortDescription>
+        <value>Specified Scan record Id is invalid</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20146</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] This is used to display Error message for Approver Id in ICO CLIFv20146</shortDescription>
+        <value>There is no Approver with the specified name</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20147</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] This is used to display Error message in ICO CLIFv20147</shortDescription>
+        <value>There is no workflow with specified workflow number</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20148</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submit for Approval Comments</shortDescription>
+        <value>Submitted for approval. Please Approve</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20149</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Workflows to refresh detail page when adding related list</shortDescription>
+        <value>China Travel Application,Material Gate Pass</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20150</fullName>
+        <categories>Column label for Failure file of P28</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20150</shortDescription>
+        <value>Error Cause</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20151</fullName>
+        <categories>success file name of P28</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20151</shortDescription>
+        <value>success.csv</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20152</fullName>
+        <categories>Failure file name for P28</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20152</shortDescription>
+        <value>failure.csv</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20153</fullName>
+        <categories>P20 Status Email Subject</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20153</shortDescription>
+        <value>Status of p28</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20154</fullName>
+        <categories>P28 Email Body</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20154</shortDescription>
+        <value>Contact details whch got inserted to salesforce</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20155</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Unable To lock row</shortDescription>
+        <value>UNABLE_TO_LOCK_ROW</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20156</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Used in permission set Assignment CLIFv20156</shortDescription>
+        <value>IFv2_Extension1</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20157</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Used in permission set Assignment CLIFv20157</shortDescription>
+        <value>IFv2_Extension2</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20158</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Used in permission set Assignment CLIFv20158</shortDescription>
+        <value>IFv2_Extension3</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20159</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] SAP retry message</shortDescription>
+        <value>SAP call successful</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20160</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] SAP retry message</shortDescription>
+        <value>SAP call unsuccessful</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20161</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Used in request trigger CLIFv20161</shortDescription>
+        <value>Concession</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20162</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>List of Profile names of System Administrator</shortDescription>
+        <value>System Administrator,System Admin</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20163</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Url Error</shortDescription>
+        <value>No URL Found</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20164</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Display Records Per Page</shortDescription>
+        <value>Records Per Page:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20165</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] ICO Summary 1</shortDescription>
+        <value>This workflow is</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20166</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] ICO Summary 2</shortDescription>
+        <value>Number of workflows triggered for this Invoice:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20167</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] ICO Summary 3</shortDescription>
+        <value>The other related workflow are:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20168</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] ICO Summary 4</shortDescription>
+        <value>Please approve all the workflows for the payment to be released to supplier.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20169</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] ICO Summary Header</shortDescription>
+        <value>Request Summary</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20170</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Deletion Successfull</shortDescription>
+        <value>Record Deleted Successfully</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20171</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Response</shortDescription>
+        <value>No Response from Server or Client is offline.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20172</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Valid material data</shortDescription>
+        <value>Your Material data is valid</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20173</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Recall success</shortDescription>
+        <value>Successfully Recalled</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20174</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Comments</shortDescription>
+        <value>Please enter Comments</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20175</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Approval Success</shortDescription>
+        <value>Successfully Approved</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20176</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Rejection Success</shortDescription>
+        <value>Successfully Rejected</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20177</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Reassignment success</shortDescription>
+        <value>Successfully Reassigned</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20178</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Post success</shortDescription>
+        <value>Successfully Posted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20179</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Submitted Successfully</shortDescription>
+        <value>Successfully Submitted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20180</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save label</shortDescription>
+        <value>Save as Draft</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20181</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Layout Error</shortDescription>
+        <value>Layout type or fields or optional field attributes must be specified</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20182</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No records error</shortDescription>
+        <value>No Records to display</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20183</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Save button label</shortDescription>
+        <value>Save</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20184</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Successfully saved</shortDescription>
+        <value>The record has been saved successfully</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20185</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Created message Related List</shortDescription>
+        <value>Record is created</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20186</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Updated message Related List</shortDescription>
+        <value>Record is updated</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20187</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] Deleted message Related List</shortDescription>
+        <value>Record is deleted</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20188</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Retry mechanism for locked records</shortDescription>
+        <value>10</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20189</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] To Share Account Records CLIFv20189</shortDescription>
+        <value>False</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20190</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[Code] Used in request record migration CLIFv20190</shortDescription>
+        <value>Approver1__c,Approver2__c,Approver3__c,Approver4__c,Approver5__c,Approver6__c,Approver7__c,Approver8__c,Approver9__c,Approver10__c,Approver11__c,Approver12__c,Approver13__c,Approver14__c,Approver15__c,Approver16__c,Approver17__c,Approver18__c,Approver19__c,Approver20__c,Approver21__c,Approver22__c,Approver23__c,Approver24__c,Approver25__c,InformWhenApproved__c,InformWhenApproved2__c,InformWhenApproved3__c,InformWhenApproved4__c,InformWhenApproved5__c,InformWhenRejected__c,InformWhenRejected2__c,InformWhenRejected3__c,InformWhenRejected4__c,InformWhenRejected5__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20191</fullName>
+        <categories>Error message when there is a mismatch of data types</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20191</shortDescription>
+        <value>Please use number for number type Fields</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20192</fullName>
+        <categories>Scan SAP status values</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20192</shortDescription>
+        <value>Success</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20193</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] To display modal message CLIFv20193</shortDescription>
+        <value>Do you want to Enable out of office</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20194</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] To display modal message CLIFv2014</shortDescription>
+        <value>Do you want to Enable back to office</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20195</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>[UI] To display modal header message CLIFv20195</shortDescription>
+        <value>Out of Office Settings</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20196</fullName>
+        <categories>P28 Logs [UI]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used in display of P28 Tab</shortDescription>
+        <value>P28</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20197</fullName>
+        <categories>Archival Procesing - Status of the requests that are considered while querying</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20197 [Code]</shortDescription>
+        <value>Approved,Cancelled,Rejected</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20198</fullName>
+        <categories>[Code] Used for CC reminder email template</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please enter the message for the CC user</shortDescription>
+        <value>You are receiving this email as a point of Escalation for the above-mentioned Request ID.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20199</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MGP Parent</shortDescription>
+        <value>Material Gate Pass</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20200</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MGP Child</shortDescription>
+        <value>Material Gate Pass - Child</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20201</fullName>
+        <categories>Challan</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used to store Address of SEG</shortDescription>
+        <value>&lt;b&gt;SEG Automotive India Pvt Ltd.&lt;/b&gt;&lt;br/&gt;&lt;p style=&quot;font-size: 70%;display:inline&quot;&gt;( Formely: Robert Bosch Starter Motors Generators India Pvt.Ltd )&lt;/p&gt;&lt;br/&gt;Naganathapura Plant, Electronic City-P.O, Post Box No:10011,&lt;br/&gt;Bangalore - 560 100. India.&lt;br/&gt; GST: 29AAHCR6993H1ZM</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20202</fullName>
+        <categories>[UI] InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>P28 Toast Message</shortDescription>
+        <value>Record is submitted successfully. Please refresh the page to know the status.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20203</fullName>
+        <categories>MGP Challan [Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Heading</shortDescription>
+        <value>SEG /</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20204</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Headers</shortDescription>
+        <value>Original for consignee</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20205</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Headers</shortDescription>
+        <value>Duplicate for Transporter</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20206</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Headers</shortDescription>
+        <value>Triplicate for Consignor</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20207</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Headers</shortDescription>
+        <value>Extra copy</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20208</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Full Name &amp; Address of the place from</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20209</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Date of issue of Delivery Note</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20210</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Supplier Details</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20211</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Maximum Date of Return</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20212</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Name</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20213</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Phone No</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20214</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Purpose of Dispatch</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20215</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Description of the Goods Details of the Goods Transported</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20216</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Part Number</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20217</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>Description</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20218</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>HSN</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20219</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>QTY</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20220</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>UNIT</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20221</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>TOTAL WT</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20222</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>NO OF PACKAGES</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20223</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>TAXABLE VALUE</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20224</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>CARRIER</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20225</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>VEHICLE NO</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20226</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>RECEIVER NAME:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20227</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>SIGNATURE:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20228</fullName>
+        <categories>Challan View[Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Challan Labels</shortDescription>
+        <value>EWAY BILL</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20229</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Logistic dept role name</shortDescription>
+        <value>LOG1</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20230</fullName>
+        <categories>Chatter migration [code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Inactive user</shortDescription>
+        <value>This feed is created by inactive user</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20231</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Return quantity exceed error</shortDescription>
+        <value>Check the quantity entered</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20232</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Quantity mismatch error</shortDescription>
+        <value>All materials should be returned before approving</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20233</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Genereate challan button name</shortDescription>
+        <value>Generate Challan</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20234</fullName>
+        <categories>Chatter migration [code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Chatter Inactive user</shortDescription>
+        <value>This comment is created by inactive user</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20235</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Privileged Roles</shortDescription>
+        <value>LOG1,TAX,PRS,Security</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20237</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20237[UI] used to display home page message</shortDescription>
+        <value>Please see the list below</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20238</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PRS Role Name</shortDescription>
+        <value>PRS</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20239</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Edit button label</shortDescription>
+        <value>Edit</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20240</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Remarks for MGP Challan</shortDescription>
+        <value>Remarks</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20241</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Static Resource name for SEG Logo</shortDescription>
+        <value>SEGlogo</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20242</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20242[UI] home page banner</shortDescription>
+        <value>To get more information about new features, please click</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20243</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20243[UI]</shortDescription>
+        <value>https://dms.seg-automotive.com/documents/1107635/29912374/Home+Screen+User+Guide.pdf/de517769-608f-37bc-b29d-23da0b22b14f</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20244</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Non-editable fields to copy on child record creation</shortDescription>
+        <value>DueDateofReturn__c,TotalAmountMGP__c</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20245</fullName>
+        <categories>[Code] IFv2_ExceptionUtilitiesController</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Classes to avoid AuraHandled Exception</shortDescription>
+        <value>IFv2_ICORequestCreation,</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20247</fullName>
+        <categories>CODE</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20247</shortDescription>
+        <value>IFv2_SEGLOGO</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20250</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20250</shortDescription>
+        <value>ICO Workflow - 6</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20251</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20251 [UI Home page]</shortDescription>
+        <value>Quick Links</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20252</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20252[UI quick links]</shortDescription>
+        <value>My Favorites</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20253</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20253[UI App page]</shortDescription>
+        <value>All Quick Links</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20255</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20255[Code Allow admin to cancel the request]</shortDescription>
+        <value>ICO Workflow - 1,ICO Workflow - 2,ICO Workflow - 3,ICO Workflow - 4,ICO Workflow - 5,ICO Workflow - 6,ICO Workflow - 8</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20256</fullName>
+        <categories>InsightFlow 2.0 [Printable View Code]</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20256</shortDescription>
+        <value>Materials</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20300</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used to store Security User&apos;s ID for MGP Returnable request.</shortDescription>
+        <value>0051v0000060rl8</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20301</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20301</shortDescription>
+        <value>IFE Process Workflow</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20302</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20302</shortDescription>
+        <value>China Leave &amp; Overtime Application</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20303</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20303</shortDescription>
+        <value>Leave Batch,Overtime Batch</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20304</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20304</shortDescription>
+        <value>Leave Individual,Overtime Individual,Time Data Amendment,Leave Cancellation</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20305</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20305</shortDescription>
+        <value>Employee</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20306</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20306</shortDescription>
+        <value>Payment Terms and Incoterms</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20307</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20307</shortDescription>
+        <value>seg-automotive.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20308</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20308</shortDescription>
+        <value>Migrated from InsightFlow1.0.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20309</fullName>
+        <categories>InsightFlow2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20309</shortDescription>
+        <value>LEX Contracting - SEG Resource Agreement</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20310</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20310</shortDescription>
+        <value>View More</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20311</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20311</shortDescription>
+        <value>View Less</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20312</fullName>
+        <categories>InsightFlow2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20312</shortDescription>
+        <value>500</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20313</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20313</shortDescription>
+        <value>3</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20314</fullName>
+        <categories>InsightFlow2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20314</shortDescription>
+        <value>You do not have the necessary permissions to delete chatter posts and comments in InsightFlow2.0</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20315</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20315</shortDescription>
+        <value>Total wokflows triggered that are awaiting approval:</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20316</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20316</shortDescription>
+        <value>Workflows that are waiting for your approval</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20317</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20317</shortDescription>
+        <value>Workflows that are waiting for approval from other users</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20318</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20318</shortDescription>
+        <value>Please add a proxy before enabling Out of Office Settings</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20319</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20319</shortDescription>
+        <value>Global</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20320</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20320</shortDescription>
+        <value>EXE,JAR,VB,JS,VBS,SFX,BAT,DLL,PY,MSI,MSP,COM,GADGET,CMD,SH,VBE,JSE,PS1,PS1XML,PS2,PS2XML,PSC1,PSC2,SCF,LNK</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20321</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20321</shortDescription>
+        <value>This file type is not allowed.</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20330</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20330</shortDescription>
+        <value>Sourcing Decision – COQ Approval Submission</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20331</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20331</shortDescription>
+        <value>0051v000005ZGIRAA4</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20332</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20332</shortDescription>
+        <value>Add at least 2 attachments if Yes is selected in either PFMEA Created/Updated or Control Plan Created/Updated field</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20333</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20333</shortDescription>
+        <value>Add at least 3 attachments if Yes is selected in both PFMEA Created/Updated and Control Plan Created / Updated fields</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20334</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20334</shortDescription>
+        <value>Add at least 1 attachment if No is selected for all document options</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20335</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20335</shortDescription>
+        <value>Payment Terms and Incoterms</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20336</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20336</shortDescription>
+        <value>0051v000008KLhxAAG</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20337</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20337</shortDescription>
+        <value>0051v000008KLiCAAW</value>
+    </labels>
+    <labels>
+        <fullName>CLIFv20339</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLIFv20339</shortDescription>
+        <value>Helpdesk Admin User</value>
+    </labels>
+    <labels>
+        <fullName>CLM_AgreementCalloutBatch_Query</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CLM_AgreementCalloutBatch Query</shortDescription>
+        <value>SELECT RecordType.Name,Name,Apttus__Status__c,Apttus__Contract_Start_Date__c,Apttus__Account__r.CLM_JAGGAER_Id__c,Apttus__Contract_End_Date__c,Owner.Name,Apttus__FF_Agreement_Number__c,SyncedWithJaggaer__c,Apttus__APTS_Agreement__c.Agreement_Types__c 
+FROM Apttus__APTS_Agreement__c WHERE Apttus__Status__c = &apos;Activated&apos;
+AND SyncedWithJaggaer__c = FALSE</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingAppStartDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingAppStartDate</shortDescription>
+        <value>AppStartDate</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError1</shortDescription>
+        <value>Something went wrong</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError2</shortDescription>
+        <value>Bookings are allowed only on Monday, Tuesday, Wednesday ,Thursday and Friday</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError3</shortDescription>
+        <value>There are no bookings available.</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError4</shortDescription>
+        <value>You have already booked a slot on this date.</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError5</shortDescription>
+        <value>No of guests should be greater than 0</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError6</shortDescription>
+        <value>No of guests should be less than available slots</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError7</shortDescription>
+        <value>Enter no of guests</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError8</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError8</shortDescription>
+        <value>Bookings can be added only 9th June onwards</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingError9</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingError9</shortDescription>
+        <value>Please select a valid date</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingGuests</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingGuests</shortDescription>
+        <value>Guests :</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingRecordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingRecordType</shortDescription>
+        <value>Canteen Booking</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingSuccess1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingSuccess1</shortDescription>
+        <value>Booking added successfully</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingSuccess2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingSuccess2</shortDescription>
+        <value>Booking removed successfully</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingViewUsers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>View Canteen Bookings of Users</shortDescription>
+        <value>CanteenBookingViewUsers</value>
+    </labels>
+    <labels>
+        <fullName>CanteenBookingWeekDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CanteenBookingWeekDays</shortDescription>
+        <value>Monday,Tuesday,Wednesday,Thursday,Friday</value>
+    </labels>
+    <labels>
+        <fullName>ChatterNotifications</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ChatterNotifications</shortDescription>
+        <value>True</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_After_Split</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE After Split</shortDescription>
+        <value>0120Y00000078uJQAQ</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_Before_Split_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Before Split</shortDescription>
+        <value>0120Y00000078uKQAQ</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_Combine</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Combine</shortDescription>
+        <value>0120Y00000078uMQAQ</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_Lost</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Lost</shortDescription>
+        <value>0120Y00000078uNQAQ</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_Scrap</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Scrap</shortDescription>
+        <value>0120Y00000078uOQAQ</value>
+    </labels>
+    <labels>
+        <fullName>China_MAE_Transfer</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>China MAE Transfer</shortDescription>
+        <value>0120Y00000078uPQAQ</value>
+    </labels>
+    <labels>
+        <fullName>ConcessionRecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ConcessionRecordTypeId</shortDescription>
+        <value>0120Y000000a4azQAA</value>
+    </labels>
+    <labels>
+        <fullName>CovidBookingError2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CovidBookingError2</shortDescription>
+        <value>Bookings are allowed only on Tuesday, Wednesday and Thursday.</value>
+    </labels>
+    <labels>
+        <fullName>CovidBookingRecordtype</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CovidBookingRecordtype</shortDescription>
+        <value>Covid Booking</value>
+    </labels>
+    <labels>
+        <fullName>CovidBookingViewUsers</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>CovidBookingViewUsers</shortDescription>
+        <value>CovidBookingViewUsers</value>
+    </labels>
+    <labels>
+        <fullName>Covid_Week_Days</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Covid Week Days</shortDescription>
+        <value>Tuesday,Wednesday,Thursday</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EmailTempAppLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EmailTempAppLink</shortDescription>
+        <value>https://seg-automotive.lightning.force.com/lightning/n/Detective_Controls_Manager_View</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EmailTempDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EmailTempDate</shortDescription>
+        <value>2022 first half-year</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EmailTempDetailsLink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EmailTempDetailsLink</shortDescription>
+        <value>https://dms.seg-automotive.com/documents/1107635/2171290/200925_Detective_Controls_OnePager.pdf/0ae49a2c-75d8-740f-1105-58afd5c79dfa?version=1.0&amp;t=1600978287217&amp;download=true</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EmailTempFinalDate</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EmailTempFinalDate</shortDescription>
+        <value>Thursday 6th Oct 2022.</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EmailTempSubject</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EmailTempSubject</shortDescription>
+        <value>Internal Controls // SAP Detective Controls Assignments (Q1/Q2 2022)</value>
+    </labels>
+    <labels>
+        <fullName>DCA_EscalationDays</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_EscalationDays</shortDescription>
+        <value>15</value>
+    </labels>
+    <labels>
+        <fullName>DCA_HR_Applink</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA HR Applink</shortDescription>
+        <value>https://seg-automotive.lightning.force.com/lightning/n/DCA_HR</value>
+    </labels>
+    <labels>
+        <fullName>DCA_RecordLoadLimit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_RecordLoadLimit</shortDescription>
+        <value>1000</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error1</shortDescription>
+        <value>Something went wrong</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error2</shortDescription>
+        <value>Please select status</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error3</shortDescription>
+        <value>User details cannot be modified</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error4</shortDescription>
+        <value>You can not add a comment in pending status</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error5</shortDescription>
+        <value>Comment cannot be changed now.</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error6</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error6</shortDescription>
+        <value>Status cannot be changed now.</value>
+    </labels>
+    <labels>
+        <fullName>DCA_error7</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_error7</shortDescription>
+        <value>Comment is mandatory for this status</value>
+    </labels>
+    <labels>
+        <fullName>DCA_info1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_info1</shortDescription>
+        <value>You have no Records assigned with Pending Action</value>
+    </labels>
+    <labels>
+        <fullName>DCA_info2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_info2</shortDescription>
+        <value>Search can return only up to 1000 records. Please change your filters to narrow down your search</value>
+    </labels>
+    <labels>
+        <fullName>DCA_info4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_info4</shortDescription>
+        <value>You have more than 1000 records. &apos;View All&apos; functionality is not applicable for you.</value>
+    </labels>
+    <labels>
+        <fullName>DCA_recordType</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_recordType</shortDescription>
+        <value>Detective Controls Automization</value>
+    </labels>
+    <labels>
+        <fullName>DCA_success1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DCA_success1</shortDescription>
+        <value>Record submitted successfully</value>
+    </labels>
+    <labels>
+        <fullName>DummyAccountId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DummyAccountId</shortDescription>
+        <value>0011l00000CBIhF</value>
+    </labels>
+    <labels>
+        <fullName>DummyUserId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>DummyUserId</shortDescription>
+        <value>0050Y000002Ulsr</value>
+    </labels>
+    <labels>
+        <fullName>Email_Body_for_OOO_batch</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email Body for OOO batch</shortDescription>
+        <value>Dear Madam/Sir,
+
+There are few users with delegates that are either inactive or emails that do not belong to any user. 
+
+Please replace the emails of delegates.
+
+Please do not reply to this automated email.</value>
+    </labels>
+    <labels>
+        <fullName>Error_Message</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Error Message</shortDescription>
+        <value>There was a problem. Please contact Administrator.</value>
+    </labels>
+    <labels>
+        <fullName>ExpenseDetailsRecordTravelNo</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ExpenseDetailsRecordTravelNo</shortDescription>
+        <value>0120Y000000a7ePQAQ</value>
+    </labels>
+    <labels>
+        <fullName>Expense_Detail_Record_Type_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Expense Detail Record Type Id</shortDescription>
+        <value>0120Y000000a4aoQAA</value>
+    </labels>
+    <labels>
+        <fullName>GMI_BackTo</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Back To used in Google Maps</shortDescription>
+        <value>Back to</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GenerateKey</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please generate a Google maps API key used in Google Maps</shortDescription>
+        <value>Please generate a Google maps API key</value>
+    </labels>
+    <labels>
+        <fullName>GMI_GoogleLanguageCode</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps Language Code</shortDescription>
+        <value>en</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Location displayed using address used in Google Maps</shortDescription>
+        <value>Location displayed using address</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalAddressNotFound</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Address not found by Google used in Google Maps</shortDescription>
+        <value>Address not found by Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_LocalShowMap</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Show in Google used in Google Maps</shortDescription>
+        <value>Show in Google</value>
+    </labels>
+    <labels>
+        <fullName>GMI_UpdateComponent</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Please update the GoogleMapsInternational component used in Google Maps</shortDescription>
+        <value>Please update the GoogleMapsInternational component with a new key which can be generated from</value>
+    </labels>
+    <labels>
+        <fullName>GMI_WebsiteNeeded</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>The website URL needed is used in Google Maps</shortDescription>
+        <value>The website URL needed is</value>
+    </labels>
+    <labels>
+        <fullName>GMI_googleMapURL</fullName>
+        <categories>Google, Maps, Google Maps, Google Maps International</categories>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>Google Maps URL</shortDescription>
+        <value>http://maps.google.com</value>
+    </labels>
+    <labels>
+        <fullName>IFv2_InvoicingPartyVendorNumber</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IFv2_InvoicingPartyVendorNumber</shortDescription>
+        <value>0097361152;0097976814;0097373642;0097361155;0097368012;0097361169;0097361135;0097976811;0098000761;0097976815;0097976816;0097386228;0097276559;0097390741;</value>
+    </labels>
+    <labels>
+        <fullName>IP_EncryptedFields</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_EncryptedFields</shortDescription>
+        <value>IP_Explanation_of_Special_Points__c,IP_Who_Initiated_the_Subject__c</value>
+    </labels>
+    <labels>
+        <fullName>IP_Explanation_of_Special_Points</fullName>
+        <categories>NewIDF</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_Explanation_of_Special_Points</shortDescription>
+        <value>Description of the publicly funded project, if applicable.
+		a) conception:
+		b) 1st model/prototype:
+		c) commercial offer to OE customer, if applicable.</value>
+    </labels>
+    <labels>
+        <fullName>IP_IDFFileUploadURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IDFFileUploadURL</shortDescription>
+        <value>https://seg-automotive--c.eu17.visual.force.com/apex/IP_InventionDisclosureFileUpload</value>
+    </labels>
+    <labels>
+        <fullName>IP_IDFFileViewURL</fullName>
+        <categories>IP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IDFFileViewURL</shortDescription>
+        <value>https://seg-automotive--c.eu17.visual.force.com/apex/IP_InventionDisclosureViewFiles?idfid=</value>
+    </labels>
+    <labels>
+        <fullName>IP_IDFLightningURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IDFLightningURL</shortDescription>
+        <value>https://seg-automotive.lightning.force.com</value>
+    </labels>
+    <labels>
+        <fullName>IP_IDFVFURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IDFVFURL</shortDescription>
+        <value>https://seg-automotive--c.eu17.visual.force.com</value>
+    </labels>
+    <labels>
+        <fullName>IP_IPFileUploadURL</fullName>
+        <categories>IP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IPFileUploadURL</shortDescription>
+        <value>https://seg-automotive--c.eu17.visual.force.com/apex/IP_IPRightFileUpload</value>
+    </labels>
+    <labels>
+        <fullName>IP_IPRight_RecordType_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IPRight_RecordType_Name</shortDescription>
+        <value>IP_Right</value>
+    </labels>
+    <labels>
+        <fullName>IP_IdfHeadlineForNewIDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IdfHeadlineForNewIDF</shortDescription>
+        <value>Invention Disclosure – Privileged, Confidential and Proprietary.</value>
+    </labels>
+    <labels>
+        <fullName>IP_IdfInstructionsNewIDF</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_IdfInstructionsNewIDF</shortDescription>
+        <value>Thanks for taking the time to share your invention with us. Please complete the mandatory fields (specified by &lt;font size =&quot;3&quot; color=&quot;red&quot;&gt; *&lt;/font&gt;) below. Optional fields should either be filled out on this form or be included in the document you upload.</value>
+    </labels>
+    <labels>
+        <fullName>IP_InventionImageUpload</fullName>
+        <categories>IP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_InventionImageUpload</shortDescription>
+        <value>https://seg-automotive--c.eu17.visual.force.com/apex/IP_InventionImageUpload?idfid=</value>
+    </labels>
+    <labels>
+        <fullName>IP_InventionUserGuide</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP InventionUserGuide</shortDescription>
+        <value>https://segautomotivecom.sharepoint.com/sites/intranet/SharedFiles/Creation_of_invention_reports_131022.pptx</value>
+    </labels>
+    <labels>
+        <fullName>IP_Invention_RecordType_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_Invention_RecordType_Name</shortDescription>
+        <value>Invention_Disclosure</value>
+    </labels>
+    <labels>
+        <fullName>IP_InventorPS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_InventorPS</shortDescription>
+        <value>IP_Inventor</value>
+    </labels>
+    <labels>
+        <fullName>IP_LawFirmMembers</fullName>
+        <categories>IP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_LawFirmMembers</shortDescription>
+        <value>IP Law Firm Members</value>
+    </labels>
+    <labels>
+        <fullName>IP_MassEncryptLimit</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_MassEncryptLimit</shortDescription>
+        <value>200</value>
+    </labels>
+    <labels>
+        <fullName>IP_PatentFamily_RecordType_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_PatentFamily_RecordType_Name</shortDescription>
+        <value>Patent_Family</value>
+    </labels>
+    <labels>
+        <fullName>IP_ProbabilityOfRealisation</fullName>
+        <categories>IP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_ProbabilityOfRealisation</shortDescription>
+        <value>&quot;Interest&quot; of competitor : Evidence that Competitor will use or intends to use the in - vention in the future, fir example because of Customers requirements or similar developments or because the inventions is the solution of a technical problem of the co</value>
+    </labels>
+    <labels>
+        <fullName>IP_SEGPrivateKey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_SEGPrivateKey</shortDescription>
+        <value>1234567890abcdef1234567890abcdef</value>
+    </labels>
+    <labels>
+        <fullName>IP_recordTypeFilter</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>IP_recordTypeFilter</shortDescription>
+        <value>Patent Family</value>
+    </labels>
+    <labels>
+        <fullName>InsightURL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>InsightURL</shortDescription>
+        <value>https://seg-automotive.force.com/insight/sfc/servlet.shepherd/version/renditionDownload?rendition=THUMB720BY480&amp;versionId=</value>
+    </labels>
+    <labels>
+        <fullName>Jagger_Password</fullName>
+        <categories>Jagger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jagger_Password</shortDescription>
+        <value>SEG@Jagger1</value>
+    </labels>
+    <labels>
+        <fullName>Jagger_SupplierUpsertFailureEmail</fullName>
+        <categories>Jagger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jagger SupplierUpsertFailureEmail</shortDescription>
+        <value>nitish.kumar@absyz.com</value>
+    </labels>
+    <labels>
+        <fullName>Jagger_Token</fullName>
+        <categories>Jagger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jagger_Token</shortDescription>
+        <value>y~62Te/We.earthwWBNewuXsaudirS</value>
+    </labels>
+    <labels>
+        <fullName>Jagger_Username</fullName>
+        <categories>Jagger</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Jagger_Username</shortDescription>
+        <value>bsg.conga</value>
+    </labels>
+    <labels>
+        <fullName>Leave_Cancel_id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Leave Cancel id</shortDescription>
+        <value>0120Y000000a4apQAA</value>
+    </labels>
+    <labels>
+        <fullName>Leave_Details_id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Leave Details id</shortDescription>
+        <value>0120Y000000a4aqQAA</value>
+    </labels>
+    <labels>
+        <fullName>License_Salesforce_Platform</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>License Salesforce Platform</shortDescription>
+        <value>Salesforce Platform</value>
+    </labels>
+    <labels>
+        <fullName>MMS_ADDRESS</fullName>
+        <categories>Location</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_ADDRESS</shortDescription>
+        <value>Address</value>
+    </labels>
+    <labels>
+        <fullName>MMS_CONTACT_PERSON</fullName>
+        <categories>Location detail and department detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_CONTACT_PERSON</shortDescription>
+        <value>Contact Person</value>
+    </labels>
+    <labels>
+        <fullName>MMS_DIGiConcept</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_DIGiConcept</shortDescription>
+        <value>DIGiConcept</value>
+    </labels>
+    <labels>
+        <fullName>MMS_GLOBAL_NEWS</fullName>
+        <categories>Global News</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_GLOBAL_NEWS</shortDescription>
+        <value>Global News</value>
+    </labels>
+    <labels>
+        <fullName>MMS_LOCAL_NEWS</fullName>
+        <categories>Local News</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_LOCAL_NEWS</shortDescription>
+        <value>Local News</value>
+    </labels>
+    <labels>
+        <fullName>MMS_MANAGER</fullName>
+        <categories>Location detail and department detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_MANAGER</shortDescription>
+        <value>Manager</value>
+    </labels>
+    <labels>
+        <fullName>MMS_Move</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_Move</shortDescription>
+        <value>Project Move</value>
+    </labels>
+    <labels>
+        <fullName>MMS_OUR_DEPARTMENTS</fullName>
+        <categories>Location detail and department detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_OUR_DEPARTMENTS</shortDescription>
+        <value>Our Departments</value>
+    </labels>
+    <labels>
+        <fullName>MMS_OUR_LOCATIONS</fullName>
+        <categories>Location.cmp</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_OUR_LOCATIONS</shortDescription>
+        <value>Our Locations</value>
+    </labels>
+    <labels>
+        <fullName>MMS_OWNER</fullName>
+        <categories>Global News</categories>
+        <language>de</language>
+        <protected>false</protected>
+        <shortDescription>MMS_OWNER</shortDescription>
+        <value>From :</value>
+    </labels>
+    <labels>
+        <fullName>MMS_READ_MORE</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_READ_MORE</shortDescription>
+        <value>Read more</value>
+    </labels>
+    <labels>
+        <fullName>MMS_TEAM</fullName>
+        <categories>Department</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_TEAM</shortDescription>
+        <value>Team</value>
+    </labels>
+    <labels>
+        <fullName>MMS_TIME</fullName>
+        <categories>Location other detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_TIME</shortDescription>
+        <value>Local Time</value>
+    </labels>
+    <labels>
+        <fullName>MMS_View_All</fullName>
+        <categories>AnimatedSlider</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_VIEW_ALL</shortDescription>
+        <value>View All</value>
+    </labels>
+    <labels>
+        <fullName>MMS_WEATHER</fullName>
+        <categories>Location detail and department detail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MMS_WEATHER</shortDescription>
+        <value>Weather</value>
+    </labels>
+    <labels>
+        <fullName>MaterialConcessionRTId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MaterialConcessionRTId</shortDescription>
+        <value>0120Y000000a4aKQAQ</value>
+    </labels>
+    <labels>
+        <fullName>MaterialSWorkONRTId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>MaterialSWorkONRTId</shortDescription>
+        <value>0120Y000000a4aLQAQ</value>
+    </labels>
+    <labels>
+        <fullName>NewsFileSizeRestrictionGlobal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>News File Size Restriction(Global)</shortDescription>
+        <value>10485760</value>
+    </labels>
+    <labels>
+        <fullName>NewsFileSizeRestrictionLocal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>News File Size Restriction(Local)</shortDescription>
+        <value>10485760</value>
+    </labels>
+    <labels>
+        <fullName>NewsImageExtensions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NewsImageExtensions</shortDescription>
+        <value>JPG,JEPG,PNG,GIF</value>
+    </labels>
+    <labels>
+        <fullName>NewsValidationGlobal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>News Validation(Global)</shortDescription>
+        <value>Global news image size should not exceed 10 Mb</value>
+    </labels>
+    <labels>
+        <fullName>NewsValidationLocal</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>News Validation(Local)</shortDescription>
+        <value>Local news image size should not exceed 10 Mb</value>
+    </labels>
+    <labels>
+        <fullName>OT_App_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>OT App Id</shortDescription>
+        <value>0120Y000000a4arQAA</value>
+    </labels>
+    <labels>
+        <fullName>ObjectIdPrefix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Object Id Prefix</shortDescription>
+        <value>a00;a06;a07;a0H</value>
+    </labels>
+    <labels>
+        <fullName>PermissionSetAgileAId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PermissionSetAgileAId</shortDescription>
+        <value>0PS1v000002TFS5;0PS0Y000001OnKR</value>
+    </labels>
+    <labels>
+        <fullName>Permission_Set_SG_01_Intranet_User_Only</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Permission Set SG-01-Intranet-User-Only</shortDescription>
+        <value>SG-01-Intranet-User-Only</value>
+    </labels>
+    <labels>
+        <fullName>Private_Car_RID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Private Car RID</shortDescription>
+        <value>0120Y000000a4asQAA</value>
+    </labels>
+    <labels>
+        <fullName>Production_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Production URL</shortDescription>
+        <value>https://seg-automotive.my.salesforce.com</value>
+    </labels>
+    <labels>
+        <fullName>Profile_SEG_User_Creation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Profile SEG User Creation</shortDescription>
+        <value>SEG User Creation</value>
+    </labels>
+    <labels>
+        <fullName>Profile_SG_Standard_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Profile SG Standard User</shortDescription>
+        <value>SG Standard User</value>
+    </labels>
+    <labels>
+        <fullName>PublicGroupIds</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PublicGroupIds</shortDescription>
+        <value>00G5E000003Ze86;00G5E000003qUdr</value>
+    </labels>
+    <labels>
+        <fullName>Public_Groups</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Public Groups</shortDescription>
+        <value>Chinese_Workflow_Users;Location_Organization_Read_Access</value>
+    </labels>
+    <labels>
+        <fullName>Request</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Request</shortDescription>
+        <value>28 Employee Clearance Process
+29 Employee Suggestion Scheme</value>
+    </labels>
+    <labels>
+        <fullName>Role_Dummy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Role Dummy</shortDescription>
+        <value>Dummy</value>
+    </labels>
+    <labels>
+        <fullName>SAP_Concession_Global_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP Concession Global Endpoint</shortDescription>
+        <value>https://psg-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessionvalidate_in/011/psg_011_zconcessionv/http_basic;https://psg-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessioncreate_in/011/psg_011_zconcessionc/http_basic;https://psg-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessioncreateattachdoc_in/011/psg_011_zconcessionc/http_basic</value>
+    </labels>
+    <labels>
+        <fullName>SAP_Concession_India_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP Concession India Endpoint</shortDescription>
+        <value>https://psi-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessionvalidate_in/011/xsg_011_zconcessionv/https_basic;https://psi-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessioncreate_in/011/xsg_011_zconcessionc/https_basic;https://psi-https.seg-automotive.com:44510/sap/bc/srt/xip/sap/zconcessioncreateattachdoc_in/011/xsg_011_zconcessionc/https_basic</value>
+    </labels>
+    <labels>
+        <fullName>SAP_Global_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP_Global_Endpoint</shortDescription>
+        <value>https://psg-https.seg-automotive.com:44510/sap/bc/srt/rfc/sap/zmm_serv_apm_xml_inbound_v3/011/psg_011_zmm_serv_apm/https_basic;https://psg-https.seg-automotive.com:44510/sap/bc/srt/rfc/sap/zmm_wfstatus_in/011/psg_011_zmm_wfstatus/http_basic</value>
+    </labels>
+    <labels>
+        <fullName>SAP_India_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP_India_Endpoint</shortDescription>
+        <value>https://PSI-https.seg-automotive.com:44510/sap/bc/srt/rfc/sap/zmm_xmlresp_pro_sgin_finl/011/psi_011_zmm_xmlresp_pro_sgin_fin/zmm_xmlresp_pro_sgin_finl_bnd;https://PSI-https.seg-automotive.com:44510/sap/bc/srt/rfc/sap/zmm_wfstatus_in/011/psi_011_zmm_wfstatus/http_basic</value>
+    </labels>
+    <labels>
+        <fullName>SAP_Key_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP_Key_Id</shortDescription>
+        <value>5ead0f5a-d007-4e20-8706-b557251b38b7</value>
+    </labels>
+    <labels>
+        <fullName>SAP_User</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP User</shortDescription>
+        <value>SGAPIRG;LMNTTKA</value>
+    </labels>
+    <labels>
+        <fullName>SAP_User_India</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SAP User India</shortDescription>
+        <value>SGAPSIG;Bernau#2018</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_Default_Location</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP Default Location</shortDescription>
+        <value>Stuttgart</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_EditorsPublicGroup</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_EditorsPublicGroup</shortDescription>
+        <value>00G1v000007DYZk</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_Email</fullName>
+        <categories>SEGCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_Email</shortDescription>
+        <value>Below contact mapping records owned by you had one or more inactive contacts which have now been removed from the mapping records. Your timely action is appreciated. Please find details below: &lt;br/&gt;&lt;br/&gt;</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_FAQ</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_FAQ</shortDescription>
+        <value>FAQ</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_INFO</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_INFO</shortDescription>
+        <value>INFO</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_ORDER</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_ORDER</shortDescription>
+        <value>ORDER</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_REQUEST</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_REQUEST</shortDescription>
+        <value>SERVICE TICKET</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_Subject</fullName>
+        <categories>SEGCP</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP_Subject</shortDescription>
+        <value>SEG Contact Portal: Notification for inactive users in contact mapping records.</value>
+    </labels>
+    <labels>
+        <fullName>SEGCP_Worldwide</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SEGCP Worldwide</shortDescription>
+        <value>Worldwide</value>
+    </labels>
+    <labels>
+        <fullName>Salesforce_URL</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Salesforce URL</shortDescription>
+        <value>https://seg-automotive.lightning.force.com/sfc/servlet.shepherd/document/download/</value>
+    </labels>
+    <labels>
+        <fullName>Segts_Dup_Validation</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segts Dup Validation</shortDescription>
+        <value>TRUE</value>
+    </labels>
+    <labels>
+        <fullName>Segts_TS_Trigger_Enable</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Segts TS Trigger Enable</shortDescription>
+        <value>FALSE</value>
+    </labels>
+    <labels>
+        <fullName>Time_Data_Amendment_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Time Data Amendment Id</shortDescription>
+        <value>0120Y000000a4atQAA</value>
+    </labels>
+    <labels>
+        <fullName>Used_Currency_RID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Used_Currency_RID</shortDescription>
+        <value>0120Y000000a4auQAA</value>
+    </labels>
+    <labels>
+        <fullName>XSG_Endpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>XSG_Endpoint</shortDescription>
+        <value>https://ews-emea.api.bosch.com/APM/XSG/interface2;https://ews-emea.api.bosch.com/APM/XSG/interface4</value>
+    </labels>
+    <labels>
+        <fullName>canteen_Booking_privacy_policy</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>canteen Booking privacy policy</shortDescription>
+        <value>In accordance with § 2 Para. 3 of the CoronaVO Gaststätten of the state of Baden-Württemberg, the contact details of guests are collected and stored for a period of 4 weeks for the purpose of providing information to the public health department or the local police authority in accordance with §§ 16, 25 IfSG. More information on data protection</value>
+    </labels>
+    <labels>
+        <fullName>communityId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>communityId</shortDescription>
+        <value>0DB0Y000000g0dbWAA</value>
+    </labels>
+    <labels>
+        <fullName>communityprefix</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Communityprefix</shortDescription>
+        <value>/insight/sfc/servlet.shepherd/version/download</value>
+    </labels>
+    <labels>
+        <fullName>eSignature_RecordTypeId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>eSignature RecordTypeId</shortDescription>
+        <value>0120Y000000a4b0QAA</value>
+    </labels>
+    <labels>
+        <fullName>proxyApproved</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequestsApprovedByProxy</value>
+    </labels>
+    <labels>
+        <fullName>proxyRejected</fullName>
+        <categories>InsightFlow 2.0</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Home Screen - Pie Chart</shortDescription>
+        <value>RequestsRejectedByProxy</value>
+    </labels>
+</CustomLabels>

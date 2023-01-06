@@ -1,0 +1,50 @@
+.THIS.seg-theme {
+    border-radius: .25rem;
+}
+
+.THIS .custom-slds-float_right {
+    float: right;
+    position: relative;
+}
+
+.THIS.container {
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: .25rem;
+    background: white;
+    font-family: 'Titillium Web' !important;
+}
+
+.THIS .tabs {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.THIS .slds-page-header {
+    padding: 0rem 1rem;
+    box-shadow: none;
+}
+
+.THIS .slds-text-heading_large {
+    color: #495E70;
+}
+
+.THIS .slds-p-around_medium {
+    padding-bottom: 0.4rem;
+}
+
+.THIS .custom-form-footer {
+    height: 30px;
+}
+
+.THIS .favoritebuttoncolor {
+    background-color: #009164;
+    color: #fff; 
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/resource/TitilliumWeb);
+}

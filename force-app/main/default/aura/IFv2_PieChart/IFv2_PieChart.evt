@@ -1,0 +1,14 @@
+<!--
+* 
+* @ Name 	:	IFv2_PieChart
+* @ Purpose : 	Event is used to pass the status from Piechart component to RequestsOverview Component
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   28-02-2019      |  madhuravani.b@absyz.com   	|  1.0          |  Initial Version
+*
+-->
+<aura:event type="COMPONENT" description="Holds the status of the Request">
+    <aura:attribute name="status" type="String"/>
+</aura:event>

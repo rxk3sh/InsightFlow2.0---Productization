@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ChinaCapitalizeFinFillPart</fullName>
+    <description>Used in China Capitalize workflow</description>
+    <displayedFields>
+        <field>RequestExtension1__r.AssetNo__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>ChinaCapitalize Fin Fill Part</label>
+</FieldSet>

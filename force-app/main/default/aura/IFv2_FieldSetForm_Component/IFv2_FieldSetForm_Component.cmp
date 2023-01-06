@@ -1,0 +1,57 @@
+<!--
+* @ Name 	:	IFv2_InputField_Component
+* @ Purpose : 	Display form with fields of a single field set.
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   30-10-2018      |  anoop.ravindran@absyz.com  	|  1.0          |  Initial Version
+*	09-11-2018      |  madhuravani.b@absyz.com	    |  1.1          |  Added the Edit button functionality and merged the data for workflow
+*
+-->
+
+<aura:component controller="IFv2_FieldSetFormController" implements="flexipage:availableForRecordHome,force:hasRecordId,force:hasSObjectName,flexipage:availableForAllPageTypes">
+    
+    <!-- Attributes - Spinner and Alert -->
+    <aura:attribute name="isAlert" type="Boolean" />
+    <aura:attribute name="alertMessage" type="String" />
+    <aura:attribute name="showSpinner" type="Boolean" />
+    
+    <aura:attribute name="section" type="Object" default="" />
+    <aura:attribute name="data" type="Object" default="" />
+    
+    <!-- Attributes used in logic -->
+    <aura:attribute name="fieldSetName" type="String" description="The api name of the field set to use from the given object." />
+    <aura:attribute name="saveAction" type="Aura.Action" />
+    <aura:attribute name="record" type="SObject" description="The record the fields are bound to that is returned from the server." />
+    <aura:attribute name="fields" type="Object[]" access="private" />
+    <aura:attribute name="readOnlySection" type="Boolean" default="false" />
+    <aura:attribute name="viewPage" type="Boolean" default="false" />
+    <aura:attribute name="requiredFieldList" type="Object[]" default="[]" />
+    <aura:attribute name="oldRequiredFieldList" type="Object[]" default="[]" />
+    <aura:attribute name="recordType" type="String" />
+    <aura:attribute name="fieldList" type="String[]" />
+    <aura:attribute name="showInlineEdit" type="Boolean" default="true" />
+    <aura:attribute name="readOnly" type="Boolean" />
+    <aura:attribute name="sectionId" type="String" />
+    <aura:attribute name="StoreInValue2" type="Boolean" />
+    <aura:attribute name="fieldSetName2" type="String" />
+    <aura:attribute name="requestStatus" type="String" />
+    <aura:attribute name="currentUser" type="String" />
+    
+    <!-- Component Event Handlers -->
+    <aura:handler name="change" value="{!v.requiredFieldList}" action="{!c.setFieldsRequired}" />
+    
+    <!-- Markup Body -->
+    <lightning:layout multipleRows="true" verticalAlign="start">
+        
+        <!-- Iterate over fields in the section -->
+        <aura:iteration items="{!v.data.fields}" var="field">
+            <!-- Display each field -->
+            <!-- Added new attribute in IFv2_InputField_Component for storing object name-->
+            <c:IFv2_InputField_Component sObjectName="{!v.sObjectName}" field="{!field}" record="{!v.record}" viewPage="{!v.viewPage}" readOnlySection="{!v.readOnlySection}" requestStatus="{!v.requestStatus}" currentUser="{!v.currentUser}"/>
+            
+        </aura:iteration>
+    </lightning:layout>
+    
+</aura:component>

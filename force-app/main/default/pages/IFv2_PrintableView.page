@@ -1,0 +1,168 @@
+<!--
+* 
+* @ Name 	:	IFv2_PrintableView
+* @ Purpose : 	Printable view visualforce page
+* @ Author	: 	Naga Sai
+*
+*   Date       	|  Developer Name               	|  Version      |  Changes
+* ======================================================================================================
+*   04-11-2018	|  nagasai.chalamalasetti@absyz.com	|  1.0          |  Initial Version
+*
+-->
+
+<apex:page standardController="IFv2_Request__c" extensions="IFv2_PrintableViewController" applyHtmlTag="true" applyBodyTag="false" showHeader="false" > 
+    
+    <html>
+        <style>
+            .form {
+            background-color: black;
+            }
+            .rectangle {
+            width: 580px;
+            display: inline-block;
+            position: absolute;
+            top: 0;
+            margin: 15px 0;
+            left: 50%;
+            transform: translate(-50%);
+            }
+            table.header {
+            border-collapse: collapse;
+            table-layout: fixed;
+            width: 580px;
+            height: 70px;
+            }
+            table.body-header {
+            table-layout: fixed;
+            width: 580px;
+            } 
+            td.header {
+            border: 1px solid black;
+            padding-left: 10px;
+            }
+            div.headerlabel {
+            color: grey;
+            }
+            div.headervalue {
+            color: black;
+            }
+            div.value {
+            padding-bottom: 10px;
+            word-wrap: break-word;
+            }
+            div.body {
+            width: 580px;
+            background-color: #555;
+            }
+            div.sectionheader {
+            padding-bottom: 8px;
+            font-size: 14px;
+            color: #074180;
+            text-decoration: underline;
+            }
+            div.label {
+            color: grey;
+            padding-bottom: 5px;
+            }
+            div.Approvalvalue {
+            padding-bottom: 10px;
+            word-wrap: break-word;
+            }
+            .button {
+            display: inline-block;
+            border: none;
+            padding: 1rem 2rem;
+            margin: 0;
+            text-decoration: none;
+            background: #074180;
+            color: #ffffff;
+            font-size: 1rem;
+            line-height: 1;
+            cursor: pointer;
+            text-align: center;
+            transition: background 250ms ease-in-out, transform 150ms ease;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            }
+            hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid black;
+            margin-bottom: 1em;
+            padding: 0;
+            }
+        </style>
+        
+        <script type="text/javascript">
+        
+        var image;
+        var canvasimage;
+        
+        function printPDF() {
+            document.getElementById("printbutton").style.display = "none";
+            window.print();
+        }
+        
+        </script>
+        
+        <apex:form >
+            <head>
+                <body>
+                    <div id="printbutton">
+                        <button onclick="printPDF();" class="button"> Print </button>
+                    </div>
+                    
+                    <div id="body" class="rectangle">
+                        
+                        <div style="padding-bottom:10px">
+                            <apex:image url="{!logourl}" width="137" height="57"/>
+                        </div>
+                        
+                        <table class="header">
+                            <tr>
+                                <td class="header">
+                                    <div class="headerlabel">
+                                        <span>Request Id</span>
+                                    </div>
+                                    <div class="headervalue">
+                                        <span>{!IF(ISNULL(Request.OldRequestName__c), Request.name, Request.OldRequestName__c)}</span>
+                                    </div>
+                                </td>
+                                <td class="header">
+                                    <div class="headerlabel">
+                                        <span>Applicant Name</span>
+                                    </div>
+                                    <div class="headervalue">
+                                        <span>{!Request.ApplicantFirstName__c}
+                                            {!Request.ApplicantLastName__c}</span>
+                                    </div>
+                                </td>
+                                <td class="header">
+                                    <div class="headerlabel">
+                                        <span>Created Date</span>
+                                    </div>
+                                    <div class="headervalue">
+                                        <apex:outputText value="{0,date,dd'.'MM'.'yyyy  hh:mm a}">
+                                            <apex:param value="{!Request.createddate+datetimeoffset}"/>
+                                        </apex:outputText>
+                                    </div>
+                                </td>
+                                <td class="header">
+                                    <div class="headerlabel">
+                                        <span>Status</span>
+                                    </div>
+                                    <div class="headervalue">
+                                        {!Request.Status__c}
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <br/>
+                        <apex:outputText value="{!ApprovalRelatedList}" escape="false" />
+                    </div>
+                </body>
+            </head>
+        </apex:form>
+    </html>
+</apex:page>

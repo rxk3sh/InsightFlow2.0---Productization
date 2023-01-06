@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LookupObject__c</fullName>
+    <description>API Name of Object to which the field should lookup to for using text fields as lookup. Not required in case of user lookup</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>API Name of Object to which the field should lookup to for using text fields as lookup. Not required in case of user lookup</inlineHelpText>
+    <label>Lookup Object</label>
+    <length>100</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

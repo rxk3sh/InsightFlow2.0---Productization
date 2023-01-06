@@ -1,0 +1,4 @@
+<aura:event type="Application" description="Sample Application Event">
+    <aura:attribute name="requestStatus" type="String" />
+    <aura:attribute name="eventFired" type="boolean" default="false"/>
+</aura:event>

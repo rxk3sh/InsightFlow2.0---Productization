@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestForCorporateCardSection1</fullName>
+    <active>true</active>
+    <description>This is used in Request for corporate card,  to show error message if section 1 is filled with selecting corresponding value.</description>
+    <errorConditionFormula>and 
+( 
+(NOT(INCLUDES(WorkflowType__c, &apos;Card Solicitation&apos;))), 
+ Workflow__c =  $CustomMetadata.IFv2_Workflows__mdt.Requestsforcorporatecard.Name__c , 
+OR(
+NOT(ISBLANK( RequestExtension3__r.Office__c ))
+,
+ NOT(ISBLANK(RequestExtension3__r.OfficePhone__c))
+,
+NOT(ISBLANK(RequestExtension3__r.CPF__c))
+)
+)</errorConditionFormula>
+    <errorMessage>Not allowed to enter data in section 1 / section 6 without selecting Card Solicitation value in WorkflowType</errorMessage>
+</ValidationRule>

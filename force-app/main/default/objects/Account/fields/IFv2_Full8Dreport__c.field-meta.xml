@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_Full8Dreport__c</fullName>
+    <description>Used in Concession Workflow</description>
+    <externalId>false</externalId>
+    <formula>&quot;This concession is only valid with an attached 8D report, filled out at least up to and including D3 Containment actions.&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Full 8D report</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

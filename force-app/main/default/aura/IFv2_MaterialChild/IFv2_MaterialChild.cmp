@@ -1,0 +1,32 @@
+<!--
+* 
+* @ Name 	:	IFv2_MaterialChild
+* @ Purpose : 	This is the child component to display each row of material record
+* @ Author	: 	Elsa Shaju
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   10-05-2019      |  elsa.shaju@absyz.com     	|  1.0          |  Initial Version
+-->
+
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="material" type="Object" description="Stores the material" />
+    <aura:attribute name="fieldName" type="String" description="Stores all the materials" />
+    <aura:attribute name="displayValue" type="String" description="Stores all the materials" />
+    <aura:attribute name="isParent" type="Boolean" description="Passing value to child component whether component is on parent or child" />
+    <aura:attribute name="role" type="String" description="Role of the logged in user" />
+    <aura:attribute name="inputField" type="Boolean" />
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="change" value="{!v.role}" action="{!c.handleChange}" />
+    <aura:handler name="change" value="{!v.displayValue}" action="{!c.handleValueChange}"/>
+    <aura:if isTrue="{!v.inputField}" >
+        <lightning:input value="{!v.displayValue}" />
+        <aura:set attribute="else">
+            <ui:outputText value="{!v.displayValue}" />
+        </aura:set>
+    </aura:if>
+    
+    
+</aura:component>

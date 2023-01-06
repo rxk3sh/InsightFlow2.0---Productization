@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_DescriptioninDirectApproval</fullName>
+    <description>Field set for Description section in direct purchasing Approval.</description>
+    <displayedFields>
+        <field>ResponsibleBuyerIdenticalwRequester__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Description in Direct Purchasing Approval</label>
+</FieldSet>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestForCorporateCardSection2</fullName>
+    <active>true</active>
+    <description>To display error message when Section 2 is filled without selecting 2ª Way - Card in workflow Type field. This is used in request for corporate card workflow.</description>
+    <errorConditionFormula>and 
+(  
+(NOT(INCLUDES(WorkflowType__c , &apos;2ª Way - Card&apos;))), Workflow__c =  $CustomMetadata.IFv2_Workflows__mdt.Requestsforcorporatecard.Name__c,  
+NOT(ISBLANK(TEXT( RequestExtension3__r.Reasonforreissue__c ))) 
+)</errorConditionFormula>
+    <errorMessage>Not allowed to enter data in section 2 without selecting the 2ª Way - Card value in Workflow Type field.</errorMessage>
+</ValidationRule>

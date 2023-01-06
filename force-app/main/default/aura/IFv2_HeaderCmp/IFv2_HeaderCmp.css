@@ -1,0 +1,47 @@
+.THIS.slds-page-header {
+    padding : 0.25rem;
+}
+
+.THIS #input-3-form-label {
+    display : none;
+}
+
+.THIS .slds-file-selector__text {
+    display : none;
+}
+
+.THIS .custom-icon {
+    margin-left : 0.3rem;
+}
+
+.THIS .process-status {
+    padding: 1px 4px 2px;
+    font-size: 10.998px;
+    font-weight: bold;
+    line-height: 13px;
+    color: #ffffff;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+}
+
+.THIS .custom-approved {
+    background-color: #1b7742;
+}
+
+.THIS .custom-cancelled {
+    background-color: #b94a48;
+}
+
+.THIS .custom-draft {
+    background-color: #DCD861;
+}
+
+.THIS .custom-rejected {
+    background-color: #b94a48;
+}
+
+.THIS .custom-submitted {
+    background-color: #66788a;
+}

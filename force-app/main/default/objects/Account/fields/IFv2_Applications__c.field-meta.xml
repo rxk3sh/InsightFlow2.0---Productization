@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_Applications__c</fullName>
+    <description>used in LEX contracting</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please include all of applications in the scope of this LEX - SEG Resource Agreement.</inlineHelpText>
+    <label>Applications</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

@@ -1,0 +1,101 @@
+.THIS .slds-card:hover .slds-card__footer {
+    visibility: visible;
+}
+
+.THIS .slds-card {
+    color: #495E70;
+    font-size: 14px;
+    font-family: 'Titillium Web';
+}
+
+.THIS .slds-card__footer {
+    border-bottom-left-radius: 0.25rem;
+    border-bottom-right-radius: 0.25rem;
+    font-family: 'Titillium Web';
+    background: #BEC8D4;
+    margin-top: 0.25rem;
+    padding: 5px 10px;
+    height: 40px;
+}
+
+.THIS .slds-card__header {
+    margin-bottom: 0;
+}
+
+.THIS .slds-card__body {
+    height: 165px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url(/resource/TitilliumWeb);
+}
+
+.THIS .custom-padding {
+    height: 100px;
+    width: 150px;
+}
+
+.THIS .custom-padding-2 {
+    height: 150px;
+    width: 150px;
+}
+
+.THIS .custom-overflow {
+    overflow: hidden;
+}
+
+.THIS a {
+    color: #495E70;
+    font-size: 14px;
+}
+
+.THIS .custom-animation {
+    background: #BEC8D4;
+}
+
+.THIS .custom-underline {
+    text-decoration: underline;
+    color:#495E70;
+}
+
+.THIS .custom-underline:hover {
+    text-decoration-line: underline;
+    text-decoration-color: #009164;
+}
+
+.THIS .favoritecolor {
+    color: #009164;
+}
+
+.THIS .slds-card:hover {
+    box-shadow: 8px 8px 5px #BEC8D4;
+}
+
+.THIS .outputDots {
+    color: #495E70;
+    display: inline-block;
+    width: 160px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    font-family: 'Titillium Web';
+}
+
+.THIS .custom-info svg {
+    fill: #7C8B9C;
+}
+
+.THIS .custom-info:hover svg {
+    fill: #495E70;
+}
+
+.THIS .custom-info:focus svg {
+    fill: #495E70;
+}
+
+.THIS img {
+    max-height: 70%;
+}

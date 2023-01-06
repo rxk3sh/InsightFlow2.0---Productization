@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Note__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;Please process this suggestion / in case of non-quantifiable benefits attach filled questionnaire / in case of quantifiable benefits assign this work on to CFA/CTG with data / in case you want to reject this suggestion assign it back to me, with reason for rejection&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Note</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

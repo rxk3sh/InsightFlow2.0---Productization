@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsIndirectMapping__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>If checked - In the Value field enter the field API name of the field whose value needs to be populated in the Request field API
+If unchecked - In the Value field enter the exact value to be populated in the Request field API</inlineHelpText>
+    <label>Indirect Mapping</label>
+    <type>Checkbox</type>
+</CustomField>

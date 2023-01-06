@@ -1,0 +1,36 @@
+<!--
+* @ Name 	:	IFv2_CollapsibleSection
+* @ Purpose : 	Reusable Component for Collapsible section.
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   30-10-2018      |  anoop.ravindran@absyz.com  	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component access="global">
+    
+    <!-- Attributes -->
+    <aura:attribute name="title" type="String" />
+    <aura:attribute name="stateAll" type="String" />
+    <aura:attribute name="state" type="Boolean" default="false" />
+    
+    <aura:handler name="change" value="{!v.stateAll}" action="{!c.handleChangeStateAll}" />
+    
+    <div class="slds-section slds-is-open slds-p-bottom--medium" aura:id="container-id">
+        <span class="slds-section__title">
+            <lightning:buttonStateful labelWhenOff="{!v.title}"
+                                      labelWhenOn="{!v.title}"
+                                      iconNameWhenOff="utility:chevrondown"
+                                      iconNameWhenOn="utility:chevronright"
+                                      onclick="{!c.handleSectionHeaderClick}"
+                                      state="{!v.state}"
+                                      class="slds-button_neutral slds-section__title-action" />
+        </span>
+        <div class="slds-section__content">
+            {!v.body}
+        </div>
+    </div>
+    
+</aura:component>

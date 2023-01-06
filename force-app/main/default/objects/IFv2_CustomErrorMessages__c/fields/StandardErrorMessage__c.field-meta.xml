@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>StandardErrorMessage__c</fullName>
+    <description>Used to store custom error message</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the Standard error message</inlineHelpText>
+    <label>Standard Error Message</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

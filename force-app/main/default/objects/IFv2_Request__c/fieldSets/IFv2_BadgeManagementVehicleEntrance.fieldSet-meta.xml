@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_BadgeManagementVehicleEntrance</fullName>
+    <description>Used in Badge Management</description>
+    <displayedFields>
+        <field>RequestExtension2__r.LicensePlate__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>RequestExtension2__r.AddtionalVehicleOnly__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Badge Management Vehicle Entrance</label>
+</FieldSet>

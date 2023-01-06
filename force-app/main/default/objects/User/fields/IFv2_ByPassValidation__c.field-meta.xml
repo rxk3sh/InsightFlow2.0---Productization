@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ByPassValidation__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used to handle Validation Rules from firing</description>
+    <externalId>false</externalId>
+    <label>By Pass Validation</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Checkbox</type>
+</CustomField>

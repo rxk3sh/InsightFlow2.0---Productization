@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FINDocumentNo__c</fullName>
+    <description>Used in China MAE Application – Lost, Combine, Split and Scrap.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field should be filled by specific approvers from FIN department</inlineHelpText>
+    <label>FIN Document No</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

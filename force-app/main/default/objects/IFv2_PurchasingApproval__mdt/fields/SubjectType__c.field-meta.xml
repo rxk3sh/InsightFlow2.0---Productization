@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubjectType__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please select the appropriate Subject Type</inlineHelpText>
+    <label>SubjectType</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agreements</fullName>
+                <default>true</default>
+                <label>Agreements</label>
+            </value>
+            <value>
+                <fullName>Debit Notes</fullName>
+                <default>false</default>
+                <label>Debit Notes</label>
+            </value>
+            <value>
+                <fullName>Price Decision</fullName>
+                <default>false</default>
+                <label>Price Decision</label>
+            </value>
+            <value>
+                <fullName>Purchasing Orders</fullName>
+                <default>false</default>
+                <label>Purchasing Orders</label>
+            </value>
+            <value>
+                <fullName>Value Independent</fullName>
+                <default>false</default>
+                <label>Value Independent</label>
+            </value>
+            <value>
+                <fullName>Price Decision (delta volume)</fullName>
+                <default>false</default>
+                <label>Price Decision (delta volume)</label>
+            </value>
+            <value>
+                <fullName>Payment Terms and Incoterms</fullName>
+                <default>false</default>
+                <label>Payment Terms and Incoterms</label>
+            </value>
+            <value>
+                <fullName>Sourcing Decision – COQ Approval Submission</fullName>
+                <default>false</default>
+                <label>Sourcing Decision – COQ Approval Submission</label>
+            </value>
+            <value>
+                <fullName>Credit Notes</fullName>
+                <default>false</default>
+                <label>Credit Notes</label>
+            </value>
+            <value>
+                <fullName>Sample Orders</fullName>
+                <default>false</default>
+                <label>Sample Orders</label>
+            </value>
+            <value>
+                <fullName>Price Decision(delta volume)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Price Decision(delta volume)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,23 @@
+.THIS.custom-menu {
+    border : none;
+    width : 100%;
+    text-align : center;
+    padding-right: 0rem;
+    padding-left: 0rem;
+}
+.THIS .slds-button_neutral {
+    border: none;
+}
+.THIS .slds-file-selector__dropzone {
+    border: none;
+}
+
+.THIS .slds-button__icon {
+    display: none;
+}
+
+.THIS.style {
+    /*border : none;
+    width : 100%;
+    text-align : center;*/
+}

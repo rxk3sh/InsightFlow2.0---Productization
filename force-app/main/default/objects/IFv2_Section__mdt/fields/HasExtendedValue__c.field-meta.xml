@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasExtendedValue__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If the characters stored in Value exceeds 255, store the value in Extended Value field.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>If the characters stored in Value exceeds 255, store the value in the Extended Value field.</inlineHelpText>
+    <label>Has Extended Value</label>
+    <type>Checkbox</type>
+</CustomField>

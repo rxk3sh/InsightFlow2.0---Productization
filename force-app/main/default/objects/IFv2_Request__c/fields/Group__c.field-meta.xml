@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group__c</fullName>
+    <description>Used in Purchasing Approval Workflow</description>
+    <externalId>false</externalId>
+    <label>Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PUD</fullName>
+                <default>false</default>
+                <label>PUD</label>
+            </value>
+            <value>
+                <fullName>PUE</fullName>
+                <default>false</default>
+                <label>PUE</label>
+            </value>
+            <value>
+                <fullName>PUS</fullName>
+                <default>false</default>
+                <label>PUS</label>
+            </value>
+            <value>
+                <fullName>PUI</fullName>
+                <default>false</default>
+                <label>PUI</label>
+            </value>
+            <value>
+                <fullName>AM-PUR</fullName>
+                <default>false</default>
+                <label>AM-PUR</label>
+            </value>
+            <value>
+                <fullName>PU</fullName>
+                <default>false</default>
+                <label>PU</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

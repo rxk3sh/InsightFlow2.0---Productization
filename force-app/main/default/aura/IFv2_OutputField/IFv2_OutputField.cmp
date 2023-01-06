@@ -1,0 +1,156 @@
+<!--
+* 
+* @ Name 	:	IFv2_OutputField
+* @ Purpose : 	This is the generic output form
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   24-12-2018      |  pradeep.chary@absyz.com  	|  1.0          |  Initial Version
+*   20-08-2018      |  external.debasmita.rawooth@seg-automotive.com|  Added logic for SubjectType__c field for Purchasing WF
+-->
+
+<aura:component access="global" controller="IFv2_UtilsController">
+    
+    <!-- Required Attributes -->
+    <aura:attribute name="label" type="String" default="" />
+    <aura:attribute name="value" type="String" default="" />
+    <aura:attribute name="name" type="String" default="" />
+    <aura:attribute name="type" type="String" default="string" />
+    <aura:attribute name="helpText" type="String" />
+    <aura:attribute name="objectName" type="String" />
+    <aura:attribute name="hasHelpText" type="Boolean" default="false" />
+    <aura:attribute name="isEditable" type="Boolean" default="false" />
+    <aura:attribute name="isEditableInit" type="Boolean" />
+    <aura:attribute name="createdDate" type="String"/>
+    <aura:attribute name="modifiedDate" type="String"/>
+    <aura:attribute name="containsDate" type="Boolean" default="false"/>
+    <aura:attribute name="requestStatus" type="String"/>
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="fieldName" type="String"/>
+    <aura:attribute name="workflow" type="String"/>
+    <aura:attribute name="searchField" type="String" default="Name"/>
+    
+    <!-- Custom Label -->
+    <aura:attribute name="dummyUserId" type="String" default="{!$Label.c.CLIFv20022}" />
+    
+    <!-- Event & Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:handler name="change" value="{!v.value}" action = "{!c.onInit}" />
+    <aura:handler name="change" value="{!v.requestStatus}" action="{!c.statusChange}"/>
+    <aura:registerEvent name="cmpEvent" type="c:IFv2_EditModeEvent" />
+    
+    
+    <!-- Form Start -->
+    <div class="slds-form slds-form_stacked" role="list">
+        <div class="slds-col slds-has-flexi-truncate slds-grid" role="listitem">
+            <div class="slds-form-element slds-form-element_edit slds-form-element_readonly slds-hint-parent">
+                <span class="slds-form-element__label">{!v.label}</span>
+                
+                <!-- Help Information -->
+                <aura:if isTrue="{!v.hasHelpText}">
+                    <div class="slds-form-element__icon">
+                        <lightning:helptext content="{!v.helpText}" />
+                    </div>
+                </aura:if>
+                
+                <!-- Output Fields -->
+                <div class="slds-form-element__control" ondblclick="{!c.editMode}">
+                    
+                    <aura:if isTrue="{!or(v.type == 'string',v.type == 'picklist')}">
+                        <aura:if isTrue="{!v.fieldName == 'SubjectType__c'}">
+                            <aura:if isTrue="{!v.workflow == $Label.c.CLIFv20005}">
+                                <aura:if isTrue="{!v.value=='Debit Notes'}">
+                                    <div class="slds-form-element__static">Credit Notes</div>
+                                    <aura:set attribute="else">
+                                        <div class="slds-form-element__static">{!v.value}</div>
+                                    </aura:set>
+                                </aura:if>
+                                <aura:set attribute="else">
+                                    <aura:if isTrue="{!v.workflow == $Label.c.CLIFv20007}">
+                                        <aura:if isTrue="{!v.value=='Agreements'}">
+                                            <div class="slds-form-element__static">Quota Change</div>
+                                            <aura:set attribute="else">
+                                                <aura:if isTrue="{!v.value=='Price Decision'}">
+                                                    <div class="slds-form-element__static">Purchasing Decision (Complete Volume)</div>
+                                                    <aura:set attribute="else">
+                                                        <aura:if isTrue="{!v.value=='Price Decision (delta volume)'}">
+                                                            <div class="slds-form-element__static">Purchasing Decision (delta Volume)</div>
+                                                            <aura:set attribute="else">
+                                                                <div class="slds-form-element__static">{!v.value}</div>
+                                                            </aura:set>
+                                                        </aura:if>
+                                                    </aura:set>
+                                                </aura:if>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:if>
+                                </aura:set>
+                            </aura:if>
+                            <aura:set attribute="else">
+                                <div class="slds-form-element__static">{!v.value}</div>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'reference'}">
+                        <aura:if isTrue="{!and(v.value != v.dummyUserId, v.value!=undefined)}">
+                            <ui:outputURL class="slds-form-element__static textUnderline" 
+                                          value="{!'/lightning/r/'+v.value+'/view'}" label="{!v.name}" target="_blank"/>
+                            <aura:set attribute="else">
+                                <div class="slds-form-element__static"></div>
+                            </aura:set>
+                        </aura:if>
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'datetime'}">
+                        <ui:outputDateTime class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'date'}">
+                        <ui:outputDate class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'boolean'}">
+                        <div class="slds-form-element__static">
+                            <ui:outputCheckbox value="{!v.value}" />
+                        </div>
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'currency'}">
+                        <ui:outputCurrency class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'email'}">
+                        <ui:outputEmail class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'phone'}">
+                        <ui:outputPhone class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!or(v.type == 'integer',v.type == 'double')}">
+                        <ui:outputNumber class="slds-form-element__static" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type=='percent'}">
+                        <ui:outputNumber class="slds-form-element__static" format="###.##%" value="{!if(v.value!=undefined,v.value/100,0)}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'url'}">
+                        <ui:outputURL class="slds-form-element__static textUnderline" label="{!v.name}" value="{!v.value}" />
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'textarea'}">
+                        <ui:outputTextArea class="slds-form-element__static" value="{!v.value}" />
+                        
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'richtextarea'}">
+                        <lightning:formattedRichText value="{!v.value}" class="slds-form-element__static"/>
+                    </aura:if>
+                    <aura:if isTrue="{!v.type == 'multipicklist'}">
+                        <div class="slds-form-element__static">{!v.value}</div>
+                    </aura:if>
+                    
+                    <!-- Edit button icon -->
+                    <aura:if isTrue="{!v.isEditable}">
+                        <lightning:buttonIcon variant="bare" class="slds-button slds-button_icon custom-edit-icon" 
+                                              alternativeText="edit" iconName="utility:edit" onclick="{!c.editMode}">
+                            <span class="slds-assistive-text">Edit</span>
+                        </lightning:buttonIcon>
+                    </aura:if>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</aura:component>

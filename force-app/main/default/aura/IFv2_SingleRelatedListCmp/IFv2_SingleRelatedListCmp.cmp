@@ -1,0 +1,298 @@
+<!--
+* 
+* @ Name 	:	IFv2_SingleRelatedListCmp
+* @ Purpose : 	Component for displaying individual related list
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   26-12-2018      |	pradeep.chary@absyz.com		|  1.0          |  Initial Version
+*   
+-->
+
+<aura:component controller="IFv2_GenericRelatedListController" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <!-- Attributes for Logic -->
+    <aura:attribute name="fields" type="List" description="The list of fields to display." />
+    <aura:attribute name="AllRecordList" type="List" />
+    <aura:attribute name="BackupRecordList" type="List" />
+    <aura:attribute name="columnLabels" type="String" />
+    <aura:attribute name="modalRecordList" type="List" />
+    <aura:attribute name="modalColumnLabels" type="String" />
+    <aura:attribute name="modalRecordListCount" type="String" default='0' />
+    <aura:attribute name="headerIcon" type="String" />
+    <aura:attribute name="relatedListLabel" type="String" />
+    <aura:attribute name="relatedListType" type="String" />
+    <aura:attribute name="relatedListCount" type="String" default='0'/>
+    <aura:attribute name="sObjectName" type="String" default="Account" description="The api name of the object." />
+    <aura:attribute name="record" type="Object" />
+    <aura:attribute name="requestRecord" type="Object" />
+    <aura:attribute name="wrapper" type="List" description="attribute to keep all the data from server"/>
+    <aura:attribute name="sectionList" type="Object[]"/>
+    <aura:attribute name="recordType" type ="String" default ="Custom Object"/>
+    <aura:attribute name="isOpen" type="Boolean" default = "false" description="To open modal for new record creation"/>
+    <aura:attribute name="entityId" type="String" />
+    <aura:attribute name="recordToBeDeleted" type="String" /> 
+    <aura:attribute name="isEditMode" type="Boolean" default="false" />
+    <aura:attribute name="isDelete" type="Boolean" default="false" description="To open delete confirmation modal"/>
+    <aura:attribute name="isViewAll" type="Boolean" default="false" description="To open Modal on click of View All"/>
+    <aura:attribute name="isDraft" type="Boolean" default="false" />
+    <aura:attribute name="requestStatus" type="String" />
+    <aura:attribute name="eventFired" type="Boolean" default="false" />
+    <aura:attribute name="isNew" type="Boolean" default="false" />
+    <aura:attribute name="isEdit" type="Boolean" default="false" />
+    <aura:attribute name="isView" type="Boolean" default="false" />
+    
+    <!-- Attributes for Alert and Spinner -->
+    <aura:attribute name="isAlert" type="Boolean" />
+    <aura:attribute name="alertMessage" type="String" />
+    <aura:attribute name="isEmpty" type="Boolean" default="false" />
+    <aura:attribute name="isRequiredEmpty" type="Boolean" default="false" />
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    <!-- Component Event Handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="cmpEvent" event="c:IFv2_EditModeEvent" action="{!c.editPage}" />
+    <aura:handler event="c:IFv2_Headerevent" action = "{!c.changeActions}" />
+    <aura:handler event="c:IFv2_RefreshRelatedListEvent" action="{!c.updateRecords}" />
+    
+    <!-- Page Markup -->
+    <!-- Related List Table -->
+    
+    <article class="slds-card slds-p-left--medium slds-card slds-p-right--medium relatedListComponent">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact">
+                        <lightning:icon iconName="{! v.headerIcon}" class="customHeaderIcon"/>
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="{! v.labelName}" onclick="{!c.handleViewAll}">
+                            <span>{! v.relatedListLabel} ({! v.relatedListCount})</span>
+                        </a>
+                    </h2>
+                </div>
+                <!-- New button besides the Related List header only visible in Draft status-->
+                <aura:if isTrue="{!v.showSpinner}">
+                    <div class="slds-spinner slds-spinner--small slds-spinner--brand" style="position:static;">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                    <aura:set attribute="else">
+                <aura:if isTrue="{!v.isDraft}">
+                    <lightning:button label="New" title="New" onclick="{! c.createNewRecord }"/>
+                </aura:if>
+                    </aura:set>
+                </aura:if>
+            </header>
+        </div>
+        <!-- body of data table -->
+        <div class="slds-card__body slds-scrollable_y">
+            <aura:if isTrue="{!(!v.isEmpty)}">
+                <!-- Lightning data table for displaying related list -->
+                <lightning:datatable data="{! v.AllRecordList}"
+                                     columns="{! v.columnLabels}"
+                                     keyField="id"
+                                     hideCheckboxColumn="true"
+                                     onrowaction="{! c.handleRowAction}"
+                                     />
+                <!-- End of Related list data table -->
+            </aura:if>
+            
+        </div>
+        <aura:if isTrue="{!v.isEmpty}">
+            <aura:set attribute="else">
+                <footer class="slds-card__footer">
+                    <a class="slds-card__footer-action" href="javascript:void(0);" onclick="{!c.handleViewAll}">View All</a>
+                </footer>
+            </aura:set>
+        </aura:if>
+    </article>
+    
+    
+    
+    
+    <!-- MODAL BOX for creating New Record in related list --> 
+    <aura:if isTrue="{!v.isOpen}">
+        
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large slds-scrollable_y">
+            <div class="slds-modal__container">
+                
+                <!-- Spinner -->
+                <aura:if isTrue="{!v.showSpinner}">
+                    <lightning:spinner variant="brand" size="large" class="slds-spinner_container slds-is-fixed" alternativeText="spinner" />
+                    <div class="slds-backdrop"></div>
+                </aura:if>
+                
+                <!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    
+                    <aura:if isTrue="{!v.isView}">
+                        <h2 class="slds-text-heading_medium slds-hyphenate">{!v.relatedListType}</h2>
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!v.isNew}">
+                        <h2 class="slds-text-heading_medium slds-hyphenate">New {!v.relatedListType}</h2>
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!v.isEdit}">
+                        <h2 class="slds-text-heading_medium slds-hyphenate">Edit {!v.relatedListType}</h2>
+                    </aura:if>
+                    
+                </header>
+                
+                <!-- MODAL BOX BODY to create New related list record -->
+                <div class="slds-modal__content slds-modal_large slds-p-around_medium scroll">
+                    
+                    <!-- Alert message for required fields -->
+                    <aura:if isTrue="{!v.isRequiredEmpty}">
+                        <div class="slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                            <lightning:icon iconName="utility:error" variant="inverse" alternativeText="error" class="custom-icon" size="small"/>
+                            <lightning:layout horizontalAlign="left" verticalAlign="center" multipleRows="true" class="custom-error-message">
+                                <lightning:layoutItem flexibility="auto" smallDeviceSize="10" mediumDeviceSize="10" largeDeviceSize="10" size="10" class="custom-error-css">
+                                    <h2>{!v.alertMessage}</h2>
+                                </lightning:layoutItem>
+                            </lightning:layout>
+                        </div> 
+                    </aura:if>
+                    
+                    <!-- Iterate over sections -->
+                    <aura:iteration items="{!v.sectionList}" var="section">
+                        
+                        <!-- Display fields in the section -->
+                        <c:IFv2_FieldSetForm_Component section="{!section}"
+                                                       fieldSetName="{!section.Value__c}"
+                                                       data="{!v.wrapper}" 
+                                                       recordType="{!v.recordType}" 
+                                                       sObjectName="{!v.sObjectName}" 
+                                                       record="{!v.record}" 
+                                                       recordId="{!v.recordId}"
+                                                       viewPage="{!v.isEditMode}" 
+                                                       sectionId="{!section.Id}" 
+                                                       isAlert="{!v.isAlert}" 
+                                                       alertMessage="{!v.alertMessage}"
+                                                       fieldSetName2="{!section.ExtendedValue__c}"
+                                                       requestStatus="{!v.requestStatus}"/>
+                        
+                    </aura:iteration>
+                </div>
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{! c.closeModal }"/>
+                    <aura:if isTrue="{!v.isEditMode}">
+                        <lightning:button label="Save" 
+                                          onclick="{!c.saveEvent}" 
+                                          variant="brand" />
+                    </aura:if>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!-- MODAL BOX Part END Here -->
+    </aura:if>
+    
+    <!-- Delete confirmation box Starts Here -->
+    <aura:if isTrue="{!v.isDelete}">
+        
+        <!-- MODAL BOX Start --> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_small">
+            <div class="slds-modal__container">
+                <!-- Spinner code added on 07-03-2019 Start-->
+                <aura:if isTrue="{!v.showSpinner}">
+                    <lightning:spinner variant="brand" size="large" class="slds-spinner_container slds-is-fixed" alternativeText="spinner" />
+                    <div class="slds-backdrop"></div>
+                </aura:if>
+                <!-- Spinner code added on 07-03-2019 End-->
+                
+                <!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Delete {!v.relatedListType}</h2>
+                </header>
+                
+                <!-- MODAL BOX BODY Part Start -->
+                <div class="slds-modal__content slds-p-around_medium slds-text-align_center">
+                    Are you sure you want to delete this Record?
+                </div>
+                
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button label="Cancel"
+                                      title="Cancel"
+                                      variant="neutral"
+                                      onclick="{! c.closeModal }" />
+                    <lightning:button label="Delete"
+                                      title="Cancel"
+                                      variant="brand"
+                                      onclick="{! c.confirmDelete}" />
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!-- MODAL BOX Part END Here -->
+        
+    </aura:if>
+    <!-- Delete confirmation box Ends Here -->
+    
+    
+    <!-- View All modal for Related List Starts here -->
+    <aura:if isTrue="{!v.isViewAll}">
+        
+        <!-- MODAL BOX Start --> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container">
+                
+                <!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">{!v.relatedListLabel} ({!v.modalRecordListCount})</h2>
+                </header>
+                
+                <!-- MODAL BOX BODY Part Start -->
+                <!-- Hot fix W-010304 START (Adding scroll bar in related list) -->
+                <div class="slds-modal__content slds-p-around_medium scroll">
+                    <!-- Hot fix W-010304 END-->
+                    <lightning:datatable data="{!v.modalRecordList}"
+                                         columns="{!v.modalColumnLabels}"
+                                         keyField="id"
+                                         hideCheckboxColumn="true"
+                                         onrowaction="{! c.handleRowAction}"
+                                         onsort="{!c.handleColumnSorting}"
+                                         sortedBy="{!v.sortedBy}"  
+                                         sortedDirection="{!v.sortedDirection}"/>
+                </div>
+                
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{! c.closeModal }"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!-- MODAL BOX Part END Here -->
+        
+    </aura:if>
+    <!-- View All modal for Related List Ends here -->
+    
+</aura:component>

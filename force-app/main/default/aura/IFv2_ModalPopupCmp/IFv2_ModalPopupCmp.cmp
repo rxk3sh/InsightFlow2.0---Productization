@@ -1,0 +1,97 @@
+<!--
+* 
+* @ Name 	:	IFv2_ModalPopupCmp
+* @ Purpose : 	Popup to hold comments in approval process
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   01-11-2018      |  madhuravani.b@absyz.com		|  1.0          |  Initial Version
+*   29-11-2-18      |  kanchan.baghel@absyz.com     |  1.0          |  Added logic to make reject comment mandatory
+*   30-03-2019      |  pradeep.chary@absyz.com(es)  |  2.0          |  Added logic for consult button 
+-->
+<aura:component controller="IFv2_HeaderController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name = "isOpen" type = "boolean" default="true" description = "opens the modal popup"/>
+    <aura:attribute name = "comments" type = "String" description = "stores the comments entered"/>
+    <aura:attribute name = "recordId" type = "String" description = "holds the record ID"/>
+    <aura:attribute name = "buttonName" type = "string" description = "holds the name of the button to be displayed"/>
+    <aura:attribute name = "selectedId" type = "string" description = "holds the selected record ID"/>
+    <aura:attribute name = "showLookup" type = "boolean" default="false" description = "holds the lookup component"/>
+    <aura:attribute name="createdById" type="String" description = "created by Id of the Request" />
+    <aura:attribute name="approverSectionMetadata" type="Object" description="Stores metadata of all Approver Sections" />
+    <aura:attribute name="userLookupLabel" type="String" description="Label of the lookup input box"/>
+    <aura:attribute name = "buttonDisplayName" type = "string" description = "holds the name of the button to be displayed"/>
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="Success/Error alert message" />
+    <aura:attribute name="isAlertError" type="Boolean" default="false" description="Whether to display the alert message" />
+    
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- registering events -->
+    <aura:registerEvent name="alertEvent" type="c:IFv2_AlertEvent"/>
+    <aura:registerEvent name="toastEvent" type="c:IFv2_showToastEvent"/>
+
+    
+    <!-- Modal popup is opened -->
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <!-- Close Icon -->
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.buttonDisplayName} Request</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <!-- Alert message for error -->
+                    <aura:if isTrue="{!v.isAlertError}">
+                        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                            <h2>{!v.alertMessage}</h2>
+                        </div>
+                    </aura:if>
+                    <div class="slds-form-element">
+                        <!-- Shows the lookup component -->
+                        <aura:if isTrue="{!v.showLookup}">
+                            <c:IFv2_LookupComponent
+                                                    label="{!v.userLookupLabel}"
+                                                    object="User"
+                                                    searchField="Name"
+                                                    placeholder="Search Users"
+                                                    iconName="standard:user"
+                                                    order="Name"
+                                                    limit="5"
+                                                    readOnly="false"
+                                                    loadingMessage="Loading..."
+                                                    errorMessage="Invalid input"
+                                                    filter = "isActive = true"
+                                                    subtitleField="Department"
+                                                    value="{!v.selectedId}"/>
+                            
+                        </aura:if>
+                        <!-- holds the comments -->
+                        <div class="slds-form-element__control">
+                            <lightning:textarea name="Comments" label="Comments" value="{!v.comments}"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- Footer buttons -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Cancel"
+                                      title="Cancel"
+                                      onclick="{! c.closeModel }"/>
+                    <lightning:button variant="brand" 
+                                      label="{!v.buttonDisplayName}"
+                                      title="{!v.buttonName}"
+                                      onclick="{! c.ApproverRequest }"/>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+</aura:component>

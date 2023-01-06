@@ -1,0 +1,114 @@
+<!--
+* 
+* @ Name :IFv2_ScanPrintableView
+* @ Purpose : Printable view visualforce page
+* @ Author: Naga Sai
+*
+*   Date            |  Developer Name                  |  Version      |  Changes
+* ======================================================================================================
+*   12-04-2019      |  nagasai.chalamalasetti@absyz.com|  1.0          |  Initial Version
+*
+-->
+
+<apex:page standardcontroller="Scan__c" extensions="IFv2_ScanPrintableViewController" applyHtmlTag="true" applyBodyTag="false" showHeader="false" > 
+
+<html>
+    <style>
+        
+        .form {
+        background-color: black;
+        }
+        .rectangle {
+        width: 580px;
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        margin-bottom: 20px;
+        left: 50%;
+        transform: translate(-50%);
+        }
+        table.header {
+        border-collapse: collapse;
+        table-layout: fixed;
+        width: 580px;
+        height: 70px;
+        }
+        table.body-header {
+        table-layout: fixed;
+        width: 580px;
+        } 
+        td.header {
+        border: 1px solid black;
+        padding-left: 10px;
+        }
+        div.headerlabel {
+        color: grey;
+        }
+        div.headervalue {
+        color: black;
+        }
+        div.value {
+        padding-bottom: 10px;
+        word-wrap: break-word;
+        }
+        div.body {
+        width: 580px;
+        background-color: #555;
+        }
+        div.sectionheader {
+        padding-bottom: 8px;
+        font-size: 14px;
+        color: #074180;
+        text-decoration: underline;
+        }
+        div.label {
+        color: grey;
+        padding-bottom: 5px;
+        }
+        div.Approvalvalue {
+        padding-bottom: 10px;
+        }
+        .button {
+        display: inline-block;
+        border: none;
+        padding: 1rem 2rem;
+        margin: 0;
+        text-decoration: none;
+        background: #074180;
+        color: #ffffff;
+        font-size: 1rem;
+        line-height: 1;
+        cursor: pointer;
+        text-align: center;
+        transition: background 250ms ease-in-out, transform 150ms ease;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        }
+        hr {
+        display: block;
+        height: 1px;
+        border: 0;
+        border-top: 1px solid black;
+        margin-bottom: 1em;
+        padding: 0;
+        }
+    </style>
+        <apex:form >
+        <head>
+            <body>
+                
+                <div id="body" class="rectangle">
+                    
+                    <div style="padding:10px 0">
+                        <apex:image url="{!logoURL}" width="137" height="57"/>
+                    </div>
+                    
+                    <br/>
+                    <apex:outputText value="{!generatePDF}" escape="false" />
+                </div>
+            </body>
+        </head>
+    </apex:form>
+</html>
+
+</apex:page>

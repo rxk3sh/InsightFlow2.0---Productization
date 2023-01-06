@@ -1,0 +1,17 @@
+<!--
+* 
+* @ Name 	:	IFv2_ApprovePopupevent
+* @ Purpose : 	Event which fires when Approve button is clicked in the header component
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   01-11-2018      |  madhuravani.b@absyz.com		|  1.0          |  Initial Version
+*
+-->
+<aura:event type="COMPONENT">
+    <aura:attribute name="isModalPopup" type="boolean"/>
+    <aura:attribute name="recordId" type="string"/>
+     <aura:attribute name="buttonLabel" type="string"/>
+    <aura:attribute name="showLookup" type="boolean"/>
+</aura:event>

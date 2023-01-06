@@ -1,0 +1,32 @@
+.THIS.slds-card{
+   padding-left : 1rem;
+}
+
+.THIS .customHeaderIcon {
+    width: 1.5rem;
+    height: 1.5rem;
+} 
+.THIS .customHeaderIcon svg{
+    width: 1.5rem;
+    height: 1.5rem;
+} 
+
+.THIS .slds-button{
+    margin-right : 1rem;
+}
+
+.THIS .slds-scrollable_x { 
+    overflow: visible; 
+}
+
+.THIS .slds-scrollable_y { 
+    overflow: visible; 
+}
+
+.THIS .slds-resizable__divider {
+    height: max-content;
+}
+
+.THIS .slds-card__header {
+    padding: .75rem 0 0;
+}

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubRegion__c</fullName>
+    <description>Its a dependent picklist based on Region field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Values based on the Region selected</inlineHelpText>
+    <label>Sub Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Region__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brits (SGZA)</fullName>
+                <default>false</default>
+                <label>Brits (SGZA)</label>
+            </value>
+            <value>
+                <fullName>Changchun (SGCN)</fullName>
+                <default>false</default>
+                <label>Changchun (SGCN)</label>
+            </value>
+            <value>
+                <fullName>Changsha (SGCN)</fullName>
+                <default>false</default>
+                <label>Changsha (SGCN)</label>
+            </value>
+            <value>
+                <fullName>Drancy (SGFR)</fullName>
+                <default>false</default>
+                <label>Drancy (SGFR)</label>
+            </value>
+            <value>
+                <fullName>Hildesheim (SGDE)</fullName>
+                <default>false</default>
+                <label>Hildesheim (SGDE)</label>
+            </value>
+            <value>
+                <fullName>Itupeva (SGBR)</fullName>
+                <default>false</default>
+                <label>Itupeva (SGBR)</label>
+            </value>
+            <value>
+                <fullName>Lerma (SGMX)</fullName>
+                <default>false</default>
+                <label>Lerma (SGMX)</label>
+            </value>
+            <value>
+                <fullName>Miskolc (SGHU)</fullName>
+                <default>false</default>
+                <label>Miskolc (SGHU)</label>
+            </value>
+            <value>
+                <fullName>Naganathapura (SGIN)</fullName>
+                <default>false</default>
+                <label>Naganathapura (SGIN)</label>
+            </value>
+            <value>
+                <fullName>Novi (SGUS)</fullName>
+                <default>false</default>
+                <label>Novi (SGUS)</label>
+            </value>
+            <value>
+                <fullName>Stuttgart (SGDE)</fullName>
+                <default>false</default>
+                <label>Stuttgart (SGDE)</label>
+            </value>
+            <value>
+                <fullName>Torino (SGIT)</fullName>
+                <default>false</default>
+                <label>Torino (SGIT)</label>
+            </value>
+            <value>
+                <fullName>Treto (SGES)</fullName>
+                <default>false</default>
+                <label>Treto (SGES)</label>
+            </value>
+            <value>
+                <fullName>Vila do Conde (SGPT)</fullName>
+                <default>false</default>
+                <label>Vila do Conde (SGPT)</label>
+            </value>
+            <value>
+                <fullName>Yokohama (SGJP)</fullName>
+                <default>false</default>
+                <label>Yokohama (SGJP)</label>
+            </value>
+            <value>
+                <fullName>Yongin-si (SGSK)</fullName>
+                <default>false</default>
+                <label>Yongin-si (SGSK)</label>
+            </value>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+                <label>Global</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Europe - Spain</controllingFieldValue>
+            <valueName>Treto (SGES)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America - Mexico</controllingFieldValue>
+            <valueName>Lerma (SGMX)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>North America - USA</controllingFieldValue>
+            <valueName>Novi (SGUS)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>South America - Brazil</controllingFieldValue>
+            <valueName>Itupeva (SGBR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global</controllingFieldValue>
+            <valueName>Global</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Africa - SouthAfrica</controllingFieldValue>
+            <valueName>Brits (SGZA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia - China</controllingFieldValue>
+            <valueName>Changchun (SGCN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia - China</controllingFieldValue>
+            <valueName>Changsha (SGCN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia - India</controllingFieldValue>
+            <valueName>Naganathapura (SGIN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia - Japan</controllingFieldValue>
+            <valueName>Yokohama (SGJP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Asia - Korea</controllingFieldValue>
+            <valueName>Yongin-si (SGSK)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - France</controllingFieldValue>
+            <valueName>Drancy (SGFR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - Germany</controllingFieldValue>
+            <valueName>Hildesheim (SGDE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - Germany</controllingFieldValue>
+            <valueName>Stuttgart (SGDE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - Hungary</controllingFieldValue>
+            <valueName>Miskolc (SGHU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - Italy</controllingFieldValue>
+            <valueName>Torino (SGIT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Europe - Portugal</controllingFieldValue>
+            <valueName>Vila do Conde (SGPT)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

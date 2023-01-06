@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>DirectPaymentAllGlobal1</label>
+    <protected>false</protected>
+    <values>
+        <field>ApproverApiName__c</field>
+        <value xsi:type="xsd:string">Approver1__c</value>
+    </values>
+    <values>
+        <field>ApproverRole__c</field>
+        <value xsi:type="xsd:string">OL5</value>
+    </values>
+    <values>
+        <field>Group__c</field>
+        <value xsi:type="xsd:string">Not-Rest</value>
+    </values>
+    <values>
+        <field>HighLimit__c</field>
+        <value xsi:type="xsd:double">2500.0</value>
+    </values>
+    <values>
+        <field>Limit__c</field>
+        <value xsi:type="xsd:double">0.0</value>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">Global</value>
+    </values>
+    <values>
+        <field>RoleApiName__c</field>
+        <value xsi:type="xsd:string">Role01__c</value>
+    </values>
+    <values>
+        <field>SubjectType__c</field>
+        <value xsi:type="xsd:string">Payment Terms and Incoterms</value>
+    </values>
+    <values>
+        <field>User__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>WorkFlow__c</field>
+        <value xsi:type="xsd:string">PurchasingApprovalWorkflow</value>
+    </values>
+</CustomMetadata>

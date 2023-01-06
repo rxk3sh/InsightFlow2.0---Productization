@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EstimatedValueWithoutTaxes__c</fullName>
+    <description>This is used to provide estimated value for direct and Indirect workflow.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>In EURO. In Case of &quot;Change in Masterdata&quot; it is &quot;Annual Accumulated Value&quot;.(No negative values are allowed)
+For COQ Approval Submission: “Total cost 3 yrs (with Cost as quoted | TCO, Tooling costs)” of the proposed supplier</inlineHelpText>
+    <label>Estimated Value (without taxes )</label>
+    <precision>16</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

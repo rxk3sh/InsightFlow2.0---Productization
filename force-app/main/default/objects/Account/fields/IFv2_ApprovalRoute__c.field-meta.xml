@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ApprovalRoute__c</fullName>
+    <externalId>false</externalId>
+    <label>Approval route</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SG CN</fullName>
+                <default>false</default>
+                <label>SG CN</label>
+            </value>
+            <value>
+                <fullName>SGIN</fullName>
+                <default>false</default>
+                <label>SGIN</label>
+            </value>
+            <value>
+                <fullName>SG DE</fullName>
+                <default>false</default>
+                <label>SG DE</label>
+            </value>
+            <value>
+                <fullName>SG DE HiP</fullName>
+                <default>false</default>
+                <label>SG DE HiP</label>
+            </value>
+            <value>
+                <fullName>SGHU, Trainee</fullName>
+                <default>false</default>
+                <label>SGHU, Trainee</label>
+            </value>
+            <value>
+                <fullName>SGHU, Direct</fullName>
+                <default>false</default>
+                <label>SGHU, Direct</label>
+            </value>
+            <value>
+                <fullName>SGHU, Indirect blue collar</fullName>
+                <default>false</default>
+                <label>SGHU, Indirect blue collar</label>
+            </value>
+            <value>
+                <fullName>SGHU, Indirect white collar</fullName>
+                <default>false</default>
+                <label>SGHU, Indirect white collar</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

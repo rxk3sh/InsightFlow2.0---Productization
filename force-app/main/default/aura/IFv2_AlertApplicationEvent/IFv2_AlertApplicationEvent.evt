@@ -1,0 +1,4 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="alertMessage" type="String" />
+    <aura:attribute name="isError" type="Boolean" />
+</aura:event>

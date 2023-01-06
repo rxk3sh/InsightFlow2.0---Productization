@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateTimeValidation</fullName>
+    <active>true</active>
+    <description>Validation rule to ensure To Date/Time is greater than From Date/Time</description>
+    <errorConditionFormula>OR( ToDate__c &lt;  FromDate__c, Finishedby__c &lt;  StartFrom__c,  ReturnDate__c &lt;  StartDate__c  )</errorConditionFormula>
+    <errorMessage>To Date must be greater than From Date</errorMessage>
+</ValidationRule>

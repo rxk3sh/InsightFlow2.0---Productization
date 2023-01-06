@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TravelType__c</fullName>
+    <externalId>false</externalId>
+    <label>Travel Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business - Domestic</fullName>
+                <default>false</default>
+                <label>Business - Domestic</label>
+            </value>
+            <value>
+                <fullName>Business - Overseas</fullName>
+                <default>false</default>
+                <label>Business - Overseas</label>
+            </value>
+            <value>
+                <fullName>Home trip - Overseas</fullName>
+                <default>false</default>
+                <label>Home trip - Overseas</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

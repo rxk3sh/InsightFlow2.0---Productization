@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Default__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Default Record based on the status to be displayed</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please check to make this the default record to be displayed while landing on the Home Page</inlineHelpText>
+    <label>Default</label>
+    <type>Checkbox</type>
+</CustomField>

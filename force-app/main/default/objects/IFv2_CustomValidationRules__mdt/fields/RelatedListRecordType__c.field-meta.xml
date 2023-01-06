@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelatedListRecordType__c</fullName>
+    <description>To select the picklist value for the related list .</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Select the picklist value for the related list .</inlineHelpText>
+    <label>Related List Record Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Employee</fullName>
+                <default>true</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>Leave Details</fullName>
+                <default>false</default>
+                <label>Leave Details</label>
+            </value>
+            <value>
+                <fullName>Leave Cancellation</fullName>
+                <default>false</default>
+                <label>Leave Cancellation</label>
+            </value>
+            <value>
+                <fullName>China MAE Combine</fullName>
+                <default>false</default>
+                <label>China MAE Combine</label>
+            </value>
+            <value>
+                <fullName>China MAE Scrap</fullName>
+                <default>false</default>
+                <label>China MAE Scrap</label>
+            </value>
+            <value>
+                <fullName>China MAE Lost</fullName>
+                <default>false</default>
+                <label>China MAE Lost</label>
+            </value>
+            <value>
+                <fullName>China MAE Transfer</fullName>
+                <default>false</default>
+                <label>China MAE Transfer</label>
+            </value>
+            <value>
+                <fullName>China MAE Before Split</fullName>
+                <default>false</default>
+                <label>China MAE Before Split</label>
+            </value>
+            <value>
+                <fullName>China MAE After Split</fullName>
+                <default>false</default>
+                <label>China MAE After Split</label>
+            </value>
+            <value>
+                <fullName>Attachment</fullName>
+                <default>false</default>
+                <label>Attachment</label>
+            </value>
+            <value>
+                <fullName>OT Application Details</fullName>
+                <default>false</default>
+                <label>OT Application Details</label>
+            </value>
+            <value>
+                <fullName>Time Data Amendment</fullName>
+                <default>false</default>
+                <label>Time Data Amendment</label>
+            </value>
+            <value>
+                <fullName>Table</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Table</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

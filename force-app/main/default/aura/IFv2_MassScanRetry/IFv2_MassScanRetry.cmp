@@ -1,0 +1,42 @@
+<aura:component controller="IFv2_ScanRetryController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="title" type="String" default="Scan Reprocess"/>
+    <aura:attribute name="fromDate" type="date" />
+    <aura:attribute name="toDate" type="date" />
+    <aura:attribute name="isSuccess" type="Boolean" default="false"/>
+    <aura:attribute name="recordcount" type="integer" />
+    <aura:attribute name="resultResponse" type="string" />
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <lightning:card>
+        <aura:if isTrue="{!v.Spinner}">
+            <div class="slds-spinner_container slds-is-fixed" aura:id="spinnerId">
+                <div class="slds-spinner--brand slds-spinner slds-spinner--large slds-is-fixed" role="alert">
+                    <span class="slds-assistive-text">Loading</span>
+                    <div class="slds-spinner__dot-a"></div>
+                    <div class="slds-spinner__dot-b"></div>
+                </div>
+                
+            </div>
+        </aura:if>
+        <aura:set attribute="title">
+            <lightning:icon iconName="utility:connected_apps" size="small"/>
+            {! v.title }
+        </aura:set>
+        <aura:set attribute="footer">
+        </aura:set>
+        <div class="slds-card__body slds-card__body_inner">
+            
+            <lightning:input type="date" name="From Date" label="Enter from date" value="{!v.fromDate}" ></lightning:input>
+            <lightning:input type="date" name="To Date" label="Enter to date" value="{!v.toDate}" ></lightning:input>
+            <br/> 
+            <lightning:button label="Get Failed Scans" title="Get Records" onclick="{! c.getFailedrecords }"/>
+            
+            <aura:if isTrue="{!v.isSuccess}">
+                <div>
+                    Total records to be processed: <ui:outputText value="{!v.recordcount}"/><br/> <br/> 
+                    <lightning:button label="Retry Scan records" title="Retry" onclick="{! c.retryFailedrecords }"/><br/>
+                     <br/> <ui:outputText value="{!v.resultResponse}"/><br/>
+                </div>
+            </aura:if>
+        </div>
+    </lightning:card>
+</aura:component>

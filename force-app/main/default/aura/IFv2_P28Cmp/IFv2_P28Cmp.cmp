@@ -1,0 +1,147 @@
+<!--
+* 
+* @ Name 	:	IFv2_P28Cmp
+* @ Purpose : 	This is a component for displaying the P28 records
+* @ Author	: 	NagaSai
+*
+*   Date	        |  Developer Name                       |  Version      |  Changes
+* ======================================================================================================
+*   18-03-2018      |  nagasai.chalamalasetti@absyz.com    	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component access="global" controller="IFv2_P28Controller" implements="force:appHostable,flexipage:availableForAllPageTypes" >
+    
+    <!-- Attributes for data table -->
+    <aura:attribute name="allRecordList" type="Object" description="backup attribute to keep all the data"/>
+    <aura:attribute name="filteredData" type="Object" description="attribute to display data in the data table"/>
+    <aura:attribute name="columnLabels" type="List" description="attribute for the columns of the data table"/>
+    
+    <!-- Attributes for spinner -->
+    <aura:attribute name="showSpinner" type="Boolean" default="false" />
+    
+    <!-- Attributes for  Empty data handling -->
+    <aura:attribute name="emptyMessage" type="String"/>
+    <aura:attribute name="isEmpty" type="Boolean" default="false" />
+    <!-- Attributes for  handling showMore option -->
+    <aura:attribute name="noMoreRecords" type="Boolean" default="true" />
+    
+    <!-- Internal Attributes for pagination -->
+    <aura:attribute name="page" type="Integer" default="1" description="used to store page Number of each page which contains list of items" />
+    <aura:attribute name="pageSize" type="Integer" default="12" description="default size of the page" />
+    <aura:attribute name="totalSize" type="Integer" default="0" description="total size of the results returned" />
+    <aura:attribute name="start" type="Integer" default="0" />
+    
+    <!-- Handlers and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:IFv2_P28RefreshEvent" action="{!c.doInit}"/> <!--used to refresh the data table when file is uploaded-->
+    
+    <!-- Alert message for error -->
+    <aura:if isTrue="{!v.isAlert}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>{!v.alertMessage}</h2>
+        </div>
+    </aura:if>
+    
+    <!-- Page Markup Header -->
+    <div class="container">
+        <div class="slds-page-header">
+            <lightning:layout verticalAlign="center" multipleRows="true">
+                <lightning:layoutItem padding="horizontal-small" size="12" smallDeviceSize="12" mediumDeviceSize="7" largeDeviceSize="8">
+                    <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="false">
+                        <lightning:layoutItem>
+                            <lightning:icon size="medium" iconName="standard:file"/>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="horizontal-small">
+                            <ui:outputText class="slds-page-header__title slds-truncate" value="{!$Label.c.CLIFv20196}"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+                
+                <!-- SearchBar Component -->
+                <lightning:layoutItem padding="horizontal-small" size="12" smallDeviceSize="12" mediumDeviceSize="5" largeDeviceSize="4">
+                    <lightning:layout verticalAlign="center" horizontalAlign="end" multipleRows="false" class="customRecordsToDisplay">
+                        <lightning:layoutItem size="12" smallDeviceSize="9" mediumDeviceSize="10" largeDeviceSize="10" class="customRecordsDisplaySelect">
+                            <lightning:select aura:id="pageSize" name="pageSize" label="{!$Label.c.CLIFv20164}" onchange="{! c.onSelectChange }">
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="250">250</option>
+                            </lightning:select>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="12" smallDeviceSize="3" mediumDeviceSize="2" largeDeviceSize="2">
+                            <!--used to invoke lightning component dynamically from javascript-->
+                            <button class="slds-button slds-button_neutral slds-float_right" onclick="{!c.createP28}">New</button>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    <lightning:layout verticalAlign="center" horizontalAlign="end">
+                        <lightning:input aura:id="searchBar"
+                                         type="search" 
+                                         name="search" 
+                                         placeholder="Search File"
+                                         onchange="{!c.handlesearchKeyChange}"/>
+                        
+                        <!--used to invoke lightning component dynamically from javascript-->
+                        <!--<button class="slds-button slds-button_neutral slds-float_right" onclick="{!c.createP28}">New</button> -->
+                    </lightning:layout>
+                </lightning:layoutItem>
+                <!-- End of SearchBar Component -->
+            </lightning:layout>
+        </div>
+        
+        <div aura:id="showChildModal" ></div>
+        <!-- Data Table for Workflow Listview -->
+        <!-- Attributes:- data: holds the Admin ony record data -->
+        <!-- columns: holds the column labels, types -->
+        <!-- keyField: id -->
+        <!-- onrowaction: Edit,View,Execute actions handler -->
+        <!-- hideCheckboxColumn: Either true or false to display the checkbox column -->
+        
+        <div aura:id="datatable-id" class="custom-datatable">
+            <lightning:datatable data="{!v.filteredData}"
+                                 columns="{!v.columnLabels}"
+                                 keyField="id"
+                                 onrowaction="{!c.downloadFile}"
+                                 hideCheckboxColumn="true"/>
+            
+            <!-- display message for empty list -->
+            <aura:if isTrue="{!v.isEmpty}">
+                <p>{!v.emptyMessage}</p>
+            </aura:if>
+            
+            <!-- ****************** Pagination ****************** -->
+            <div aura:id="product-pagination-id" class="slds-p-bottom_medium slds-theme_default">
+                <lightning:layout multipleRows="true" verticalAlign="center">
+                    <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-medium">
+                        <span style="float:left;font-size:14px;color:#848484;">
+                            <aura:if isTrue="{!v.totalSize gt 0}">
+                                <center>
+                                    <span class="custom-pre-wrap">
+                                        Showing Page &#160;{!v.page} Of &#160;{!v.totalSize} &#160;Items
+                                    </span>
+                                </center>
+                                <aura:set attribute="else">
+                                    <span style="text-align:left;">No Records</span>
+                                </aura:set>
+                            </aura:if>
+                        </span>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6" smallDeviceSize="12" padding="around-medium">
+                        <span style="float:right;">
+                            <lightning:button aura:id="prev-id" label="Previous" disabled="{!v.start == 0}"  onclick="{!c.previous}"/>
+                            <lightning:button aura:id="first-id" label="1" disabled="{!v.start == 0}" onclick="{!c.first}"/>
+                            <lightning:button aura:id="next-id" label="Next" disabled="{!v.pageSize gt v.totalSize}" onclick="{!c.next}"/>
+                        </span> 
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </div>
+            <!-- ****************** END - Pagination ****************** -->
+            
+            <!-- Spinner -->
+            <aura:if isTrue="{!v.showSpinner}">
+                <div class="slds-spinner_container" style="border-radius: .25rem;height:75vh">
+                    <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+                </div>
+            </aura:if>
+        </div>
+    </div>
+</aura:component>

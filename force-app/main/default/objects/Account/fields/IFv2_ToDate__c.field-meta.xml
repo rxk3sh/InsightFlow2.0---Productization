@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ToDate__c</fullName>
+    <description>Used in China Leave and Overtime Workflow</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Input is mandatory</inlineHelpText>
+    <label>To Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_iFreight_Approver_Level_3_2_proxy__c</fullName>
+    <externalId>false</externalId>
+    <label>iFreight Approver Level 3.2 proxy</label>
+    <relationshipName>iFreight_Approver_Level_3_2_Proxy</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BuyerSubRegion__c</fullName>
+    <description>Used in Indirect Purchasing Approval</description>
+    <externalId>false</externalId>
+    <label>Buyer Sub Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>BuyerRegion__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Brits* (SGZA)</fullName>
+                <default>false</default>
+                <label>Brits* (SGZA)</label>
+            </value>
+            <value>
+                <fullName>Changchun (SGCN)</fullName>
+                <default>false</default>
+                <label>Changchun (SGCN)</label>
+            </value>
+            <value>
+                <fullName>Changsha (SGCN)</fullName>
+                <default>false</default>
+                <label>Changsha (SGCN)</label>
+            </value>
+            <value>
+                <fullName>Drancy (SGFR)</fullName>
+                <default>false</default>
+                <label>Drancy (SGFR)</label>
+            </value>
+            <value>
+                <fullName>Global</fullName>
+                <default>false</default>
+                <label>Global</label>
+            </value>
+            <value>
+                <fullName>Hildesheim (SGDE)</fullName>
+                <default>false</default>
+                <label>Hildesheim (SGDE)</label>
+            </value>
+            <value>
+                <fullName>Itupeva (SGBR)</fullName>
+                <default>false</default>
+                <label>Itupeva (SGBR)</label>
+            </value>
+            <value>
+                <fullName>Lerma</fullName>
+                <default>false</default>
+                <label>Lerma</label>
+            </value>
+            <value>
+                <fullName>Miskolc (SGHU)</fullName>
+                <default>false</default>
+                <label>Miskolc (SGHU)</label>
+            </value>
+            <value>
+                <fullName>Naganathapura (SGIN)</fullName>
+                <default>false</default>
+                <label>Naganathapura (SGIN)</label>
+            </value>
+            <value>
+                <fullName>Novi (SGUS)</fullName>
+                <default>false</default>
+                <label>Novi (SGUS)</label>
+            </value>
+            <value>
+                <fullName>Stuttgart</fullName>
+                <default>false</default>
+                <label>Stuttgart</label>
+            </value>
+            <value>
+                <fullName>Torino (SGIT)</fullName>
+                <default>false</default>
+                <label>Torino (SGIT)</label>
+            </value>
+            <value>
+                <fullName>Treto (SGES)</fullName>
+                <default>false</default>
+                <label>Treto (SGES)</label>
+            </value>
+            <value>
+                <fullName>Vila do Conde (SGPT)</fullName>
+                <default>false</default>
+                <label>Vila do Conde (SGPT)</label>
+            </value>
+            <value>
+                <fullName>Yokohama (SGJP)</fullName>
+                <default>false</default>
+                <label>Yokohama (SGJP)</label>
+            </value>
+            <value>
+                <fullName>Yongin-si (SGSK)</fullName>
+                <default>false</default>
+                <label>Yongin-si (SGSK)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>Changchun (SGCN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>Changsha (SGCN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>Naganathapura (SGIN)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>Yokohama (SGJP)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>AP</controllingFieldValue>
+            <valueName>Yongin-si (SGSK)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Brits* (SGZA)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Drancy (SGFR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Hildesheim (SGDE)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Miskolc (SGHU)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Stuttgart</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Torino (SGIT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Treto (SGES)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EMEA</controllingFieldValue>
+            <valueName>Vila do Conde (SGPT)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Global</controllingFieldValue>
+            <valueName>Global</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LA</controllingFieldValue>
+            <valueName>Itupeva (SGBR)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Na</controllingFieldValue>
+            <valueName>Lerma</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Na</controllingFieldValue>
+            <valueName>Novi (SGUS)</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

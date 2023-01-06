@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute name="labelName" label="Label Name" description="design attribute to display the label name"/>
+    <design:attribute name="headerIcon" label="Icon Name" description="design attribute to hold the icon label"/>
+</design:component>

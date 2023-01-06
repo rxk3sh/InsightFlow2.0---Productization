@@ -1,0 +1,16 @@
+<template>
+        <lightning-card title="Key User Details" icon-name="custom:custom15">
+                <div class="slds-m-around_medium">
+                  <!---  {recordId}-->
+                  <template if:true={localexpert}>
+                  <template for:each={localexpert} for:item="localext">
+                    <p key={localext.Id}><b>Name: </b><a onclick={navigatetoUser} target=_blank>{localext.Name}</a></p>
+                    <p key={localext.Id}><b>Email: </b>{localext.Email}</p>
+                       </template>
+                    </template>
+                    <template if:true={error}>
+                        {error}
+                    </template>
+                    </div>
+                </lightning-card>
+            </template>

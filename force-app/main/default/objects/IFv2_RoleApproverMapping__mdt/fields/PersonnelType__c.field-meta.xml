@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PersonnelType__c</fullName>
+    <description>Personnel Type field in personnel request for special working condition mapping</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Select the Personnel Type field in personnel request for special working condition mapping</inlineHelpText>
+    <label>Personnel Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Non-tariff</fullName>
+                <default>false</default>
+                <label>Non-tariff</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Abschlussarbeiten / wissenschaftliche Arbeiten</fullName>
+                <default>false</default>
+                <label>Special working conditions – Abschlussarbeiten / wissenschaftliche Arbeiten</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Doktoranden</fullName>
+                <default>false</default>
+                <label>Special working conditions – Doktoranden</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Leasing</fullName>
+                <default>false</default>
+                <label>Special working conditions – Leasing</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Praktikant</fullName>
+                <default>false</default>
+                <label>Special working conditions – Praktikant</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Praxisstudenten</fullName>
+                <default>false</default>
+                <label>Special working conditions – Praxisstudenten</label>
+            </value>
+            <value>
+                <fullName>Special working conditions – Sonstiges</fullName>
+                <default>false</default>
+                <label>Special working conditions – Sonstiges</label>
+            </value>
+            <value>
+                <fullName>Tariff</fullName>
+                <default>false</default>
+                <label>Tariff</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

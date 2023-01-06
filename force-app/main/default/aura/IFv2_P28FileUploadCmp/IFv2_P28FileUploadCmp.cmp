@@ -1,0 +1,77 @@
+<!--
+* 
+* @ Name 	:	IFv2_P28FileUploadCmp
+* @ Purpose : 	This is a component for displaying the workflow listview
+* @ Author	: 	NagaSai
+*
+*   Date	        |  Developer Name                       |  Version      |  Changes
+* ======================================================================================================
+*   21-03-2019      |  nagasai.chalamalasetti@absyz.com    	|  1.0          |  Initial Version
+*
+-->
+
+<aura:component controller="IFv2_P28Controller">
+    <!--start of Attribute declarations-->  
+    <aura:attribute name="alertMessage" type="String" /><!--stores alert message string-->
+    <aura:attribute name="descriptionText" type="String"/><!--stores file description that user enters-->
+    <aura:attribute name="fileName" type="String"/><!--stores file name of the file uploaded-->
+    
+    <aura:attribute name="file" type="Object"/><!--stores the file data uploaded-->
+    <aura:attribute name="data" type="Object"/><!--stores the admin only record data that is used in datatable-->
+    
+    <aura:attribute name="showModal" type="Boolean" default="false"/><!--used to show/hide modal-->   
+    <aura:attribute name="isRequiredEmpty" type="Boolean" default="false" /><!--used to hide/show error block-->
+    
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    
+    <aura:attribute name="headerText" type="String" default="Upload File" />
+    <!-- Modal Code -->
+    <div style="height: 600px;">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- Modal Header -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close" class="slds-modal__close" size="large" variant="bare" alternativeText="Close" onclick="{! c.closeModal }"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">{!v.headerText}</h2>
+                </header>
+                <aura:if isTrue="{!v.showSpinner}">
+                    <div class="slds-spinner_container" style="border-radius: .25rem;height:75vh">
+                        <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+                    </div>
+                </aura:if>
+                <!--Start Alert message for required fields -->
+                <aura:if isTrue="{!v.isRequiredEmpty}">
+                    <div class="slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                        <lightning:icon iconName="utility:error" variant="inverse" alternativeText="error" class="custom-icon" size="small"/>
+                        <lightning:layout horizontalAlign="left" verticalAlign="center" multipleRows="true" class="custom-error-message">
+                            <lightning:layoutItem flexibility="auto" smallDeviceSize="10" mediumDeviceSize="10" largeDeviceSize="10" size="10" class="custom-error-css">
+                                <h2>{!v.alertMessage}</h2>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div> 
+                </aura:if>
+                <!--End Alert message for required fields -->
+                <!-- Main Body of Modal -->
+                <div class="slds-modal__content slds-p-horizontal_medium slds-p-bottom_medium" id="modal-content-id-1">
+                    <div class="slds-p-around_x-small">
+                        <lightning:input type="file" label="" name="Mapping" multiple="false" accept=".csv" onchange="{!c.storecsv}" />
+                    </div>
+                    <div class="slds-p-around_x-small">
+                        <lightning:input name="FileName" value="{!v.fileName}" label="File Name"/>
+                    </div>
+                    <div class="slds-p-around_x-small">
+                        <lightning:input name="Description" required="true" value="{!v.descriptionText}" label="Description" />
+                    </div>
+                </div>
+                
+                <!-- Footer of Modal -->
+                <footer class="slds-modal__footer ">
+                    <lightning:button label="Upload" variant="brand" iconName="utility:upload" iconPosition="centre" onclick="{! c.readCSV }" />
+                    <lightning:button label="Cancel" title="cancel" onclick="{! c.closeModal }"/>
+                </footer>
+            </div>
+        </section>
+        
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </div>
+</aura:component>

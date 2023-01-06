@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReasonPicklist__c</fullName>
+    <description>Picklist used in HU Scrapping</description>
+    <externalId>false</externalId>
+    <label>Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Damaged</fullName>
+                <default>false</default>
+                <label>Damaged</label>
+            </value>
+            <value>
+                <fullName>EZ 0 Serial</fullName>
+                <default>false</default>
+                <label>EZ 0 Serial</label>
+            </value>
+            <value>
+                <fullName>EZ Design Change</fullName>
+                <default>false</default>
+                <label>EZ Design Change</label>
+            </value>
+            <value>
+                <fullName>EZRS Design Change</fullName>
+                <default>false</default>
+                <label>EZRS Design Change</label>
+            </value>
+            <value>
+                <fullName>Not used any longer</fullName>
+                <default>false</default>
+                <label>Not used any longer</label>
+            </value>
+            <value>
+                <fullName>Obsolete</fullName>
+                <default>false</default>
+                <label>Obsolete</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Supplier fault</fullName>
+                <default>false</default>
+                <label>Supplier fault</label>
+            </value>
+            <value>
+                <fullName>Test</fullName>
+                <default>false</default>
+                <label>Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

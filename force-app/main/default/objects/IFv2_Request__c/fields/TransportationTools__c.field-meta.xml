@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TransportationTools__c</fullName>
+    <externalId>false</externalId>
+    <label>Transportation Tools</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>SubWorkflowIndiaTravel__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bus</fullName>
+                <default>false</default>
+                <label>Bus</label>
+            </value>
+            <value>
+                <fullName>Train</fullName>
+                <default>false</default>
+                <label>Train</label>
+            </value>
+            <value>
+                <fullName>Flight</fullName>
+                <default>false</default>
+                <label>Flight</label>
+            </value>
+            <value>
+                <fullName>Taxi</fullName>
+                <default>false</default>
+                <label>Taxi</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Book My Taxi</controllingFieldValue>
+            <valueName>Taxi</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITRA</controllingFieldValue>
+            <valueName>Bus</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITRA</controllingFieldValue>
+            <valueName>Train</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MITRA</controllingFieldValue>
+            <valueName>Flight</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

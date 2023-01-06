@@ -1,0 +1,15 @@
+.THIS .slds-form-element__icon {
+    padding-top: 1px !important;
+}
+
+.THIS .custom-edit-icon {
+    color: #ECEBEA !important;
+}
+
+.THIS .custom-edit-icon:hover {
+    color: #706E6B !important;
+}
+
+.THIS .textUnderline {
+    color: #006DCC;
+}

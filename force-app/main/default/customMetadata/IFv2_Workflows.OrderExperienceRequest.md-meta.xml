@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Order Experience Request</label>
+    <protected>false</protected>
+    <values>
+        <field>Country__c</field>
+        <value xsi:type="xsd:string">Brazil</value>
+    </values>
+    <values>
+        <field>DeactivateInInsightflow1__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Division__c</field>
+        <value xsi:type="xsd:string">Manufacturing</value>
+    </values>
+    <values>
+        <field>EnteredValueisPublicGroup__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>General__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Name__c</field>
+        <value xsi:type="xsd:string">Order Experience Request</value>
+    </values>
+    <values>
+        <field>Region__c</field>
+        <value xsi:type="xsd:string">NALA</value>
+    </values>
+    <values>
+        <field>RequestStatus__c</field>
+        <value xsi:type="xsd:string">Draft</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>ThirdPartyFormat__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>Users__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

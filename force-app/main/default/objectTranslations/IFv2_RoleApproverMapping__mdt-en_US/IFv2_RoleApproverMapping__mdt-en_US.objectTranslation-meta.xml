@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Role Approver Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Role Approver Mappings</value>
+    </caseValues>
+    <layouts>
+        <layout>Predefined Workflow Approval Mapping Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>MAE Approval Request</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Personnel Request</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Predefined Workflow</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Roles and Approvers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Special Freight</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Role Approver Mapping Layout</layout>
+        <sections>
+            <label></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Details</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>Roles and Approvers</section>
+        </sections>
+        <sections>
+            <label></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

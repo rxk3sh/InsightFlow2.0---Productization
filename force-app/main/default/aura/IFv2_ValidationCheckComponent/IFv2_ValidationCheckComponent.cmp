@@ -1,0 +1,27 @@
+<!--
+* 
+* @ Name 	:	IFv2_ValidationCheckComponent
+* @ Purpose : 	This Component is used to check validations onm click of verify and submit button
+* @ Author	: 	Naga Sai
+*
+*   Date	        |  Developer Name                           |  Version      |  Changes
+* ======================================================================================================
+*   29-10-2018      |  nagasai.chalamalasetti@absyz.com			|  1.0          |  Initial Version
+*   03-12-2018      |  anoop.ravindran@absyz.com				|  1.1          |  Moved required field query to parent init, combined check validation and submit for approval into 1 server call
+*   23-03-2019      |  vivek.kothalanka@absyz.com        		|  2.0          |  Update for Concession
+-->
+
+<aura:component controller="IFv2_HeaderController" access="global" implements="force:appHostable,flexipage:availableForAllPageTypes">
+    
+    <aura:attribute name="Request" type="Object" /><!--This  is used to hold request record details-->
+    <aura:attribute name="RequiredFieldList" type="String[]" /><!--This  is used to hold  Required field list ,these required fields will be decided based on data entered by user-->
+    <aura:attribute name="ObjectName" type="String" /><!--This  is used to hold aobject API Name-->
+    <aura:attribute name="RequiredFieldListWrapper" type = "Object[]" />
+    <aura:attribute name="isAlert" type="Boolean" />
+    <aura:attribute name="alertMessage" type="String[]" />
+    <aura:attribute name="approverSectionMetadata" type="Object" />
+
+    <aura:handler event="c:IFv2_ValidationCheck_EVENT" action="{!c.verifySubmit}"/><!--on click of verify and submit button on parent component(Record detail page)  an event will be fired and  this will handle this-->
+    
+    <aura:registerEvent name="refreshevent" type="c:IFv2_Headerevent"/><!--Used to fire event to refresh parent component(Record detail page) -->
+</aura:component>

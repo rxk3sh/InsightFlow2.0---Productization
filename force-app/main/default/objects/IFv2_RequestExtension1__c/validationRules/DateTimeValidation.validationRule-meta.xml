@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DateTimeValidation</fullName>
+    <active>true</active>
+    <description>Validation rule to ensure End Date is greater than Start Date</description>
+    <errorConditionFormula>OR( PlannedEndDateTime__c &lt; PlannedStartDateTime__c,
+     EmployeeDateofLeaving__c &lt;  EmployeeJoinDate__c )</errorConditionFormula>
+    <errorMessage>End Date/Date of Leaving must be greater than Start Date/Date of Joining</errorMessage>
+</ValidationRule>

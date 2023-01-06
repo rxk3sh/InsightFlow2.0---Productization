@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Note__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;**** Required to attach the term, otherwise the workflow will be disapproved ****&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;1) Card Solicitation: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;2) 2ª Way - Card: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;3) 2ª Way - Password Card: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;4) Card Cancellation: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;5) Work trips - 90 days: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;6) Data modification: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;7) Credit limits modification: Notes zu jeder Section&quot;
+&amp;&apos;\n&apos;&amp;
+
+&quot;8) Unlock Corporate Card: Notes zu jeder Section&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Note</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

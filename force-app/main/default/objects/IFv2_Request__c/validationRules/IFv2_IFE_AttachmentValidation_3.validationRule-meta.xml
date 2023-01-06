@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_IFE_AttachmentValidation_3</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND( 
+Workflow__c = $Label.CLIFv20301 , 
+ISPICKVAL(RequestExtension3__r.PFMEA_Created_Updated__c, &apos;No&apos;), 
+ISPICKVAL(RequestExtension3__r.Control_Plan_Created_Updated__c, &apos;No&apos;), 
+ISPICKVAL(RequestExtension3__r.MSA_and_Capability_Created_Updated__c, &apos;No&apos;), 
+FileCount__c &lt; 1 
+)</errorConditionFormula>
+    <errorMessage>Add at least 1 attachment if &apos;No&apos; is selected for all document options.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,47 @@
+<!--
+* 
+* @ Name 	:	IFv2_MaterialReturnableChild
+* @ Purpose : 	This is the child component to track each returnable material of MGP returnable challan type
+* @ Author	: 	Elsa Shaju
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   06-05-2019      |  elsa.shaju@absyz.com     	|  1.0          |  Initial Version
+-->
+
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    
+    <aura:attribute name="materialRow" type="Object" description="Stores all the materials" />
+    <aura:attribute name="returnQty" type="Integer" description="Quantity of material returned" />
+    <aura:attribute name="isParent" type="Boolean"
+                    description="Passing value to child component whether component is on parent or child" />
+    <aura:attribute name="apiList" type="Object" description="Stores all the column apis" />
+    <aura:attribute name="role" type="String" description="Role of the logged in user" />
+    <aura:attribute name="showButton" type="Boolean" />
+    
+    <aura:iteration items="{!v.apiList}" var="api">
+        <td>
+            <c:IFv2_MaterialChild fieldName="{!api}" material="{!v.materialRow.material}" isParent="{!v.isParent}"
+                                  role="{!v.role}" />
+        </td>
+    </aura:iteration>
+    <aura:if isTrue="{!!v.isParent}">
+        <aura:if isTrue="{!v.showButton}">
+            <td>
+                <lightning:layout>
+                    <lightning:layoutItem size="6">
+                        <lightning:input value="{!v.materialRow.currentQty}"
+                                         disabled="{!equals(v.materialRow.material.IFv2_Quantity__c,v.materialRow.material.IFv2_ReturnedQuantity__c)}" />
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </td>
+        </aura:if>
+        <td>
+            <aura:if
+                     isTrue="{!equals(v.materialRow.material.IFv2_Quantity__c,v.materialRow.material.IFv2_ReturnedQuantity__c)}">
+                <lightning:icon iconName="action:approval" alternativeText="Approved" size="x-small" />
+            </aura:if>
+        </td>
+    </aura:if>
+    
+</aura:component>

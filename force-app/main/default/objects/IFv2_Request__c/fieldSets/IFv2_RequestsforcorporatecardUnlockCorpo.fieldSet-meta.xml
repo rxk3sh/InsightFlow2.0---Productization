@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_RequestsforcorporatecardUnlockCorpo</fullName>
+    <description>Used in Requests for corporate card Workflow</description>
+    <displayedFields>
+        <field>RequestExtension3__r.Reasonforunlock__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Requests for corporate card  Unlock Corporate Card</label>
+</FieldSet>

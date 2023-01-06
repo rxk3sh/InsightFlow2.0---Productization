@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>To store the list of buttons to be displayed on the request detail page based on the status of the application in InsightFlow application version 2.0</description>
+    <label>Request Button</label>
+    <pluralLabel>Request Buttons</pluralLabel>
+    <visibility>Public</visibility>
+</CustomObject>

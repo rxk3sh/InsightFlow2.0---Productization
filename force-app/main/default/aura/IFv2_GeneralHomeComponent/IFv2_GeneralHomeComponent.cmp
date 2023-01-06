@@ -1,0 +1,188 @@
+<!--
+* 
+* @ Name 	:	IFv2_GeneralHomeComponent
+* @ Purpose : 	Display list of different apps for navigation on the home page 
+* @ Author	: 	Anoop Ravindran
+*
+*   Date	        |  Developer Name               	|  Version      |  Changes
+* ======================================================================================================
+*   05-06-2019      |  anoop.ravindran@absyz.com		|  1.0          |  Initial Version
+*   22-06-2019      |  vivek.kothalanka@absyz.com    	|  1.1          |  Added favorite logic.
+*
+-->
+
+<aura:component access="global" implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes" controller="IFv2_GeneralHomeController">
+    
+    <!-- Attribute Definitions-->
+    <aura:attribute name = "tabList" type="Object[]" description="List of favorite tabs to show on the page"/> <!-- List which contains favorite list -->
+    <aura:attribute name = "showSpinner" type="Boolean" description="Switch for spinner"/>
+    <aura:attribute name = "alerMessage" type="String"/>	<!-- Attribute to take error message -->
+    <aura:attribute name = "isAlert" type="Boolean"/>	<!-- Attribute to display error message -->
+    <aura:attribute name = "searchkey" type="String"/>	<!-- Attribute to take search keys -->
+    <aura:attribute name = "searchTabsFavorite" type="Object[]" description="Serach results"/> <!-- List to store for temporary purpose for sorting favorite list-->
+    <aura:attribute name = "searchTabsNonFavorite" type="Object[]"/>						<!-- List to store for temporary purpose for sorting non favorite list-->
+    <aura:attribute name = "tabListnonFavorite" type="Object[]" description="List of non favorite tabs to show on the page"/> <!-- List which contains non favorite list -->
+    <aura:attribute name = "sortedBy" type="String" default="Name__c"/>		<!-- Attributes by which we want to sort -->
+    <aura:attribute name = "sortedDirection" type="String" default="asc"/>	<!-- Attribute to display the sort direction -->
+    <aura:attribute name = "toggleButton" type="Boolean" default="false"/>	<!-- Attribute to sort between sort button icons -->
+    <aura:attribute name = "ShowHomeIcon" type="Boolean" default="True"/> 	<!-- Aura attribute to show or hide home icon -->
+    <aura:attribute name = "ShowAllNonFavorite" type="Boolean" default="false"/> <!--Aura attribute to show or hide non favorite item with limit -->
+    
+    <!-- Events and Handlers-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="favoriteUpdate" event="c:IFv2_FavoriteUpdate" action="{!c.updateFavorite}"/>
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="Success/Error alert message" />
+    <aura:attribute name="alertMsg" type="String" description="attahments alert message" />
+    
+    <!--Alert Message-->
+    <aura:if isTrue="{!v.isAlert}">
+        {!v.alertMessage}
+    </aura:if>
+    
+    <!-- To show spinner -->
+    <aura:if isTrue="{!v.showSpinner}">
+        <div class="slds-spinner_container" style="border-radius: .25rem;">
+            <lightning:spinner variant="brand" size="medium" alternativeText="spinner" />
+        </div>
+    </aura:if>
+    
+    <!-- Mark up to display tabs -->
+    <div class="container">
+        <div class="slds-page-header">
+            <lightning:layout verticalAlign="center" multipleRows="true">
+                <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="7">
+                    <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="false">
+                        <!-- To show or hide home icon -->
+                        <aura:if isTrue="{!v.ShowHomeIcon}">
+                            <lightning:layoutItem>
+                                <lightning:icon size="medium" iconName="standard:macros"/>
+                            </lightning:layoutItem>
+                        </aura:if>
+                        <lightning:layoutItem padding="horizontal-small">
+                            <ui:outputText class="slds-page-header__title slds-truncate" value="{!$Label.c.CLIFv20251}"/>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+                
+                <!-- Search componnet and picklist -->
+                <lightning:layoutItem padding="around-small" size="12" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="5">
+                    <lightning:layout verticalAlign="center" multipleRows="false">
+                        <lightning:layoutItem size="12" smallDeviceSize="8" mediumDeviceSize="8" largeDeviceSize="9">
+                            <lightning:input class="searchComponent slds-p-bottom_medium"
+                                             aura:id="searchBar"
+                                             type="search" 
+                                             name="search" 
+                                             placeholder="Search"
+                                             onchange="{!c.searchKeyChange}"
+                                             value="{!v.searchkey}" />
+                        </lightning:layoutItem>
+                        <lightning:layoutItem padding="horizontal-small" size="12" smallDeviceSize="4" mediumDeviceSize="4" largeDeviceSize="3">
+                            
+                            <lightning:buttonStateful onclick="{!c.sortApps}" 
+                                                      labelWhenOn="Z-A"
+                                                      labelWhenOff="A-Z"
+                                                      state="{! v.toggleButton }"
+                                                      iconNameWhenOn="utility:arrowdown"
+                                                      iconNameWhenOff="utility:arrowup" />
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </lightning:layoutItem>
+            </lightning:layout>
+        </div>
+        
+        <div class="tabs">
+            
+            <!-- To display Quick -->
+            <aura:if isTrue="{!not(empty(v.tabList))}">
+                <lightning:layout multipleRows="false" class="slds-p-around_medium" verticalAlign="center">
+                    <lightning:layoutItem size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                        <div class="slds-text-heading_large">
+                            {!$Label.c.CLIFv20252}
+                        </div>
+                        <!--Markup-->
+                        <lightning:layout multipleRows="true" verticalAlign="center">
+                            <aura:iteration items="{!v.tabList}" var="tab" indexVar="index">
+                                <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="3" smallDeviceSize="12">
+                                    <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "favoriteList"/>
+                                </lightning:layoutItem>
+                            </aura:iteration>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </aura:if>
+            
+            <!-- To display Apps -->
+            <!--
+            <aura:if isTrue="{!and(not(empty(v.tabListnonFavorite)),(v.tabListnonFavorite.length>12))}">
+                <lightning:layout multipleRows="false" class="slds-p-around_medium" verticalAlign="center">
+                    <lightning:layoutItem size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                        <div class="slds-text-heading_large" >
+                            {!$Label.c.CLIFv20253}
+                        </div>
+                        
+                        <lightning:layout multipleRows="true" verticalAlign="center">
+                            <aura:iteration items="{!v.tabListnonFavorite}" var="tab" indexVar="index">
+                                <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="6" smallDeviceSize="12">
+                                    <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "nonFavoriteList"/>
+                                </lightning:layoutItem>
+                            </aura:iteration>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </aura:if> -->
+            
+             <!-- To display Apps -->
+            <aura:if isTrue="{!and(not(empty(v.tabListnonFavorite)),(v.tabListnonFavorite.length>0))}">
+                <lightning:layout multipleRows="false" class="slds-p-around_medium" verticalAlign="center">
+                    <lightning:layoutItem size="12" largeDeviceSize="12" mediumDeviceSize="12" smallDeviceSize="12">
+                        <div class="slds-text-heading_large" >
+                            {!$Label.c.CLIFv20253}
+                        </div>
+                        <!--Markup-->
+                        <lightning:layout multipleRows="true" verticalAlign="center">
+                            <aura:iteration items="{!v.tabListnonFavorite}" var="tab" indexVar="index">
+                                <aura:if isTrue="{!$Browser.formFactor=='DESKTOP'}">
+                                    <aura:if isTrue="{!and(not(index>($Label.c.CLIFv20313*6-1)),v.ShowAllNonFavorite==false)}">
+                                        <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="6" smallDeviceSize="12">
+                                            <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "nonFavoriteList"/>
+                                        </lightning:layoutItem>
+                                    </aura:if>                                    
+                                </aura:if>
+                                <aura:if isTrue="{!$Browser.formFactor=='PHONE'}">
+                                    <aura:if isTrue="{!and(not(index>($Label.c.CLIFv20313*1-1)),v.ShowAllNonFavorite==false)}">
+                                        <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="6" smallDeviceSize="12">
+                                            <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "nonFavoriteList"/>
+                                        </lightning:layoutItem>
+                                    </aura:if>
+                                </aura:if>
+                                
+                                <aura:if isTrue="{!$Browser.formFactor=='TABLET'}">
+                                    <aura:if isTrue="{!and(not(index>($Label.c.CLIFv20313*2-1)),v.ShowAllNonFavorite==false)}">
+                                        <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="6" smallDeviceSize="12">
+                                            <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "nonFavoriteList"/>
+                                        </lightning:layoutItem>
+                                    </aura:if>
+                                </aura:if>
+                                                                
+                                <aura:if isTrue="{!v.ShowAllNonFavorite==true}">
+                                    <lightning:layoutItem size="12" largeDeviceSize="2" mediumDeviceSize="6" smallDeviceSize="12">
+                                        <c:IFv2_GeneralHomeTab tab="{!tab}" index="{!index}" listName = "nonFavoriteList"/>
+                                    </lightning:layoutItem>
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:layout>
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </aura:if>
+            <aura:if isTrue="{!or(and($Browser.formFactor=='DESKTOP',v.tabListnonFavorite.length>($Label.c.CLIFv20313*6)),and($Browser.formFactor=='TABLET',v.tabListnonFavorite.length>($Label.c.CLIFv20313*2)),and($Browser.formFactor=='PHONE',v.tabListnonFavorite.length>($Label.c.CLIFv20313*1)))}">
+                <lightning:button class="slds-align_absolute-center favoritebuttoncolor" variant="Neutral" label="{!$Label.c.CLIFv20310}" title="Brand action" onclick="{! c.showAllNonFavorite }" />
+            </aura:if>
+            <div class="custom-form-footer">
+                
+            </div>
+        </div>
+        
+    </div>
+</aura:component>

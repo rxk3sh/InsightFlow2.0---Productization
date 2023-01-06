@@ -1,0 +1,70 @@
+<!--
+* 
+* @ Name 	:	IFv2_MaterialReturnable
+* @ Purpose : 	This is the custom component to track the returnable packages of MGP returnable challan type
+* @ Author	: 	Elsa Shaju
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   06-05-2019      |  elsa.shaju@absyz.com     	|  1.0          |  Initial Version
+-->
+<aura:component controller="IFv2_MaterialController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <aura:attribute name="materialsList" type="Object" description="Stores all the materials" />
+    <aura:attribute name="labelList" type="Object" description="Stores all the column labels" />
+    <aura:attribute name="apiList" type="Object" description="Stores all the column apis" />
+    <aura:attribute name="buttonLabel" type="String" description="label to be displayed on the button" />
+    <aura:attribute name="isParent" type="Boolean" default="" description="Passing value to child component whether component is on parent or child" />
+    <aura:attribute name="role" type="String" description="Role of the logged in user" />
+    <aura:attribute name="showButton" type="Boolean" default="false" />
+    <aura:attribute name="alertMessage" type="String" description="alert message" />
+    <aura:attribute name="isAlertError" type="Boolean" default="false" description="Whether to display the alert message" />
+    <aura:attribute name="isMatching" type="Boolean" description="If quantity and returned quantity is equal display completed" />
+    
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler event="c:IFv2_EditEvent" action="{!c.setRole}" />
+    
+    <!-- Alert message for error -->
+    <aura:if isTrue="{!v.isAlertError}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>{!v.alertMessage}</h2>
+        </div>
+    </aura:if>
+    
+    <lightning:card>
+        <lightning:layout multipleRows="true">
+            <lightning:layoutItem size="12" padding="around-small">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                    <thead>
+                        <aura:iteration items="{!v.labelList}" var="label" >
+                            <th>
+                                <ui:outputText value="{!label}"/>
+                            </th> 
+                        </aura:iteration>
+                        <aura:if isTrue="{!!v.isParent}">
+                            <th>
+                                <ui:outputText value="Returned Quantity"/>
+                            </th>
+                            <th></th>
+                        </aura:if>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.materialsList}" var="materialRow" >
+                            <tr>
+                                <c:IFv2_MaterialReturnableChild materialRow="{!materialRow}" isParent="{!v.isParent}" apiList="{!v.apiList}" role="{!v.role}" showButton="{!v.showButton}" />
+                            </tr> 
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </lightning:layoutItem>
+            <aura:if isTrue="{!v.showButton}">
+                <lightning:layoutItem size="12" padding="horizontal-small">
+                    <lightning:layout horizontalAlign="end">
+                        <lightning:button variant="brand" label="{!v.buttonLabel}" title="Update Returned Material" onclick="{!c.updateMaterial}"/>
+                    </lightning:layout>
+                </lightning:layoutItem>
+            </aura:if>
+        </lightning:layout>
+    </lightning:card>
+</aura:component>

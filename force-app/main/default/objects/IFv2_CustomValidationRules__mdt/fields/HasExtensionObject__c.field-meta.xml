@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HasExtensionObject__c</fullName>
+    <defaultValue>false</defaultValue>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this check box if  the field in this record is related to extension object.</inlineHelpText>
+    <label>Has Extension Object</label>
+    <type>Checkbox</type>
+</CustomField>

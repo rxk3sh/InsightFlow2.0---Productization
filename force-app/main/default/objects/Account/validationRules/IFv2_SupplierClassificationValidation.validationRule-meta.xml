@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_SupplierClassificationValidation</fullName>
+    <active>true</active>
+    <description>This validation is to make the supplier classification field mandatory when the Account record type is Supplier</description>
+    <errorConditionFormula>AND(RecordType.DeveloperName = &apos;Supplier&apos;, ISPICKVAL(IFv2_SupplierClassification__c,&quot;&quot;))</errorConditionFormula>
+    <errorDisplayField>IFv2_SupplierClassification__c</errorDisplayField>
+    <errorMessage>Please select the Suppler Classification.</errorMessage>
+</ValidationRule>

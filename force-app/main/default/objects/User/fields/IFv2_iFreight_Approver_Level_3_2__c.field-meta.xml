@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_iFreight_Approver_Level_3_2__c</fullName>
+    <description>used for iFreight Approval Process</description>
+    <externalId>false</externalId>
+    <label>iFreight Approver Level 3.2</label>
+    <relationshipName>iFreight_Level_3_2</relationshipName>
+    <restrictedAdminField>false</restrictedAdminField>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Hierarchy</type>
+</CustomField>

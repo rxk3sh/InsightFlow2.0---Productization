@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PurchasingArea__c</fullName>
+    <description>Used in Indirect Purchasing Approval</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select Purchasing Area</inlineHelpText>
+    <label>Purchasing Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Consulting, Temp.-Labor, Development-, Training Services</fullName>
+                <default>false</default>
+                <label>Consulting, Temp.-Labor, Development-, Training Services</label>
+            </value>
+            <value>
+                <fullName>Hardware, Software, IT-Services</fullName>
+                <default>false</default>
+                <label>Hardware, Software, IT-Services</label>
+            </value>
+            <value>
+                <fullName>Logistics Services</fullName>
+                <default>false</default>
+                <label>Logistics Services</label>
+            </value>
+            <value>
+                <fullName>MAE - MAE1</fullName>
+                <default>false</default>
+                <label>MAE - MAE1</label>
+            </value>
+            <value>
+                <fullName>Maintenance, Repair and Operations</fullName>
+                <default>false</default>
+                <label>Maintenance, Repair and Operations</label>
+            </value>
+            <value>
+                <fullName>Packaging</fullName>
+                <default>false</default>
+                <label>Packaging</label>
+            </value>
+            <value>
+                <fullName>unbundled</fullName>
+                <default>false</default>
+                <label>unbundled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

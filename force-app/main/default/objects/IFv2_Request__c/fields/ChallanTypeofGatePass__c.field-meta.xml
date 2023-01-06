@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ChallanTypeofGatePass__c</fullName>
+    <description>Type of Gate Pass</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the type of gate pass for the challan</inlineHelpText>
+    <label>Challan - Type of Gate Pass</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Returnable</fullName>
+                <default>false</default>
+                <label>Returnable</label>
+            </value>
+            <value>
+                <fullName>Non - Returnable</fullName>
+                <default>false</default>
+                <label>Non - Returnable</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

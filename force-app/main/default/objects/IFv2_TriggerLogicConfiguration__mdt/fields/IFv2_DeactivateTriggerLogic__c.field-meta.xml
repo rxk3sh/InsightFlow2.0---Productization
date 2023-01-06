@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_DeactivateTriggerLogic__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox to activate or deactivate trigger.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check this checkbox to deactivate a trigger.</inlineHelpText>
+    <label>Deactivate Trigger Logic</label>
+    <type>Checkbox</type>
+</CustomField>

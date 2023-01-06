@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AreAllMaterialsValidated__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>All materials for concession validation</description>
+    <externalId>false</externalId>
+    <label>Are All Materials Validated</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

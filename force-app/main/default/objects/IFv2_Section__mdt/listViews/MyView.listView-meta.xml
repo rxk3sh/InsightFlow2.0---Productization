@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyView</fullName>
+    <columns>MasterLabel</columns>
+    <columns>Name__c</columns>
+    <columns>SectionNumber__c</columns>
+    <columns>Workflows__c</columns>
+    <columns>Type__c</columns>
+    <columns>Value__c</columns>
+    <columns>Active__c</columns>
+    <columns>ExtendedRelatedListColumnApis__c</columns>
+    <columns>ExtendedRelatedListColumnLabels__c</columns>
+    <columns>ExtendedValue__c</columns>
+    <columns>ApproverRelatedFields__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MasterLabel</field>
+        <operation>contains</operation>
+        <value>Process</value>
+    </filters>
+    <label>My View</label>
+    <language>en_US</language>
+</ListView>

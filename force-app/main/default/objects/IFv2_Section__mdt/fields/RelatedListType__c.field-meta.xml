@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelatedListType__c</fullName>
+    <description>This picklist is used to store the type of Related list this record belongs to</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Related List Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Employee</fullName>
+                <default>false</default>
+                <label>Employee</label>
+            </value>
+            <value>
+                <fullName>Time Data Amendment</fullName>
+                <default>false</default>
+                <label>Time Data Amendment</label>
+            </value>
+            <value>
+                <fullName>OT Application Details</fullName>
+                <default>false</default>
+                <label>OT Application Details</label>
+            </value>
+            <value>
+                <fullName>Leave Cancellation</fullName>
+                <default>false</default>
+                <label>Leave Cancellation</label>
+            </value>
+            <value>
+                <fullName>Leave Details</fullName>
+                <default>false</default>
+                <label>Leave Details</label>
+            </value>
+            <value>
+                <fullName>Travel</fullName>
+                <default>false</default>
+                <label>Travel</label>
+            </value>
+            <value>
+                <fullName>Material</fullName>
+                <default>false</default>
+                <label>Material</label>
+            </value>
+            <value>
+                <fullName>China MAE Combine</fullName>
+                <default>false</default>
+                <label>China MAE Combine</label>
+            </value>
+            <value>
+                <fullName>China MAE Scrap</fullName>
+                <default>false</default>
+                <label>China MAE Scrap</label>
+            </value>
+            <value>
+                <fullName>China MAE Lost</fullName>
+                <default>false</default>
+                <label>China MAE Lost</label>
+            </value>
+            <value>
+                <fullName>China MAE Transfer</fullName>
+                <default>false</default>
+                <label>China MAE Transfer</label>
+            </value>
+            <value>
+                <fullName>China MAE Before Split</fullName>
+                <default>false</default>
+                <label>China MAE Before Split</label>
+            </value>
+            <value>
+                <fullName>China MAE After Split</fullName>
+                <default>false</default>
+                <label>China MAE After Split</label>
+            </value>
+            <value>
+                <fullName>Approval History</fullName>
+                <default>false</default>
+                <label>Approval History</label>
+            </value>
+            <value>
+                <fullName>LEX Contracting</fullName>
+                <default>false</default>
+                <label>LEX Contracting</label>
+            </value>
+            <value>
+                <fullName>Sample ContentType Relatedlist_R</fullName>
+                <default>false</default>
+                <label>Sample ContentType Relatedlist_R</label>
+            </value>
+            <value>
+                <fullName>Containment action</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Containment action</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

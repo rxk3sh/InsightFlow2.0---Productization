@@ -1,0 +1,99 @@
+<!--
+* 
+* @ Name 	:	IFv2_HomePageRequestsOverview
+* @ Purpose : 	This Component is used to display the Home Screen layout
+* @ Author	: 	Madhura Vani
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   21-01-2019      |  madhuravani.b@absyz.com   	|  1.0          |  Initial Version
+*
+-->
+<aura:component access="global" controller="IFv2_HomePageRequestsOverviewController" implements="flexipage:availableForAllPageTypes,force:appHostable" >
+    
+    <!-- attributes -->
+    <aura:attribute name="requestDetails" type="Object[]" description="attribute to display data in the data table" />
+    <aura:attribute name="pieChartData" type="Object" default="{}" description="holds pie chart data" />
+    <aura:attribute name="mapObject" type="Object" description="holds map records"/>
+    <aura:attribute name="mapColors" type="Object" default="{}" description="holds map colors"/>
+    <aura:attribute name="mapStatus" type="Map" description = "holds the count based on the status" />
+    <aura:attribute name="columns" type="List" description="holds the label names of each column" />
+        <aura:attribute name="columnsCopy" type="List" description="holds the copy of column" />
+    <aura:attribute name="fieldset" type="List" description="holds fieldset names"/>
+    <aura:attribute name="status" type="String" description="Holds the status from design Attribute" />
+    <aura:attribute name="displayChart" type="Boolean" default="false" description="displays the chart" />
+    <aura:attribute name="noRecords" type="Boolean" default="false" description="displays the chart" />
+    <aura:attribute name="index" type="String" default="" />
+    <aura:attribute name="sortedBy" type="String" default="Name"/>
+    <aura:attribute name="sortedDirection" type="String" default="desc"/>
+    <aura:attribute name="showMessage" type="Boolean" default="true"/>
+    <aura:attribute name="overDueRequestSize" type="Boolean" default="false"/>
+    <aura:attribute name="requestToApproveFlag" type="Boolean" default="false"/>
+    <aura:attribute name="DelegatedOverDueRequestflag" type="Boolean" default="false"/>
+    <aura:attribute name="proxyApprovedflag" type="Boolean" default="false"/>
+    <aura:attribute name="proxyRejectedflag" type="Boolean" default="false"/>
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="shows error message" />
+    <aura:attribute name="isAlert" type="Boolean" default="false" description="displays or hides the error message" />
+    <aura:attribute name="showSpinner" type="Boolean" default="true" description = "shows the spinner on load" />
+    <aura:attribute name="alertMsg" type="String" description="Warning alert message" default = "{!$Label.c.CLIFv20242}" />	
+    
+    
+    <!-- Events & Handlers-->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="requestStatus" event="c:IFv2_PieChart" action="{!c.RequestStatus}" />
+    <aura:registerEvent name="OutOfOfficeEvt" type="c:IFv2_OutOfOffice" />
+    
+    <!-- Alert message for error -->
+    <aura:if isTrue="{!v.isAlert}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>{!v.alertMessage}</h2>
+        </div>
+    </aura:if>
+    
+    <!-- To display message on home page -->
+    <!-- Division to show message on page load. -->
+   <!-- <aura:if isTrue="{!v.showMessage}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+            
+            <h2><b>{!v.alertMsg}</b></h2>
+             Link To navigate  
+            <b> <a class="slds-p-left_xx-small" href="{!$Label.c.CLIFv20243}" target="_blank"> Link </a> </b>  
+            
+        </div> 
+    </aura:if>-->	
+<!-- End of Home page banner -->
+    
+    <div class="slds-box slds-theme_default">
+        
+		<!-- Header Title -->
+        <div class="slds-text-heading_large">{!$Label.c.CLIFv20130}</div>
+       
+        <!-- Pie Chart -->
+        <aura:if isTrue="{!v.displayChart}">
+            <c:IFv2_HomePagePieChart type="pie" data="{!v.pieChartData}" mapReqColors="{!v.mapColors}" index="{!v.index}" />
+        </aura:if>
+       
+        <!-- No request records -->
+        <aura:if isTrue="{!v.noRecords}">
+            <h2 class="slds-p-around_medium" style="color:#000000;font-weight:bold;">{!$Label.c.CLIFv20110}</h2>
+        </aura:if>
+        
+        <!-- displays the request data-->
+        <lightning:layout>
+            <lightning:layoutItem>
+                <aura:if isTrue="{!v.requestDetails.length > 0}">
+                    <lightning:datatable class="{!v.requestDetails.length gt 12 ? 'datatableParent' : ''}"
+                                         keyField="id"
+                                         data="{!v.requestDetails}"
+                                         columns="{!v.columns}"
+                                         onsort="{!c.handleColumnSorting}"
+                                         sortedBy="{!v.sortedBy}"  
+                                         sortedDirection="{!v.sortedDirection}"
+                                         hideCheckboxColumn="true" />
+                </aura:if> 
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+</aura:component>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyView</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Workflow__c</columns>
+    <columns>Value__c</columns>
+    <columns>RequestFieldAPI__c</columns>
+    <columns>WorkflowName__c</columns>
+    <columns>MappingLogic__c</columns>
+    <columns>IsConditional__c</columns>
+    <columns>IsIndirectMapping__c</columns>
+    <columns>WorkflowField__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Workflow__c</field>
+        <operation>contains</operation>
+        <value>Experience</value>
+    </filters>
+    <label>My View</label>
+    <language>en_US</language>
+</ListView>

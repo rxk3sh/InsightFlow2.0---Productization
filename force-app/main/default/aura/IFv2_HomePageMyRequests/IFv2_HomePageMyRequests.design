@@ -1,0 +1,6 @@
+<design:component>
+  <design:attribute name="status" label="status" description="Please add the Request status" />
+  <design:attribute name="sectionHeader" label="Section Header" description="Please add the Request Header" />
+  <design:attribute name="sObjectName" label="sObject Name" description="Please add the sObject Name" />
+  <design:attribute name="limit" label="Limit" description="Enter the number of records to be displayed on load" />
+</design:component>

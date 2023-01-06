@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CorporateCardDisclaimer__c</fullName>
+    <externalId>false</externalId>
+    <label>Corporate Card Disclaimer</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>none</fullName>
+                <default>false</default>
+                <label>none</label>
+            </value>
+            <value>
+                <fullName>I declare for the purposes that I have read and fully agree with the content of the &quot;Corporate Card Responsibility Term&quot;</fullName>
+                <default>false</default>
+                <label>I declare for the purposes that I have read and fully agree with the content of the &quot;Corporate Card Responsibility Term&quot;</label>
+            </value>
+            <value>
+                <fullName>I have read and do not agree to the &quot;Corporate Card Disclaimer&quot;</fullName>
+                <default>false</default>
+                <label>I have read and do not agree to the &quot;Corporate Card Disclaimer&quot;</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

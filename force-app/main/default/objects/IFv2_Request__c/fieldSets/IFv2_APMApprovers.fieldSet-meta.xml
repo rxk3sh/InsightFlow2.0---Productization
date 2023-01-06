@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_APMApprovers</fullName>
+    <description>This field set is used to display Approvers for APM workflow 1,3,4,5,8</description>
+    <displayedFields>
+        <field>Approver1__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>APM Approvers 1,3,4,5,8</label>
+</FieldSet>

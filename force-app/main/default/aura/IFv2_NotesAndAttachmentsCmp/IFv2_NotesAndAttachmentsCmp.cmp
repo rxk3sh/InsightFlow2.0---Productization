@@ -1,0 +1,196 @@
+<!--
+* 
+* @ Name 	:	IFv2_NotesAndAttachmentsCmp
+* @ Purpose : 	Component for displaying the notes and attachment list
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   12-11-2018      |	pradeep.chary@absyz.com		|  1.0          |  Initial Version
+*   
+-->
+
+<aura:component controller="IFv2_GenericRelatedListController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <!-- Attributes for Attachments List -->
+    <aura:attribute name="AllRecordList" type="List" description="attribute to keep all the data"/>
+    <aura:attribute name="relatedListCount" type="Integer" default="0" description="to display the count of the related list"/>
+    <aura:attribute name="extendedRelatedListCount" type="Integer" default="0" description="to display the count of the related list"/>
+    <aura:attribute name="labelName" type="String" description="design attribute to display the label name"/>
+    <aura:attribute name="headerIcon" type="String" description="design attribute to hold the label icon"/>
+    <aura:attribute name="requestStatus" type="String" description="design attribute to display the label name"/>
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <aura:attribute name="isDraft" type="Boolean" default="false"/>
+    <aura:attribute name="isOpen" type="Boolean" default="false"/>
+    <aura:attribute name="hasFiles" type="Boolean" default="false"/>
+    
+    
+    <!-- Handler and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="c:IFv2_UploadFileEvent" action="{!c.doInit}"/>
+    <!--<aura:handler event="c:IFv2_Headerevent" action = "{!c.refreshOnSubmit}" />-->
+    <aura:handler event="c:IFv2_RefreshRelatedListEvent" action="{!c.refreshOnSubmit}" />
+    
+    <!-- Iteration 3 addons START-->
+    <!-- Attributes for Alert and Spinner -->
+    <aura:attribute name="isAlert" type="Boolean" />
+    <aura:attribute name="alertMessage" type="String" /> 
+    <aura:attribute name="showSpinner" type="Boolean" default="false"/>
+    <!-- Iteration 3 addons END-->
+    
+    <!-- Page Markup -->
+    <!-- Component to display when request is in Draft status -->
+    <article class="slds-card slds-p-left--medium slds-card slds-p-right--medium">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact">
+                        <lightning:icon iconName="{!v.headerIcon}" class="customHeaderIcon" />
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h2 class="slds-card__header-title">
+                        <aura:if isTrue="{!v.isDraft}">
+                            <a href="javascript:void(0);" onclick="{! c.handleOnclick}" class="slds-card__header-link slds-truncate" title="{! v.labelName}">
+                                <span>{!v.labelName} ({!v.relatedListCount})</span>
+                            </a>
+                            <aura:set attribute="else">
+                                <a href="javascript:void(0);" onclick="{! c.navigateToModal}" class="slds-card__header-link slds-truncate" title="{! v.labelName}">
+                                    <span>{!v.labelName} ({!v.relatedListCount})</span>
+                                </a>
+                            </aura:set>
+                        </aura:if>
+                    </h2>
+                </div>
+                
+                <!-- Spinner -->
+                <aura:if isTrue="{!v.showSpinner}">
+                    <div class="slds-spinner slds-spinner--small slds-spinner--brand" style="position:static;">
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                    <aura:set attribute="else">
+                        <aura:if isTrue="{!v.isDraft}">
+                            <!-- Upload files button menu when request is in Draft status -->
+                            <div>
+                                <lightning:fileUpload name="fileUploader"
+                                                      recordId="{! v.recordId}"
+                                                      onuploadfinished="{!c.refreshNotesAndAttachments }"
+                                                      multiple="true"/>
+                            </div>
+                        </aura:if>
+                    </aura:set>
+                </aura:if>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            
+            <!-- Aura iteration to display the attachments -->
+            <aura:iteration var="attachment" items="{!v.AllRecordList}" indexVar="index">
+                <aura:if isTrue="{! index &lt; 2}">
+                    
+                    <!-- Setting the attachments data as anchor tag to open when clicked anywhere-->
+                    <a onclick="{!c.openAttachment}" data-Id="{!attachment.ContentDocumentId}" title="{!attachment.ContentDocument.Title}" class="customAnchor">
+                        <lightning:layout multipleRows="false" verticalAlign="center">
+                            <lightning:layoutItem>
+                                <lightning:icon iconName="{!attachment.attachmentIcon}" />
+                            </lightning:layoutItem>
+                            <lightning:layoutItem padding="horizontal-small" class="custom-font">
+                                <lightning:layout>
+                                    {!attachment.ContentDocument.Title}
+                                </lightning:layout>
+                                <lightning:layout>
+                                    <lightning:layoutItem>
+                                        <ui:outputDate class="slds-form-element__static custom-font" value="{!attachment.ContentDocument.CreatedDate}" />
+                                    </lightning:layoutItem>
+                                    <lightning:layoutItem>
+                                        . {!attachment.ContentDocument.ContentSize} . {!attachment.ContentDocument.FileExtension}
+                                    </lightning:layoutItem>
+                                </lightning:layout>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </a>
+                    <!-- End of anchor tag & end of one attachment-->
+                    <br/>
+                </aura:if>
+            </aura:iteration>
+            
+            <!-- Display View All only when there are files -->
+            
+            <aura:if isTrue="{!v.hasFiles}">
+                <footer class="slds-card__footer">
+                    <aura:if isTrue="{!v.isDraft}">
+                        <a class="slds-card__footer-action" href="javascript:void(0);" onclick="{! c.handleOnclick}">View All</a>
+                        <aura:set attribute="else">
+                            <a class="slds-card__footer-action" href="javascript:void(0);" onclick="{! c.navigateToModal}">View All</a>
+                        </aura:set>
+                    </aura:if>
+                </footer>
+            </aura:if>
+        </div>
+    </article>
+    <!-- End of Component to display when in Draft status -->
+    
+    <!-- Modal view on click of View All -->
+    <aura:if isTrue="{!v.isOpen}">
+        <!-- MODAL BOX Start --> 
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_large">
+            <div class="slds-modal__container  ">
+               
+               	<!--  MODAL BOX HEADER Start -->
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModal }"
+                                          alternativeText="Close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">{!v.labelName} ({!v.extendedRelatedListCount})</h2>
+                </header>
+                <!-- MODAL BOX BODY Part Start -->
+                <div class="slds-modal__content slds-p-around_medium slds-scrollable--y slds-scrollable--x">
+                    <!-- data table for View All -->
+                    <div class= "container slds-p-top--medium slds-scrollable_y">
+                        <div id="list" class= "row">
+                            <table  class="slds-table slds-table--bordered slds-table--striped">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"><span class="slds-text-heading--medium">Title</span></th>
+                                        <th scope="col"><span class="slds-text-heading--medium">Date</span></th>
+                                        <th scope="col"><span class="slds-text-heading--medium">Size</span></th>
+                                        <th scope="col"><span class="slds-text-heading--medium">Type</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.AllRecordList}" var="attachment">
+                                        <tr>
+                                            <td>
+                                                <a onclick="{!c.openAttachment}" data-Id="{!attachment.ContentDocumentId}" title="{!attachment.ContentDocument.Title}">
+                                                    <lightning:icon iconName="{!attachment.attachmentIcon}"/>{!attachment.ContentDocument.Title}
+                                                </a>
+                                            </td>
+                                            <td><ui:outputDate class="slds-form-element__static custom-font" value="{!attachment.ContentDocument.CreatedDate}" /></td>
+                                            <td>{!attachment.ContentDocument.ContentSize}</td>
+                                            <td>{!attachment.ContentDocument.FileExtension}</td>
+                                        </tr>
+                                        
+                                    </aura:iteration>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>  
+                   <!-- </div>-->
+                </div>
+                <!-- MODAL BOX FOOTER Part Start -->
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{! c.closeModal }"/>
+                </footer>
+               
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+        <!-- MODAL BOX Part END Here -->
+    </aura:if>
+</aura:component>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_Deviation__c</fullName>
+    <externalId>false</externalId>
+    <label>Reason for Deviation</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Warranty</fullName>
+                <default>false</default>
+                <label>Warranty</label>
+            </value>
+            <value>
+                <fullName>Line Rejection</fullName>
+                <default>false</default>
+                <label>Line Rejection</label>
+            </value>
+            <value>
+                <fullName>Freight / Courier</fullName>
+                <default>false</default>
+                <label>Freight / Courier</label>
+            </value>
+            <value>
+                <fullName>Price difference</fullName>
+                <default>false</default>
+                <label>Price difference</label>
+            </value>
+            <value>
+                <fullName>Cancelled invoice</fullName>
+                <default>false</default>
+                <label>Cancelled invoice</label>
+            </value>
+            <value>
+                <fullName>Tax</fullName>
+                <default>false</default>
+                <label>Tax</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

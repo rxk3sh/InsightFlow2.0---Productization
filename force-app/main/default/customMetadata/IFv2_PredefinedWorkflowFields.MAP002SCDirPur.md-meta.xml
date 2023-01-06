@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>MAP002SCDirPur</label>
+    <protected>false</protected>
+    <values>
+        <field>AllowOverride__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>Description__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>IsConditional__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>IsIndirectMapping__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>MappingLogic__c</field>
+        <value xsi:type="xsd:string">ALL</value>
+    </values>
+    <values>
+        <field>RequestFieldAPI__c</field>
+        <value xsi:type="xsd:string">Approver2__c</value>
+    </values>
+    <values>
+        <field>Status__c</field>
+        <value xsi:type="xsd:string">Active</value>
+    </values>
+    <values>
+        <field>Value__c</field>
+        <value xsi:type="xsd:string">0051v00000BKu8aAAD</value>
+    </values>
+    <values>
+        <field>WorkflowField__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>WorkflowName__c</field>
+        <value xsi:type="xsd:string">Purchasing Approval</value>
+    </values>
+    <values>
+        <field>Workflow__c</field>
+        <value xsi:type="xsd:string">PurchasingApprovalWorkflow</value>
+    </values>
+</CustomMetadata>

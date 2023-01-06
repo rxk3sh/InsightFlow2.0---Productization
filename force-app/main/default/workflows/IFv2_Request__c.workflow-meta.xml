@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>B2B_AlertAftermarketUserApproval</fullName>
+        <description>B2B - Alert the Aftermarket on approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>B2B_StoreEmailTemplates/B2B_NotifyAftermarketUser</template>
+    </alerts>
+    <alerts>
+        <fullName>B2B_AlertContactRejection</fullName>
+        <description>B2B - Alert the contact on rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <field>B2B_Email__c</field>
+            <type>email</type>
+        </recipients>
+        <senderAddress>shopme@seg-automotive.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>B2B_StoreEmailTemplates/B2B_NewCustomerRejected</template>
+    </alerts>
+    <alerts>
+        <fullName>B2B_NotifyCustomerUsers</fullName>
+        <description>B2B -  Notify customer users when process is approved</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>B2B_CustomerUsers</recipient>
+            <type>group</type>
+        </recipients>
+        <senderAddress>shopme@seg-automotive.com</senderAddress>
+        <senderType>OrgWideEmailAddress</senderType>
+        <template>B2B_StoreEmailTemplates/B2B_NotifyAftermarketManagers</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_for_Approval</fullName>
+        <description>Email Alert for Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>shivangi.tiwari@absyz.com.segabsyz</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/AA_Reminder_for_DueDate</template>
+    </alerts>
+    <alerts>
+        <fullName>IFv2_GeneralApprovalProductCancellationnotifywhenRejected</fullName>
+        <description>General Approval &amp; Product Cancellation notify when Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_NotificationApplicantwhenReject</template>
+    </alerts>
+    <alerts>
+        <fullName>IFv2_SendEmailToICO6Owner</fullName>
+        <description>IFv2_SendEmailToICO6Owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_InformICO6Owner</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejection_Approval_Email</fullName>
+        <description>Rejection Approval Email</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>shivangi.tiwari@absyz.com.segabsyz</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/CommunityAsyncVerificationEmailTemplate</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_upon_approval</fullName>
+        <description>Send Email upon approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_Notification_once_request_is_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_upon_rejection</fullName>
+        <description>Send Email upon rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_Notification_once_request_is_rejected</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_email_uponApproval</fullName>
+        <description>Send email upon Approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_Notification_once_request_is_approved</template>
+    </alerts>
+    <alerts>
+        <fullName>eSignature_Send_Email_upon_approval</fullName>
+        <description>eSignature Send Email upon approval</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_eSignature_Notification_once_request_is_approved_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>eSignature_Send_Email_upon_rejection</fullName>
+        <description>eSignature Send Email upon rejection</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Insight_Flow_Version_2/IFv2_eSignature_Notification_once_request_is_rejected_Request</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>CommentField</fullName>
+        <field>Comment__c</field>
+        <formula>IF( Account__r.IFv2_WorkflowNumber__c  = &apos;01&apos;,  $Label.CLIFv20122 , 
+IF(Account__r.IFv2_WorkflowNumber__c  = &apos;02&apos;, $Label.CLIFv20123,
+ IF(Account__r.IFv2_WorkflowNumber__c  = &apos;03&apos;, $Label.CLIFv20124 ,
+ IF(Account__r.IFv2_WorkflowNumber__c  = &apos;04&apos;, $Label.CLIFv20125,
+ IF(Account__r.IFv2_WorkflowNumber__c  = &apos;05&apos;, $Label.CLIFv20126,
+ IF(Account__r.IFv2_WorkflowNumber__c  = &apos;06&apos;,$Label.CLIFv20127,
+ IF(Account__r.IFv2_WorkflowNumber__c  = &apos;08&apos;,$Label.CLIFv20128,&apos;&apos;)))))) )</formula>
+        <name>Comment Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_InformWhenApprovedNonReturnable</fullName>
+        <field>InformWhenApproved__c</field>
+        <formula>Approver9__c</formula>
+        <name>IFv2_InformWhenApprovedNonReturnable</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_InformWhenApprovedReturnable</fullName>
+        <field>InformWhenApproved__c</field>
+        <formula>Approver6__c</formula>
+        <name>IFv2_InformWhenApprovedReturnable</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_ParallelFalse</fullName>
+        <field>Parallel__c</field>
+        <literalValue>0</literalValue>
+        <name>IFv2 Parallel False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_ParallelTrue</fullName>
+        <field>Parallel__c</field>
+        <literalValue>1</literalValue>
+        <name>IFv2 Parallel True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_SerialFalse</fullName>
+        <field>Serial__c</field>
+        <literalValue>0</literalValue>
+        <name>IFv2 Serial False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_SerialTrue</fullName>
+        <field>Serial__c</field>
+        <literalValue>1</literalValue>
+        <name>IFv2 Serial True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_UpdateDueDate</fullName>
+        <field>DueDateofReturn__c</field>
+        <formula>IF( ISPICKVAL(ItemType__c, &quot;Tools/Dies/Fixtures (Returnable due 2 years)&quot;), ADDMONTHS(TODAY(),24) , TODAY() + 90)</formula>
+        <name>IFv2 Update Due Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>IFv2_UserCurrency</fullName>
+        <field>CurrencyNew__c</field>
+        <formula>CreatedBy.Currency__c</formula>
+        <name>IFv2_UserCurrency</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initiated_Approval_Process_Date</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Initiated Approval Process Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Initiation_Date</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Initiation Date</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>UpdateStatusToSubmitted</fullName>
+        <description>Update status to submitted when request is submitted for approval</description>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update status to submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_toApproved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update status to Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_toDraft</fullName>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update status to Draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_toRejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_Rejected</fullName>
+        <field>Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Update status to Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_approved</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update status to approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_approved_Indirect</fullName>
+        <field>Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Update status to approved_Indirect</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_draft</fullName>
+        <field>Status__c</field>
+        <literalValue>Draft</literalValue>
+        <name>Update status to draft</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_status_to_submitted</fullName>
+        <description>Update status to submitted when request is submitted for approval</description>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>Update status to submitted</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>status_update</fullName>
+        <field>Status__c</field>
+        <literalValue>Submitted</literalValue>
+        <name>status update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>IFv2 Concession Parallel</fullName>
+        <actions>
+            <name>IFv2_ParallelTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>IFv2_SerialFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver3__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>Concession</value>
+        </criteriaItems>
+        <description>Update parallel and serial checkbox when approver 3 in not empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2 Concession Serial</fullName>
+        <actions>
+            <name>IFv2_ParallelFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>IFv2_SerialTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver3__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>Concession</value>
+        </criteriaItems>
+        <description>Update Parallel and checkbox when approver 3 is empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2 Design Verification Parallel</fullName>
+        <actions>
+            <name>IFv2_ParallelTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver1__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>Design Verification Process Approval</value>
+        </criteriaItems>
+        <description>Update parallel checkbox when approver 1 is not empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2 EmployeeClearance Parallel</fullName>
+        <actions>
+            <name>IFv2_ParallelTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver1__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>Employee Clearance Process</value>
+        </criteriaItems>
+        <description>Update parallel checkbox when approver 1 is not empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2 eSignature Parallel</fullName>
+        <actions>
+            <name>IFv2_ParallelTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>IFv2_SerialFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver11__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>eSignature</value>
+        </criteriaItems>
+        <description>Update parallel and serial checkbox when approver 11 in not empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2 eSignature Serial</fullName>
+        <actions>
+            <name>IFv2_ParallelFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>IFv2_SerialTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Approver11__c</field>
+            <operation>equals</operation>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>equals</operation>
+            <value>eSignature</value>
+        </criteriaItems>
+        <description>Update Parallel and checkbox when approver 11 is empty</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2_ICO6SendOwnerInformation</fullName>
+        <actions>
+            <name>IFv2_SendEmailToICO6Owner</name>
+            <type>Alert</type>
+        </actions>
+        <active>true</active>
+        <description>Fires an email to the new owner of ICO-6 requesting to add approvers</description>
+        <formula>AND( Workflow__c == &apos;ICO Workflow - 6&apos;,       ISCHANGED( OwnerId ))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2_ICOCommentField</fullName>
+        <actions>
+            <name>CommentField</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.CreatedById</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>IFv2_Request__c.Workflow__c</field>
+            <operation>startsWith</operation>
+            <value>ICO Workflow</value>
+        </criteriaItems>
+        <description>This is used to fill Comment field in ICO workflow</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>IFv2_User Currency</fullName>
+        <actions>
+            <name>IFv2_UserCurrency</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>IFv2_Request__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Draft</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

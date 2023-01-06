@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_DateTime__c</fullName>
+    <description>Used for storing the Date Time of the attached xml document</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Displays the date time of the attached SCAN document</inlineHelpText>
+    <label>Date/Time</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>DateTime</type>
+</CustomField>

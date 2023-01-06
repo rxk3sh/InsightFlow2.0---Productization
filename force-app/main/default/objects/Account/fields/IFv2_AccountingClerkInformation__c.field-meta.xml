@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_AccountingClerkInformation__c</fullName>
+    <description>SAP accounting clerk information is here</description>
+    <externalId>false</externalId>
+    <inlineHelpText>SAP accounting clerk information is here</inlineHelpText>
+    <label>Accounting Clerk Information</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

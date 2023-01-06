@@ -1,0 +1,34 @@
+<!--
+* 
+* @ Name 	:	IFv2_ScanRetryCmp
+* @ Purpose : 	To override Retry button on Scan Record page for retriggering failed scan records
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   26-12-2018      |	pradeep.chary@absyz.com		|  1.0          |  Initial Version
+*   
+-->
+
+<aura:component controller="IFv2_ScanRetryController" implements ="force:lightningQuickAction,force:hasRecordId">
+    
+    <!-- Attributes -->
+    <aura:attribute name="responseString" type="String"/>
+    <aura:attribute name="alertMessage" type="String" />
+    <aura:attribute name="isSuccess" type="Boolean" default="false"/>
+    <aura:attribute name="isFailure" type="Boolean" default="false"/>
+    <aura:attribute name="isAlert" type="Boolean" default="false" />
+    
+    <!-- Handler and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Markup -->
+    <aura:if isTrue="{!v.isSuccess}">
+        {!$Label.c.CLIFv20159} ! 
+    </aura:if>
+    
+    <aura:if isTrue="{!v.isFailure}">
+        {!$Label.c.CLIFv20160} !
+    </aura:if>
+    
+</aura:component>

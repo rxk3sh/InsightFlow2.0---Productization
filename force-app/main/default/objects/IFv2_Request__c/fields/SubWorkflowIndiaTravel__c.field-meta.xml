@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubWorkflowIndiaTravel__c</fullName>
+    <description>Sub workflow for India Travel Application</description>
+    <externalId>false</externalId>
+    <label>Sub Workflow</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Book My Taxi</fullName>
+                <default>false</default>
+                <label>Book My Taxi</label>
+            </value>
+            <value>
+                <fullName>MITRA</fullName>
+                <default>false</default>
+                <label>MITRA</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

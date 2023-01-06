@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RelatedList__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check if this record is related to related list of the workflow.</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check if this record is related to related list of the workflow.</inlineHelpText>
+    <label>Related List</label>
+    <type>Checkbox</type>
+</CustomField>

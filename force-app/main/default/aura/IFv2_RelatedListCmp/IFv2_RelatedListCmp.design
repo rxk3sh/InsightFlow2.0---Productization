@@ -1,0 +1,5 @@
+<design:component>
+    <design:attribute name="listType" label="Related List Type" description="design attribute for the related list type"/>
+    <design:attribute name="labelName" label="Label Name" description="design attribute to display the label name"/>
+    <design:attribute name="headerIcon" label="Icon Name" description="design attribute to hold the label icon"/>
+</design:component>

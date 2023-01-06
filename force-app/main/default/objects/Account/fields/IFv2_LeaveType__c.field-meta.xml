@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_LeaveType__c</fullName>
+    <description>Used for Leave and Overtime</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the type of leave</inlineHelpText>
+    <label>Leave Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Annual Leave</fullName>
+                <default>false</default>
+                <label>Annual Leave</label>
+            </value>
+            <value>
+                <fullName>Compensated Leave</fullName>
+                <default>false</default>
+                <label>Compensated Leave</label>
+            </value>
+            <value>
+                <fullName>Marriage Leave</fullName>
+                <default>false</default>
+                <label>Marriage Leave</label>
+            </value>
+            <value>
+                <fullName>Maternity Leave</fullName>
+                <default>false</default>
+                <label>Maternity Leave</label>
+            </value>
+            <value>
+                <fullName>Pregnancy Medical Check-up</fullName>
+                <default>false</default>
+                <label>Pregnancy Medical Check-up</label>
+            </value>
+            <value>
+                <fullName>Nursing Leave</fullName>
+                <default>false</default>
+                <label>Nursing Leave</label>
+            </value>
+            <value>
+                <fullName>Family-planning Leave</fullName>
+                <default>false</default>
+                <label>Family-planning Leave</label>
+            </value>
+            <value>
+                <fullName>On-job Injury Leave</fullName>
+                <default>false</default>
+                <label>On-job Injury Leave</label>
+            </value>
+            <value>
+                <fullName>Bereavement Leave</fullName>
+                <default>false</default>
+                <label>Bereavement Leave</label>
+            </value>
+            <value>
+                <fullName>Unpaid Leave</fullName>
+                <default>false</default>
+                <label>Unpaid Leave</label>
+            </value>
+            <value>
+                <fullName>Business Leave</fullName>
+                <default>false</default>
+                <label>Business Leave</label>
+            </value>
+            <value>
+                <fullName>Sick Leave Deduction 30%</fullName>
+                <default>false</default>
+                <label>Sick Leave Deduction 30%</label>
+            </value>
+            <value>
+                <fullName>Sick Leave Partial Pay</fullName>
+                <default>false</default>
+                <label>Sick Leave Partial Pay</label>
+            </value>
+            <value>
+                <fullName>Paternity Leave</fullName>
+                <default>false</default>
+                <label>Paternity Leave</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

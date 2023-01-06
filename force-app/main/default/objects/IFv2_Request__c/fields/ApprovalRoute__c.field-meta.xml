@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalRoute__c</fullName>
+    <externalId>false</externalId>
+    <label>Approval route</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Sales Entities</fullName>
+                <default>false</default>
+                <label>Sales Entities</label>
+            </value>
+            <value>
+                <fullName>SG CN</fullName>
+                <default>false</default>
+                <label>SG CN</label>
+            </value>
+            <value>
+                <fullName>SG DE HiP</fullName>
+                <default>false</default>
+                <label>SG DE HiP</label>
+            </value>
+            <value>
+                <fullName>SG DE St</fullName>
+                <default>false</default>
+                <label>SG DE St</label>
+            </value>
+            <value>
+                <fullName>SGFR</fullName>
+                <default>false</default>
+                <label>SGFR</label>
+            </value>
+            <value>
+                <fullName>SGHU, Direct</fullName>
+                <default>false</default>
+                <label>SGHU, Direct</label>
+            </value>
+            <value>
+                <fullName>SGHU, Indirect blue collar</fullName>
+                <default>false</default>
+                <label>SGHU, Indirect blue collar</label>
+            </value>
+            <value>
+                <fullName>SGHU, Indirect white collar</fullName>
+                <default>false</default>
+                <label>SGHU, Indirect white collar</label>
+            </value>
+            <value>
+                <fullName>SGHU, Trainee</fullName>
+                <default>false</default>
+                <label>SGHU, Trainee</label>
+            </value>
+            <value>
+                <fullName>SGIN</fullName>
+                <default>false</default>
+                <label>SGIN</label>
+            </value>
+            <value>
+                <fullName>SGIT</fullName>
+                <default>false</default>
+                <label>SGIT</label>
+            </value>
+            <value>
+                <fullName>SGJP</fullName>
+                <default>false</default>
+                <label>SGJP</label>
+            </value>
+            <value>
+                <fullName>SGKR</fullName>
+                <default>false</default>
+                <label>SGKR</label>
+            </value>
+            <value>
+                <fullName>SGPT</fullName>
+                <default>false</default>
+                <label>SGPT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

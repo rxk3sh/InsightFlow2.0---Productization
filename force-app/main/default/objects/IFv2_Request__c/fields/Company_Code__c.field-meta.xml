@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company_Code__c</fullName>
+    <externalId>false</externalId>
+    <label>Company Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>71F0</fullName>
+                <default>false</default>
+                <label>71F0</label>
+            </value>
+            <value>
+                <fullName>70A0</fullName>
+                <default>false</default>
+                <label>70A0</label>
+            </value>
+            <value>
+                <fullName>70B0</fullName>
+                <default>false</default>
+                <label>70B0</label>
+            </value>
+            <value>
+                <fullName>70D0</fullName>
+                <default>false</default>
+                <label>70D0</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

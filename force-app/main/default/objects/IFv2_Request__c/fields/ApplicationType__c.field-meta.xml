@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApplicationType__c</fullName>
+    <description>Used in China property gate application.</description>
+    <externalId>false</externalId>
+    <label>Application Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Building</fullName>
+                <default>false</default>
+                <label>Building</label>
+            </value>
+            <value>
+                <fullName>EWAK Tooling in Supplier</fullName>
+                <default>false</default>
+                <label>EWAK Tooling in Supplier</label>
+            </value>
+            <value>
+                <fullName>EWAK Tooling in own location</fullName>
+                <default>false</default>
+                <label>EWAK Tooling in own location</label>
+            </value>
+            <value>
+                <fullName>MAE</fullName>
+                <default>false</default>
+                <label>MAE</label>
+            </value>
+            <value>
+                <fullName>MAE related to BAU, Software, Vehicles, Office equipments except PC</fullName>
+                <default>false</default>
+                <label>MAE related to BAU, Software, Vehicles, Office equipments except PC</label>
+            </value>
+            <value>
+                <fullName>PC</fullName>
+                <default>false</default>
+                <label>PC</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

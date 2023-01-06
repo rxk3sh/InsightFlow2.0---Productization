@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ArrivalTargetDate__c</fullName>
+    <defaultValue>TODAY()+7</defaultValue>
+    <description>This is used in  Approval process for special Freights.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the expected arrival target date</inlineHelpText>
+    <label>Arrival Target Date</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

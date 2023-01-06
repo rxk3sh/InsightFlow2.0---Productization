@@ -1,0 +1,9 @@
+<aura:event type="APPLICATION" description="Event template" >
+
+    <aura:attribute name="materialdescription" type="String"/>
+    <aura:attribute name="checkboxValue" type="Boolean"/>
+    <aura:attribute name="plantvalue" type="String"/>
+    <aura:attribute name="supplierName" type="String"/>
+    <aura:attribute name ="custometText" type="String"/>
+	
+</aura:event>

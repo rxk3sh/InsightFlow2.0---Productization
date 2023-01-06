@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReasonforExit__c</fullName>
+    <description>Picklist field which holds the reason for Exit</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the reason for exit.</inlineHelpText>
+    <label>Reason for Exit</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resignation</fullName>
+                <default>false</default>
+                <label>Resignation</label>
+            </value>
+            <value>
+                <fullName>Retirement</fullName>
+                <default>false</default>
+                <label>Retirement</label>
+            </value>
+            <value>
+                <fullName>Transfer</fullName>
+                <default>false</default>
+                <label>Transfer</label>
+            </value>
+            <value>
+                <fullName>Death</fullName>
+                <default>false</default>
+                <label>Death</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Training Completed (Fixed Term)</fullName>
+                <default>false</default>
+                <label>Training Completed (Fixed Term)</label>
+            </value>
+            <value>
+                <fullName>Contract completed (externals)</fullName>
+                <default>false</default>
+                <label>Contract completed (externals)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

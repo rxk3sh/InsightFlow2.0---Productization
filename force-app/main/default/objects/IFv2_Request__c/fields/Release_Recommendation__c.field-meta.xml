@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Recommendation__c</fullName>
+    <externalId>false</externalId>
+    <label>Overall evaluation</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Design Verification passed</fullName>
+                <default>false</default>
+                <label>Design Verification passed</label>
+            </value>
+            <value>
+                <fullName>Design Verification not fully passed – open low relevant test(s)</fullName>
+                <default>false</default>
+                <label>Design Verification not fully passed – open low relevant test(s)</label>
+            </value>
+            <value>
+                <fullName>Design Verification partly failed – open relevant test(s)</fullName>
+                <default>false</default>
+                <label>Design Verification partly failed – open relevant test(s)</label>
+            </value>
+            <value>
+                <fullName>Design Verification failed</fullName>
+                <default>false</default>
+                <label>Design Verification failed</label>
+            </value>
+            <value>
+                <fullName>Limited Release</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Limited Release</label>
+            </value>
+            <value>
+                <fullName>No Release</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>No Release</label>
+            </value>
+            <value>
+                <fullName>Unlimited Release</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Unlimited Release</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

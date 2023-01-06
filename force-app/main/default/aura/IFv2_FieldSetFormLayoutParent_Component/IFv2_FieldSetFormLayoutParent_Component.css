@@ -1,0 +1,64 @@
+/* style class for fixing button */
+.THIS .float{
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    width: unset;
+    background: rgba(243, 242, 242,0);
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0);
+    z-index: 8000;
+    display: flex;
+    justify-content: center;
+    padding: .5rem 0;
+}
+
+.THIS .custom-error-message {
+    width: 100%;
+}
+
+.THIS .custom-error-css {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.THIS .custom-error-css-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: -5%
+}
+
+.THIS .custom-icon svg.slds-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.THIS .custom-icon {
+    padding-right: 10px;
+}
+.THIS input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.THIS input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}
+
+.THIS .slds-spinner_container {
+    z-index: 3 !important;
+    border-radius: .25rem;
+    height:100%;
+    min-height:75vh
+}
+
+.THIS .slds-spinner {
+    position: fixed;
+    left: 33%;
+    top: 65%
+}

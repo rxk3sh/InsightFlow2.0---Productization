@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WorkingTimeModel__c</fullName>
+    <externalId>false</externalId>
+    <label>Working time model</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ApprovalRoute__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>fulltime</fullName>
+                <default>false</default>
+                <label>fulltime</label>
+            </value>
+            <value>
+                <fullName>1st shift</fullName>
+                <default>false</default>
+                <label>1st shift</label>
+            </value>
+            <value>
+                <fullName>2nd shift</fullName>
+                <default>false</default>
+                <label>2nd shift</label>
+            </value>
+            <value>
+                <fullName>3rd shift</fullName>
+                <default>false</default>
+                <label>3rd shift</label>
+            </value>
+            <value>
+                <fullName>Flexi time</fullName>
+                <default>false</default>
+                <label>Flexi time</label>
+            </value>
+            <value>
+                <fullName>Night Shift</fullName>
+                <default>false</default>
+                <label>Night Shift</label>
+            </value>
+            <value>
+                <fullName>Part time</fullName>
+                <default>false</default>
+                <label>Part time</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <valueName>fulltime</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>Flexi time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGPT</controllingFieldValue>
+            <controllingFieldValue>Sales Entities</controllingFieldValue>
+            <valueName>Part time</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>2nd shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>3rd shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGHU, Direct</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect blue collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Indirect white collar</controllingFieldValue>
+            <controllingFieldValue>SGHU, Trainee</controllingFieldValue>
+            <valueName>Night Shift</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SGIN</controllingFieldValue>
+            <valueName>1st shift</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ChinaSplitFINFillpart</fullName>
+    <description>Used in China split workflow</description>
+    <displayedFields>
+        <field>RequestExtension1__r.FINDocumentNo__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <label>China Split FIN Fill part</label>
+</FieldSet>

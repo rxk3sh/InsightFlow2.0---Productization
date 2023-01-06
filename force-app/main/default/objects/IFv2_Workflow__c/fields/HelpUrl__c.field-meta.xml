@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HelpUrl__c</fullName>
+    <description>This is used to give link of the document to open if a help icon is clicked on request detail page.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Link of the document to open if a help icon is clicked on request detail page.</inlineHelpText>
+    <label>Help Url</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

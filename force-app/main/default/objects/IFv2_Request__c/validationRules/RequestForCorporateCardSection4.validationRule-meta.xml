@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestForCorporateCardSection4</fullName>
+    <active>true</active>
+    <description>To show error message when section 4 is filled when  Card Cancellation is not selected in Workflow Type field in Request for Corporate Card Workflow.</description>
+    <errorConditionFormula>and 
+(  
+(ispickval (Status__c , &apos;Draft&apos;)),Workflow__c =  $CustomMetadata.IFv2_Workflows__mdt.Requestsforcorporatecard.Name__c, 
+(NOT(INCLUDES(WorkflowType__c , &apos;Card Cancellation&apos;))), 
+NOT(ISBLANK(TEXT( RequestExtension3__r.Reasonforcancellation__c ))) 
+)</errorConditionFormula>
+    <errorMessage>Not allowed to enter data in section 4 without selecting the Card Cancellation value in Workflow Type field.</errorMessage>
+</ValidationRule>

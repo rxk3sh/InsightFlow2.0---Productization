@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location_to_which_this_applies__c</fullName>
+    <description>used in workflow employee suggestion scheme US MX</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the location for which your suggestion applies.</inlineHelpText>
+    <label>Location to which this applies</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Novi</fullName>
+                <default>false</default>
+                <label>Novi</label>
+            </value>
+            <value>
+                <fullName>Lerma</fullName>
+                <default>false</default>
+                <label>Lerma</label>
+            </value>
+            <value>
+                <fullName>both</fullName>
+                <default>false</default>
+                <label>both</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

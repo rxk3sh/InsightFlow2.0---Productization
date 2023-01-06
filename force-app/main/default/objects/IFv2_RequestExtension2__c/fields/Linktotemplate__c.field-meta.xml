@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Linktotemplate__c</fullName>
+    <defaultValue>&quot;https://seg--WF.cs88.my.salesforce.com/sfc/p/9E0000000OxM/a/9E00000008bd/NXEOpWzLnYYJxEuvsWzMglERHh63fIiBBaCMRYOiqqc&quot;</defaultValue>
+    <externalId>false</externalId>
+    <label>Link to template</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Url</type>
+</CustomField>

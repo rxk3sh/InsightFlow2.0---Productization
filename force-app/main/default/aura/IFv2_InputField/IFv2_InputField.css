@@ -1,0 +1,25 @@
+.THIS .slds-form-element__icon {
+    padding-top: 1px !important;
+}
+
+.THIS .custom-edit-icon {
+    color: #ECEBEA !important;
+}
+
+.THIS .custom-edit-icon:hover {
+    color: #706E6B !important;
+}
+
+.THIS .textUnderline {
+    color: #006DCC;
+}
+
+.THIS .custom-label-hide label {
+    display: none;
+    visibility: hidden;
+}
+
+.THIS .slds-checkbox label .slds-form-element__label {
+    display: none;
+    visibility: hidden;
+}

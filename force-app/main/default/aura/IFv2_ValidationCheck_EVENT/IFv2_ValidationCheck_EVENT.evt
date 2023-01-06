@@ -1,0 +1,8 @@
+<aura:event type="Application" description="Event template" >
+    <aura:attribute name = "recordId" type = "String"/>
+    <aura:attribute name = "approverSectionMetadata" type = "Object" />
+    <!--  Iteration 3 Changes Start-->
+    <aura:attribute name="CheckNow" type="Boolean"/>
+    <aura:attribute name="ErrorMessage" type="LIST[]"/>
+    <!--  Iteration 3 Changes End-->
+</aura:event>

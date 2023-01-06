@@ -1,0 +1,36 @@
+<!--
+* 
+    * @ Name 	:	Ifv2_EditShortcut
+* @ Purpose : 	This is to OverRide Standard Edit Hotkey Button On IFv2_Request Object
+* @ Author	: 	Veerendra B
+*
+*   Date	        |  Developer Name              		    |  Version      |  Changes
+* ======================================================================================================
+*   01-02-2019      |  Veerendra.billakurthi@absyz.com  	|  1.0          |  Initial Version
+*
+-->
+<aura:component implements="lightning:actionOverride" access="global">
+  
+    <aura:attribute name="alertMsg" type="String" default="{!$Label.c.CLIFv20079}" description="Warning alert message" />
+    
+    <div class="demo-only" >
+        <section role="dialog" aria-modal="true" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <h1>{!v.alertMsg}</h1>
+                </header>
+        
+                <div  class="slds-modal__footer">
+                    <footer>
+                    <lightning:button variant="neutral" 
+                                          label="{!$Label.c.CLIFv20090}"
+                                          title="{!$Label.c.CLIFv20090}"
+                                          onclick="{!c.Close}"/> 
+                </footer>
+            </div>
+            </div>
+        </section>
+             </div>
+    <div class="slds-backdrop slds-backdrop_open"></div>
+    
+</aura:component>

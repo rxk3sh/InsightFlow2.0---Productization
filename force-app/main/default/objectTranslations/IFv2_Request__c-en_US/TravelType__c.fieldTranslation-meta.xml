@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label></label>
+    <name>TravelType__c</name>
+    <picklistValues>
+        <masterLabel>Business - Domestic</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Business - Overseas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home trip - Overseas</masterLabel>
+        <translation></translation>
+    </picklistValues>
+</CustomFieldTranslation>

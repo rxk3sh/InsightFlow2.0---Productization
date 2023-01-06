@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ApprovalRequestProjectExpenditure</fullName>
+    <description>Used in MAE Approval Request</description>
+    <displayedFields>
+        <field>Total__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>MAE Approval Request Expenditure</label>
+</FieldSet>

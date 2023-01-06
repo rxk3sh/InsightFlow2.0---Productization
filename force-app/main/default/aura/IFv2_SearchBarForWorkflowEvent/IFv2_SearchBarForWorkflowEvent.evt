@@ -1,0 +1,15 @@
+<!--
+* 
+* @ Name 	:	IFv2_SearchBarForWorkflowEvent
+* @ Purpose : 	This is an event for the search bar on workflow listview
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   30-10-2018      |  pradeep.chary@absyz.com(yv)	|  1.0          |  Initial Version
+*
+-->
+
+<aura:event type="APPLICATION">
+    <aura:attribute name="searchKey" type="String"/>
+</aura:event>

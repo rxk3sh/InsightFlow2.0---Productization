@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bank__c</fullName>
+    <externalId>false</externalId>
+    <label>Bank</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>001 - Banco do Brasil</fullName>
+                <default>false</default>
+                <label>001 - Banco do Brasil</label>
+            </value>
+            <value>
+                <fullName>104 - CEF</fullName>
+                <default>false</default>
+                <label>104 - CEF</label>
+            </value>
+            <value>
+                <fullName>237 - Bradesco</fullName>
+                <default>false</default>
+                <label>237 - Bradesco</label>
+            </value>
+            <value>
+                <fullName>341 - Itaú</fullName>
+                <default>false</default>
+                <label>341 - Itaú</label>
+            </value>
+            <value>
+                <fullName>399 - HSBC</fullName>
+                <default>false</default>
+                <label>399 - HSBC</label>
+            </value>
+            <value>
+                <fullName>409 - Unibanco</fullName>
+                <default>false</default>
+                <label>409 - Unibanco</label>
+            </value>
+            <value>
+                <fullName>477 - Citibank</fullName>
+                <default>false</default>
+                <label>477 - Citibank</label>
+            </value>
+            <value>
+                <fullName>Outros</fullName>
+                <default>false</default>
+                <label>Outros</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

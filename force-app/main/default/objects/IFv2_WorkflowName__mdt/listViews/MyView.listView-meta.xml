@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyView</fullName>
+    <columns>MasterLabel</columns>
+    <columns>DeveloperName</columns>
+    <columns>Workflows__c</columns>
+    <columns>InsightFlow1Name__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>My View</label>
+    <language>en_US</language>
+</ListView>

@@ -1,0 +1,24 @@
+.THIS .changeColor {
+   background-color:steelblue !important; 
+}
+
+.THIS .datatableChild .slds-scrollable_y {
+    overflow-y: auto;
+}
+
+.THIS .slds-scrollable_x {
+    overflow-x: hidden;
+}
+
+.THIS .slds-icon-text-default {
+    width: 1.2rem;
+}
+
+.THIS .custom-p-top_small {
+    padding: 0.75rem 0.25rem;
+}
+
+.THIS .slds-card__footer {
+    border-top: none;
+    margin-top: 0px;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EmployeeType__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the employee type.</inlineHelpText>
+    <label>Employee Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>External / fixed-term</fullName>
+                <default>false</default>
+                <label>External / fixed-term</label>
+            </value>
+            <value>
+                <fullName>M&amp;SS</fullName>
+                <default>false</default>
+                <label>M&amp;SS</label>
+            </value>
+            <value>
+                <fullName>M&amp;SS Trainee</fullName>
+                <default>false</default>
+                <label>M&amp;SS Trainee</label>
+            </value>
+            <value>
+                <fullName>Non M&amp;SS Trainee</fullName>
+                <default>false</default>
+                <label>Non M&amp;SS Trainee</label>
+            </value>
+            <value>
+                <fullName>Workmen</fullName>
+                <default>false</default>
+                <label>Workmen</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

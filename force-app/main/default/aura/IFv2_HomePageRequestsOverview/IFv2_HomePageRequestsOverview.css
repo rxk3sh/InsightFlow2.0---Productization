@@ -1,0 +1,8 @@
+.THIS .datatableParent .slds-scrollable_y {
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.THIS header {
+    display: none;
+}

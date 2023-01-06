@@ -1,0 +1,6 @@
+<aura:event type="COMPONENT" description="Event template">
+    <aura:attribute name="index" type="Integer"/>
+    <aura:attribute name="starred" type="Boolean"/>
+    <aura:attribute name="ListType" type="String"/>
+    <aura:attribute name="CustomSettingId" type="String"/>
+</aura:event>

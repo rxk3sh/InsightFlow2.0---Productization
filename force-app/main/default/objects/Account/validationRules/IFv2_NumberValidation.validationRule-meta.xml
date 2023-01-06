@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_NumberValidation</fullName>
+    <active>true</active>
+    <description>To check Number data type field is never less than 0.</description>
+    <errorConditionFormula>OR( (IFv2_SubNumber__c &lt; 0),(IFv2_AssetNumber__c &lt; 0), (IFv2_OriginalValue__c &lt; 0),(IFv2_InventoryNumber__c &lt; 0),  (IFv2_NewAssetNumber__c &lt; 0), (IFv2_NewSubNumber__c &lt; 0), (IFv2_NewInventoryNumber__c &lt; 0),(IFv2_NetBookValueatPlannedMonth__c &lt; 0),
+(IFv2_UsefulLifeMonths__c&lt;0),
+(IFv2_UsedMonthatPlannedDate__c &lt;0),
+( IFv2_ImportTax__c &lt;0),
+( IFv2_EstimatedImportTaxtoPay__c &lt;0),
+(  IFv2_NewOriginalValue__c &lt;0),
+( IFv2_DutyFreeCertificateNo__c &lt;0),
+( IFv2_NewNetBookValue__c &lt;0))</errorConditionFormula>
+    <errorMessage>Numeric field cannot be negative</errorMessage>
+</ValidationRule>

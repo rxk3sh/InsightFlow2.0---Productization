@@ -1,0 +1,9 @@
+<aura:event type="APPLICATION" description="to refresh related lists" >
+    <aura:attribute name="relatedRecords" type="List" />
+    <aura:attribute name="userNames" type="List"/>
+    <aura:attribute name="relatedListType" type="String"/>
+    <aura:attribute name="workflowName" type="String"/>
+    <aura:attribute name="hasUploadFiles" type="Boolean"/>
+    <aura:attribute name="forNotesAndAttachments" type="Boolean" default="false"/>
+    <aura:attribute name="mappingFromRelatedList" type="Boolean" default="false"/>
+</aura:event>

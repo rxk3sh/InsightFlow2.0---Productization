@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_concessionActualValue</fullName>
+    <description>Concession Actual Value Workflow</description>
+    <displayedFields>
+        <field>Account__r.IFv2_Actualvaluenonconformity__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>true</isRequired>
+    </displayedFields>
+    <displayedFields>
+        <field>ConcessionComment__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>concession Actual Value</label>
+</FieldSet>

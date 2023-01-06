@@ -1,0 +1,180 @@
+<!--
+* 
+* @ Name 	:	IFv2_HeaderCmp
+* @ Purpose : 	This is the custom request header component
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   29-10-2018      |  pradeep.chary@absyz.com(es)	|  1.0          |  Initial Version
+*   01-11-2018      |  madhuravani.b@absyz.com		|  1.1          |  Added the popup functionality for custom Approve button 
+*   18-03-2019      |  pradeep.chary@absyz.com(es)  |  2.0          |  Getting approver section metadata and storing in session storage
+-->
+
+<aura:component controller="IFv2_HeaderController" implements="force:appHostable,flexipage:availableForAllPageTypes,force:hasRecordId" access="global" >
+    
+    <!-- Attributes for button display logic -->
+    <aura:attribute name="buttons" type="Object" description="Information of each button passed from iteration" />
+    <aura:attribute name="approverSectionMetadata" type="Object" description="Stores metadata of all Approver Sections" />
+    <aura:attribute name="buttonLabels" type="Object" description="List of button labels" />
+    <aura:attribute name="buttonName" type="String" description="Name of the current record" />
+    <aura:attribute name="createdById" type="String" description = "created by Id of the Request" />
+    <aura:attribute name="CssStyle" Type="String" description="adding css to button menu"/>
+    <aura:attribute name="status" type="String" default="" description="Status of the request" />
+    <aura:attribute name="approverRoleName" type="String" default="" description="Holds the role of the current approver" />
+    <aura:attribute name="oldRequest" type="Boolean" default="false"/>
+    <aura:attribute name="oldRequestRestart" type="Boolean" default="false"/>
+    <aura:attribute name="disabled" type="Boolean" default="false"/>
+    
+    <!-- Attribute for modal display logic -->
+    <aura:attribute name="isModalParent" type="Boolean" />
+    <aura:attribute name="showLookupCmp" type="Boolean" default="false" />
+    <aura:attribute name="isModalOpen" type="Boolean" default="false" description="opens the modal popup for Delete button"/>
+    
+    <!-- Attributes for alert message handling -->
+    <aura:attribute name="alertMessage" type="String" description="Success/Error alert message" />
+    <aura:attribute name="alertMsg" type="String" description="attahments alert message" />
+    
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="isAlertError" type="Boolean" default="false" description="Whether to display the alert message" />
+    <aura:attribute name="isApprover" type="Boolean" default="false" description="Whether to display the alert message for attachments" />
+    
+    <!-- Event handlers -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="componentEventFired" event="c:IFv2_ApprovePopupEvent" action="{!c.handleApprovalEvent}"/>
+    <aura:handler name="deleteEvent" event="c:IFv2_DeleteEvent" action="{!c.handleDeleteRecord}" />
+    <aura:handler name="alertEvent" event="c:IFv2_AlertEvent" action="{!c.handleAlerts}" />
+    <aura:handler name="toastEvent" event="c:IFv2_showToastEvent" action="{!c.handleToast}" />
+    <aura:handler event="c:IFv2_Headerevent" action="{!c.doInit}" />
+    <aura:handler event="c:IFv2_EditButtonHandleEvent" action="{!c.editButtonAction}" />
+    <aura:handler event="c:IFv2_EditEvent" action="{!c.editEventAction}" />
+    <aura:handler event="c:IFv2_ApproverSectionMetadataEvent" action="{!c.handleSectionMetadata}" />
+    
+    <!-- Alert message for error -->
+    <aura:if isTrue="{!v.isAlertError}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2>{!v.alertMessage}</h2>
+        </div>
+    </aura:if>
+    
+    <!-- Alert message for attachments -->
+    <aura:if isTrue="{!v.isApprover}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_warning" role="alert">
+            <h2><b>{!v.alertMsg}</b></h2>
+        </div>
+    </aura:if>
+    
+    <!-- Alert message for restart of rejected migrated records -->
+    <aura:if isTrue="{!v.oldRequestRestart}">
+        <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+            <h2><b>{!$Label.c.CLIFv20087}</b></h2>
+        </div>
+    </aura:if>
+    
+    <div class="slds-page-header slds-page-header_record-home">
+        <lightning:layout verticalAlign="center" multipleRows="true">
+            
+            <!-- Header part with Request name -->
+            
+            <lightning:layoutItem size="12" padding="around-small" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="6">
+                <lightning:layout verticalAlign="center" horizontalAlign="start" multipleRows="false">
+                    <lightning:layoutItem>
+                        <lightning:icon size="medium" iconName="custom:custom18"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem padding="horizontal-small">
+                        <ui:outputText class="slds-page-header__name" value="{!(v.buttons.workflow +' - Request')}"/>
+                        <ui:outputText class="slds-page-header__title slds-truncate" value="{!v.buttons.requestName}"/>
+                    </lightning:layoutItem>
+                    <lightning:layoutItem>
+                        <aura:if isTrue="{!v.status == 'Approved'}">
+                            <ui:outputText class="process-status custom-approved" value="Approved" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.status == 'Cancelled'}">
+                            <ui:outputText class="process-status custom-cancelled" value="Cancelled" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.status == 'Draft'}">
+                            <ui:outputText class="process-status custom-draft" value="Draft" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.status == 'Rejected'}">
+                            <ui:outputText class="process-status custom-rejected" value="Rejected" />
+                        </aura:if>
+                        <aura:if isTrue="{!v.status == 'Submitted'}">
+                            <ui:outputText class="process-status custom-submitted" value="Submitted" />
+                        </aura:if>
+                        
+                    </lightning:layoutItem>
+                </lightning:layout>
+            </lightning:layoutItem>
+            
+            <!-- Creating buttons dynamically  -->
+            <lightning:layoutItem aura:id="buttons-id" class="slds-hide" size="12" padding="around-small" smallDeviceSize="12" mediumDeviceSize="6" largeDeviceSize="6">
+                <lightning:layout verticalAlign="center" horizontalAlign="end">
+                    <lightning:buttonGroup>
+                        <aura:iteration items="{!v.buttonLabels}" var="button" indexVar="index">
+                            <aura:if isTrue="{!index &lt; 4}">
+                                <!-- Passing button label and api name with recordId to child component -->
+                                <aura:if isTrue="{!button.Label__c eq 'Delete'}" >
+                                    <c:IFv2_HeaderChildCmp button="{!button}" index="{!index}" recordId="{!v.recordId}" type="group" disabled="false" workflow="{!v.buttons.workflow}" oldRequest="{!v.oldRequest}" oldRequestRestart="{!v.oldRequestRestart}" approverSectionMetadata="{!v.approverSectionMetadata}" approverRoleName="{!v.approverRoleName}" />  
+                                    <aura:set attribute="else">
+                                        <c:IFv2_HeaderChildCmp button="{!button}" index="{!index}" recordId="{!v.recordId}" type="group" disabled="{!v.disabled}" workflow="{!v.buttons.workflow}" oldRequest="{!v.oldRequest}" oldRequestRestart="{!v.oldRequestRestart}" approverSectionMetadata="{!v.approverSectionMetadata}" approverRoleName="{!v.approverRoleName}" />  
+                                    </aura:set>    
+                                </aura:if>
+                            </aura:if>
+                        </aura:iteration>
+                        
+                        <lightning:button  label ="Help" onclick="{!c.openHelpDocument}"/>
+                        
+                    </lightning:buttonGroup>
+                    <aura:if isTrue="{!v.buttons.button.length &gt; 4}">
+                        <lightning:buttonMenu menuAlignment="right">
+                            <aura:iteration items="{!v.buttonLabels}" var="button" indexVar="index">
+                                <aura:if isTrue="{!index &gt; 3}">
+                                    <!-- Passing button label and api name with recordId to child component -->
+                                    <c:IFv2_HeaderChildCmp button="{!button}" index="{!index}" recordId="{!v.recordId}" type="menu" disabled="{!v.disabled}" workflow="{!v.buttons.workflow}" oldRequest="{!v.oldRequest}" oldRequestRestart="{!v.oldRequestRestart}" approverSectionMetadata="{!v.approverSectionMetadata}" approverRoleName="{!v.approverRoleName}" />  
+                                </aura:if>
+                            </aura:iteration>
+                        </lightning:buttonMenu>
+                    </aura:if>
+                </lightning:layout>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>
+    <!-- Modal for adding comments and Approving/Rejecting a record for the approver -->
+    
+    <aura:if isTrue="{!v.isModalParent}" >
+        <c:IFv2_ModalPopupCmp recordId="{!v.recordId}" buttonName="{!v.buttonName}" isOpen="{!v.isModalParent}" showLookup="{!v.showLookupCmp}" createdById="{!v.createdById}" approverSectionMetadata="{!v.approverSectionMetadata}" />
+    </aura:if>
+    
+    <!-- Popup which displays when delete button is clicked -->
+    <aura:if isTrue="{!v.isModalOpen}">
+        <div class="demo-only" >
+            <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <header class="slds-modal__header">
+                        <!-- Close Icon -->
+                        <lightning:buttonIcon iconName="utility:close"
+                                              onclick="{! c.closeModel }"
+                                              alternativeText="close"
+                                              variant="bare-inverse"
+                                              class="slds-modal__close"/>
+                        <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Delete Request</h2>
+                    </header>
+                    <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" style="text-align:center;">
+                        {!$Label.c.CLIFv20048}
+                    </div>
+                    <footer class="slds-modal__footer">
+                        <lightning:button variant="neutral" 
+                                          label="Cancel"
+                                          title="Cancel"
+                                          onclick="{!c.closeModel}"/>
+                        <lightning:button variant="brand" 
+                                          label="Delete"
+                                          title="Delete"
+                                          onclick="{!c.deleteRequest}"/>
+                    </footer>
+                </div>
+            </section>
+            <div class="slds-backdrop slds-backdrop_open"></div>
+        </div>
+    </aura:if>
+</aura:component>

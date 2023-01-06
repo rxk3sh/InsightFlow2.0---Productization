@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IFv2_ChinaLeaveOvertimeRemarks</fullName>
+    <description>Used in chinaChina Leave &amp; Overtime Application</description>
+    <displayedFields>
+        <field>RequestExtension1__r.Remarks__c</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>China Leave &amp; Overtime Application Remarks</label>
+</FieldSet>

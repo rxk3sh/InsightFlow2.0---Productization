@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestType__c</fullName>
+    <description>Used in badge Management</description>
+    <externalId>false</externalId>
+    <label>Request type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Location__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Create new role</fullName>
+                <default>false</default>
+                <label>Create new role</label>
+            </value>
+            <value>
+                <fullName>Change existing role</fullName>
+                <default>false</default>
+                <label>Change existing role</label>
+            </value>
+            <value>
+                <fullName>Delete existing role</fullName>
+                <default>false</default>
+                <label>Delete existing role</label>
+            </value>
+            <value>
+                <fullName>Change role approvers</fullName>
+                <default>false</default>
+                <label>Change role approvers</label>
+            </value>
+            <value>
+                <fullName>Personenausweis</fullName>
+                <default>false</default>
+                <label>Personenausweis</label>
+            </value>
+            <value>
+                <fullName>Parkgenehmigung</fullName>
+                <default>false</default>
+                <label>Parkgenehmigung</label>
+            </value>
+            <value>
+                <fullName>Zutrittsausweis</fullName>
+                <default>false</default>
+                <label>Zutrittsausweis</label>
+            </value>
+            <value>
+                <fullName>Einfahrgenehmigung</fullName>
+                <default>false</default>
+                <label>Einfahrgenehmigung</label>
+            </value>
+            <value>
+                <fullName>Request access / role</fullName>
+                <default>false</default>
+                <label>Request access / role</label>
+            </value>
+            <value>
+                <fullName>Remove role</fullName>
+                <default>false</default>
+                <label>Remove role</label>
+            </value>
+            <value>
+                <fullName>Remove access (inlc. deleting all roles)</fullName>
+                <default>false</default>
+                <label>Remove access (inlc. deleting all roles)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Stuttgart</controllingFieldValue>
+            <valueName>Personenausweis</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

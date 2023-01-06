@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RequestExtension2__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>This is look up for Request Extension2-EMEA</description>
+    <externalId>false</externalId>
+    <label>Request Extension2</label>
+    <referenceTo>IFv2_RequestExtension2__c</referenceTo>
+    <relationshipLabel>Request Extension2</relationshipLabel>
+    <relationshipName>Requests</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

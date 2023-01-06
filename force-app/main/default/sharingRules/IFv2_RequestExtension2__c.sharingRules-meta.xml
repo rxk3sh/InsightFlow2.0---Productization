@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>SCC_Extension_Sharing</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>To share SCC extension 2 records</description>
+        <label>SCC Extension Sharing</label>
+        <sharedTo>
+            <group>IFv2_SCCworkflow</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>WorkflowName__c</field>
+            <operation>contains</operation>
+            <value>SCC</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

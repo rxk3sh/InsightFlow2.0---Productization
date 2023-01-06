@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Company__c</fullName>
+    <description>Used in China Property Gate Pass Application Workflow and China- Combine, Lost, Split.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Company location</inlineHelpText>
+    <label>Company</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SGCN</fullName>
+                <default>false</default>
+                <label>SGCN</label>
+            </value>
+            <value>
+                <fullName>SGCN_Sgh</fullName>
+                <default>false</default>
+                <label>SGCN_Sgh</label>
+            </value>
+            <value>
+                <fullName>SGCS</fullName>
+                <default>false</default>
+                <label>SGCS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NumericFieldValidation</fullName>
+    <active>true</active>
+    <description>Validation rule to ensure no negative values are entered in numeric type fields.</description>
+    <errorConditionFormula>OR( TotalAmount__c &lt; 0 , 
+    QtdCommissioned__c &lt; 0 ,  
+    MaximumAllowedTime__c &lt; 0,  
+    TotalWithdrawalLimitinUS__c &lt; 0,  
+    TotalWithdrawalLimitinR__c &lt; 0,  
+    TotalCardLimitinUS__c &lt; 0,  
+    TotalCardLimitinR__c &lt; 0, 
+    AmountCost__c &lt; 0)</errorConditionFormula>
+    <errorMessage>Numeric field cannot be negative</errorMessage>
+</ValidationRule>

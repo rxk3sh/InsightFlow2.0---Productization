@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Operator__c</fullName>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Please select the appropriate operator</inlineHelpText>
+    <label>Operator</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Equals</fullName>
+                <default>true</default>
+                <label>Equals</label>
+            </value>
+            <value>
+                <fullName>Not Equals</fullName>
+                <default>false</default>
+                <label>Not Equals</label>
+            </value>
+            <value>
+                <fullName>Greater Than</fullName>
+                <default>false</default>
+                <label>Greater Than</label>
+            </value>
+            <value>
+                <fullName>Less Than</fullName>
+                <default>false</default>
+                <label>Less Than</label>
+            </value>
+            <value>
+                <fullName>Contains</fullName>
+                <default>false</default>
+                <label>Contains</label>
+            </value>
+            <value>
+                <fullName>Does not Contain</fullName>
+                <default>false</default>
+                <label>Does not Contain</label>
+            </value>
+            <value>
+                <fullName>Less Than or Equals</fullName>
+                <default>false</default>
+                <label>Less Than or Equals</label>
+            </value>
+            <value>
+                <fullName>Greater Than or Equals</fullName>
+                <default>false</default>
+                <label>Greater Than or Equals</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

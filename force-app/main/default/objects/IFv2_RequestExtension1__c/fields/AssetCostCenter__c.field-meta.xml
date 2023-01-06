@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>AssetCostCenter__c</fullName>
+    <description>used in China MAE</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the Asset Cost Center ID</inlineHelpText>
+    <label>Asset Cost Center</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

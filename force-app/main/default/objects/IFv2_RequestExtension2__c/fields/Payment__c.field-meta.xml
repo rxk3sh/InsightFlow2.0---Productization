@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment__c</fullName>
+    <externalId>false</externalId>
+    <label>Payment</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>100% Overtime</fullName>
+                <default>false</default>
+                <label>100% Overtime</label>
+            </value>
+            <value>
+                <fullName>time off</fullName>
+                <default>false</default>
+                <label>time off</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

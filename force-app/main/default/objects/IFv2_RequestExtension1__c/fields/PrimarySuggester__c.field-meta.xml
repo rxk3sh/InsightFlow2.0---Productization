@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimarySuggester__c</fullName>
+    <description>Used in Employee Suggestion Scheme</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please enter the name of the primary suggester</inlineHelpText>
+    <label>Primary Suggester</label>
+    <length>255</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TaxiType__c</fullName>
+    <externalId>false</externalId>
+    <label>Taxi Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>TransportationTools__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Swift Dzire</fullName>
+                <default>false</default>
+                <label>Swift Dzire</label>
+            </value>
+            <value>
+                <fullName>Toyota Etios</fullName>
+                <default>false</default>
+                <label>Toyota Etios</label>
+            </value>
+            <value>
+                <fullName>Innova</fullName>
+                <default>false</default>
+                <label>Innova</label>
+            </value>
+            <value>
+                <fullName>Tata</fullName>
+                <default>false</default>
+                <label>Tata</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Taxi</controllingFieldValue>
+            <valueName>Swift Dzire</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taxi</controllingFieldValue>
+            <valueName>Toyota Etios</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taxi</controllingFieldValue>
+            <valueName>Innova</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Taxi</controllingFieldValue>
+            <valueName>Tata</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

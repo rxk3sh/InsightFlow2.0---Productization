@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ReleaseReason__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select the Release Reason</inlineHelpText>
+    <label>Release Reason</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>First time release</fullName>
+                <default>false</default>
+                <label>First time release</label>
+            </value>
+            <value>
+                <fullName>Equipment moved</fullName>
+                <default>false</default>
+                <label>Equipment moved</label>
+            </value>
+            <value>
+                <fullName>Equipment changed</fullName>
+                <default>false</default>
+                <label>Equipment changed</label>
+            </value>
+            <value>
+                <fullName>Equipment upgrade</fullName>
+                <default>false</default>
+                <label>Equipment upgrade</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

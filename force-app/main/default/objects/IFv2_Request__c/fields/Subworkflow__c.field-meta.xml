@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subworkflow__c</fullName>
+    <description>Used for China Leave and Overtime Request</description>
+    <externalId>false</externalId>
+    <label>Subworkflow</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Leave Individual</fullName>
+                <default>false</default>
+                <label>Leave Individual</label>
+            </value>
+            <value>
+                <fullName>Overtime Individual</fullName>
+                <default>false</default>
+                <label>Overtime Individual</label>
+            </value>
+            <value>
+                <fullName>Leave Batch</fullName>
+                <default>false</default>
+                <label>Leave Batch</label>
+            </value>
+            <value>
+                <fullName>Overtime Batch</fullName>
+                <default>false</default>
+                <label>Overtime Batch</label>
+            </value>
+            <value>
+                <fullName>Leave Cancellation</fullName>
+                <default>false</default>
+                <label>Leave Cancellation</label>
+            </value>
+            <value>
+                <fullName>Time Data Amendment</fullName>
+                <default>false</default>
+                <label>Time Data Amendment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

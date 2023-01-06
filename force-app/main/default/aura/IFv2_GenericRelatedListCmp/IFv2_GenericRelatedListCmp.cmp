@@ -1,0 +1,28 @@
+<!--
+* 
+* @ Name 	:	IFv2_GenericRelatedListCmp
+* @ Purpose : 	Generic Component for displaying all the related lists
+* @ Author	: 	Pradeep Chary
+*
+*   Date	        |  Developer Name               |  Version      |  Changes
+* ======================================================================================================
+*   26-12-2018      |	pradeep.chary@absyz.com	(yv)	|  1.0          |  Initial Version
+*   
+-->
+
+<aura:component controller="IFv2_GenericRelatedListController" implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    
+    <!-- Attributes for Related List -->
+    <aura:attribute name="sObjectName" type="String" default="Account" description="The api name of the object." />
+    <aura:attribute name="wrapperList" type="Object[]" description="attribute to keep all the data"/>
+    <aura:attribute name="requestRecord" type="List" description="attribute to keep the request record"/>    
+    
+    <!-- Handler and Events -->
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <!-- Markup to display Related List-->
+    <aura:iteration var="relatedList" items="{! v.wrapperList}" >
+        <c:IFv2_SingleRelatedListCmp wrapper="{!relatedList}" entityId="{! v.recordId}"/>
+    </aura:iteration>
+</aura:component>

@@ -1,0 +1,4 @@
+<design:component>
+    <design:attribute label="Show Home Icon"  name="ShowHomeIcon"/>
+	
+</design:component>

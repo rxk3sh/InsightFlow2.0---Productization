@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SpecialFreight</fullName>
+    <columns>MasterLabel</columns>
+    <columns>WorkflowName__c</columns>
+    <columns>FreightPlant__c</columns>
+    <columns>ValueEur__c</columns>
+    <columns>ValueINR__c</columns>
+    <columns>ValueBRL__c</columns>
+    <columns>ValueCNY__c</columns>
+    <columns>ValueUSD__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Workflows__c</field>
+        <operation>contains</operation>
+        <value>special</value>
+    </filters>
+    <label>Special Freight</label>
+    <language>en_US</language>
+</ListView>
